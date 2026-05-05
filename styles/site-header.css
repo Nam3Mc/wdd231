@@ -1,0 +1,17 @@
+header {
+  display: grid;
+  grid-template-columns: 24px auto 44px;
+}
+
+#logo {
+  height: 44px;
+  width: 44px;
+  margin: auto;
+}
+
+.hamburger::before {
+  content: "\2630";
+}
+.hamburger.show::before {
+  content: "\00D7";
+}
