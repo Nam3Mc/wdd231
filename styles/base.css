@@ -1,15 +1,59 @@
+/* ================================
+   BLOCKCHAIN / WEB3 COLOR SYSTEM
+   Futuristic Tech UI Palette
+   ================================
+
+   BACKGROUND COLORS
+   - Primary Background: #0B0F1A (deep dark navy)
+   - Section Background: #111827 (dark gray-blue)
+
+   PRIMARY ACCENTS
+   - Neon Cyan: #00F5FF (highlights, primary actions)
+   - Blockchain Purple: #7C3AED (strong accents, branding)
+   - Digital Green: #22C55E (success, status, "on-chain" feel)
+
+   SECONDARY ACCENTS
+   - Electric Blue: #38BDF8 (links, hover states)
+   - Energy Orange: #F97316 (warnings, secondary CTA)
+
+   TEXT COLORS
+   - Primary Text: #E5E7EB (main content)
+   - Secondary Text: #94A3B8 (muted info, labels)
+
+   UI STYLE NOTES
+   - Use glow effects with cyan/purple for interactive elements
+   - Prefer dark glassmorphism cards with subtle borders (#1F2937)
+   - Use gradients for hero sections:
+     linear-gradient(90deg, #00F5FF, #7C3AED, #38BDF8)
+
+   DESIGN FEEL
+   - Web3 / Blockchain / Crypto dashboard aesthetic
+   - Neon futuristic glow on hover
+   - Dark-first interface with high contrast accents
+================================ *
+
 * {
     box-sizing: border-box;
+    font-family: 'VT323', monospace;
 }
+
+/* TITLES = PIXEL RETRO STYLE */
+h1, header span {
+    font-family: 'Press Start 2P', monospace;
+}
+
+/* ================================
+   BLOCKCHAIN / WEB3 COLOR SYSTEM
+   ================================ */
 
 header {
     display: grid;
     grid-template-columns: 24px auto 44px;
     padding: 5px 0 5px 10px;
-    border-bottom: solid 1px #ddd;
+    border-bottom: solid 1px #1F2937;
     column-gap: 8px;
     align-items: end;
-    fount-family: "Josfin Sans", sanss-serif;
+    background-color: #0B0F1A;
 }
 
 header img {
@@ -20,28 +64,29 @@ header img {
 }
 
 header span {
-    font-size: 1.2rem;
-    color: sandybrown;
+    font-size: 1rem;
+    color: #00F5FF;
 }
 
 /********************************BURGER********************************/
 .hamburger {
     background: none;
     border: none;
-    color: sandybrown;
+    color: #7C3AED;
     cursor: pointer;
-    fount-family: "Josfin Sans", sanss-serif;
-
+    font-family: 'VT323', monospace;
 }
 
 .hamburger::after {
     content: "\2630";
     font-size: 2rem;
+    color: #00F5FF;
 }
 
 .hamburger.show::after {
     content: "\00d7";
     font-size: 2rem;
+    color: #00F5FF;
 }
 
 /********************************NAVIGATION********************************/
@@ -51,39 +96,44 @@ header span {
 
 .navigation.show {
     display: block;
+    background-color: #111827;
 }
 
 .navigation ul {
     list-style-type: none;
-    margin:  0;
+    margin: 0;
     padding: 0;
 }
 
 .navigation a {
     display: block;
     padding: .8rem 10px;
-    color: sandybrown;
+    color: #E5E7EB;
     text-decoration: none;
-    border-bottom: solid 1px #ddd;
+    border-bottom: solid 1px #1F2937;
 }
 
 .navigation li.current {
-    background-color: #ddd;
+    background-color: #1F2937;
 }
 
 .navigation a:hover {
-    background-color: sienna;
+    background-color: #7C3AED;
+    color: #0B0F1A;
 }
 
 h1 {
     margin-left: 10px;
+    color: #00F5FF;
 }
 
 /********************************FOOTER********************************/
 footer {
-    background-color: sienna;
+    background-color: #111827;
     padding: 1rem 10px;
     text-align: center;
+    color: #94A3B8;
+    font-family: 'VT323', monospace;
 }
 
 .social-media {
@@ -98,7 +148,9 @@ footer {
     height: 44px;
     justify-content: center;
     align-items: center;
-    border: #sandybrown solid 1px;
+    border: #1F2937 solid 1px;
+    color: #00F5FF;
+    font-family: 'VT323', monospace;
 }
 
 .social-media img {
@@ -107,5 +159,20 @@ footer {
 }
 
 .social-media a:hover {
-    background-color: #ddd;
+    background-color: #7C3AED;
+    color: #0B0F1A;
+}
+
+/********************************CERTIFICATES********************************/
+
+.true::before {
+    content: "\2714";
+    color: #7C3AED;
+    margin-right: 8px;
+}
+
+.false::before {
+    content: "\2716";
+    color: #7C3AED;
+    margin-right: 8px;
 }

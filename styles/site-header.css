@@ -1,6 +1,7 @@
 header {
   display: grid;
   grid-template-columns: 24px auto 44px;
+  font-family: 'VT323', monospace;
 }
 
 #logo {
@@ -9,9 +10,24 @@ header {
   margin: auto;
 }
 
+/* BURGER ICON */
+.hamburger {
+  font-family: 'VT323', monospace;
+  background: none;
+  border: none;
+  color: #00F5FF;
+  cursor: pointer;
+}
+
+/* ICONS */
 .hamburger::before {
   content: "\2630";
+  font-size: 2rem;
+  color: #00F5FF;
 }
+
 .hamburger.show::before {
   content: "\00D7";
+  font-size: 2rem;
+  color: #00F5FF;
 }
