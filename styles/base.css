@@ -481,3 +481,79 @@ div,
 article {
     max-width: 100%;
 }
+
+
+/********************************
+WCAG CONTRAST FIXES
+********************************/
+
+/* fuerza color claro global */
+body,
+main,
+section,
+article,
+div,
+p,
+span,
+li,
+ul,
+nav,
+footer,
+header {
+    color: #E5E7EB;
+}
+
+/* botones */
+button {
+    color: #E5E7EB;
+}
+
+/* enlaces */
+a {
+    color: #38BDF8;
+}
+
+/* estados hover */
+a:hover {
+    color: #00F5FF;
+}
+
+/* headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #E5E7EB;
+}
+
+/* evita negro heredado en botones del nav */
+.navigation a {
+    color: #E5E7EB;
+}
+
+/* footer text */
+footer p {
+    color: #CBD5E1;
+}
+
+/* accesibilidad focus */
+button:focus,
+a:focus {
+    outline: 2px solid #00F5FF;
+    outline-offset: 3px;
+}
+
+/* mejora contraste hover morado */
+.navigation a:hover,
+.social-media a:hover {
+    color: #FFFFFF;
+}
+
+/* evita colores negros en elementos dinámicos */
+#courses p,
+#total-credits,
+#btns button {
+    color: #E5E7EB;
+}
