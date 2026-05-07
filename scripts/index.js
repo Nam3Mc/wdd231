@@ -1,9 +1,7 @@
 const navButtom = document.querySelector('#ham-btn')
 const navBar = document.querySelector('#nav-bar')
 const cetificates = document.querySelector('#certificates')
-
-
-
+let totalCredits = 0
 
 document.getElementById('currentYear').innerHTML = new Date().getFullYear()
 document.getElementById("lastModified").innerHTML = document.lastModified;
@@ -13,61 +11,60 @@ navButtom.addEventListener('click', () => {
     navBar.classList.toggle('show')
 })
 
+
 fetch('./scripts/courses.json')
-    .then(response => response.json())
-    .then(data => {
+  .then(response => response.json())
+  .then(data => {
+    let courses = data
+    let subjects = [...new Set(courses.map(course => course.subject))]
+    const btnsDiv = document.createElement('div')
+    const coursesDiv = document.createElement('div')
+    const allBtn = document.createElement('button')
+    const totalP = document.createElement('p')
 
-        const coursesData = data
-        const subjects = [...new Set(coursesData.map(course => course.subject))]
+    allBtn.id = 'show-all'
+    allBtn.textContent = 'ALL'
+    btnsDiv.id = 'btns'
+    coursesDiv.id = 'courses'
+    totalP.id = 'total-credits'
+    btnsDiv.appendChild(allBtn)
 
-        const div = document.createElement('div')
-        
-        const allBtn = document.createElement('button')
-        allBtn.textContent = 'ALL'
-
-        allBtn.addEventListener('click', () => {
-            renderCourses(coursesData, div)
+    function renderCourses(list, container) {
+        container.innerHTML = ''
+        totalCredits = 0
+        list.forEach(course => {
+            const p = document.createElement('p')
+            p.classList.add(`${course.subject}`)
+            p.innerHTML = `<span class="${course.completed}"></span> ${course.subject} - ${course.number}`
+            container.appendChild(p)
+            totalCredits += course.credits
         })
-
-        cetificates.appendChild(allBtn)
-
-        subjects.forEach(subject => {
-            const btn = document.createElement('button')
-            btn.textContent = subject
-            btn.classList.add(subject)
-            cetificates.appendChild(btn)
-        })
-
-        subjects.forEach(subject => {
-            const btn = document.createElement('button')
-            btn.classList.add(subject)
-            btn.textContent = subject
-
-            btn.addEventListener('click', () => {
-                const filter = coursesData.filter(course => course.subject = subject)
-                renderCourses(FileSystemDirectoryReader, div)
-            })
-            
-            cetificates.appendChild(div)
-        
-        })
-
-        renderCourses(coursesData, div)
-
-        cetificates.appendChild(div)
+        totalP.textContent = `The total credits for courses listed above is ${totalCredits}`
+    }
+    
+    allBtn.addEventListener('click', () => {
+            renderCourses(courses, coursesDiv)
     })
-    .catch(error => console.error(error))
 
-function renderCourses(list, container) {
-    container.innerHTML = ''
+    subjects.forEach(subject => {
+        const btn = document.createElement('button')
+        btn.id = `show-${subject}`
+        btn.textContent = subject
+        btnsDiv.appendChild(btn)
 
-    list.forEach(course => {
-        const p = document.createElement('p')
+        btn.addEventListener('click', () => {
+            const filteredCourses = courses.filter(course => 
+                course.subject === subject
+            )
+            renderCourses(filteredCourses, coursesDiv)
 
-        p.innerHTML = `
-            <span class="${course.completed}"><span/> 
-            ${course.subject} - ${course.number}
-        `
-        container.appendChild(p)
-    }) 
-}
+        })
+    })
+    
+    cetificates.appendChild(btnsDiv)
+    cetificates.appendChild(coursesDiv)
+    cetificates.appendChild(totalP)
+    renderCourses(courses, coursesDiv)
+
+  })
+  .catch(error => console.error(error));
