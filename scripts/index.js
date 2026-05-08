@@ -12,7 +12,7 @@ navButtom.addEventListener('click', () => {
 })
 
 
-fetch('/scripts/courses.json')
+fetch('scripts/courses.json')
   .then(response => response.json())
   .then(data => {    
     let courses = data
