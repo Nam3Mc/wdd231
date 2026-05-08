@@ -1,6 +1,6 @@
 const navButtom = document.querySelector('#ham-btn')
 const navBar = document.querySelector('#nav-bar')
-const cetificates = document.querySelector('#certificates')
+const certificates = document.querySelector('#certificates')
 let totalCredits = 0
 
 document.getElementById('currentYear').innerHTML = new Date().getFullYear()
@@ -12,9 +12,9 @@ navButtom.addEventListener('click', () => {
 })
 
 
-fetch('./scripts/courses.json')
+fetch('/scripts/courses.json')
   .then(response => response.json())
-  .then(data => {
+  .then(data => {    
     let courses = data
     let subjects = [...new Set(courses.map(course => course.subject))]
     const btnsDiv = document.createElement('div')
@@ -61,9 +61,9 @@ fetch('./scripts/courses.json')
         })
     })
     
-    cetificates.appendChild(btnsDiv)
-    cetificates.appendChild(coursesDiv)
-    cetificates.appendChild(totalP)
+    certificates.appendChild(btnsDiv)
+    certificates.appendChild(coursesDiv)
+    certificates.appendChild(totalP)
     renderCourses(courses, coursesDiv)
 
   })
