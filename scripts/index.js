@@ -1,6 +1,7 @@
 const navButtom = document.querySelector('#ham-btn')
 const navBar = document.querySelector('#nav-bar')
 const certificates = document.querySelector('#certificates')
+
 let totalCredits = 0
 
 document.getElementById('currentYear').innerHTML = new Date().getFullYear()
