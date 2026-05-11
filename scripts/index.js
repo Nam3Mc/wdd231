@@ -1,21 +1,22 @@
-const navButtom = document.querySelector('#ham-btn')
+const navButton = document.querySelector('#ham-btn')
 const navBar = document.querySelector('#nav-bar')
 const certificates = document.querySelector('#certificates')
 
 let totalCredits = 0
 
-document.getElementById('currentYear').innerHTML = new Date().getFullYear()
-document.getElementById("lastModified").innerHTML = document.lastModified;
-
-navButtom.addEventListener('click', () => {
-    navButtom.classList.toggle('show')
+document.getElementById('currentYear').textContent =
+  new Date().getFullYear()
+document.getElementById('lastModified').textContent =
+  document.lastModified
+navButton.addEventListener('click', () => {
+    navButton.classList.toggle('show')
     navBar.classList.toggle('show')
 })
 
-
-fetch('scripts/courses.JSON')
+fetch('./scripts/courses.json')
   .then(response => response.json())
-  .then(data => {    
+  .then(data => {
+
     let courses = data
     let subjects = [...new Set(courses.map(course => course.subject))]
     const btnsDiv = document.createElement('div')
@@ -35,16 +36,19 @@ fetch('scripts/courses.JSON')
         totalCredits = 0
         list.forEach(course => {
             const p = document.createElement('p')
-            p.classList.add(`${course.subject}`)
-            p.innerHTML = `<span class="${course.completed}"></span> ${course.subject} - ${course.number}`
+            p.classList.add(course.subject)
+            p.innerHTML =
+              `<span class="${course.completed}"></span>
+               ${course.subject} - ${course.number}`
             container.appendChild(p)
             totalCredits += course.credits
         })
-        totalP.textContent = `The total credits for courses listed above is ${totalCredits}`
+        totalP.textContent =
+          `The total credits for courses listed above is ${totalCredits}`
     }
-    
+
     allBtn.addEventListener('click', () => {
-            renderCourses(courses, coursesDiv)
+        renderCourses(courses, coursesDiv)
     })
 
     subjects.forEach(subject => {
@@ -52,20 +56,18 @@ fetch('scripts/courses.JSON')
         btn.id = `show-${subject}`
         btn.textContent = subject
         btnsDiv.appendChild(btn)
-
         btn.addEventListener('click', () => {
-            const filteredCourses = courses.filter(course => 
+            const filteredCourses = courses.filter(course =>
                 course.subject === subject
             )
             renderCourses(filteredCourses, coursesDiv)
-
         })
     })
-    
+
     certificates.appendChild(btnsDiv)
     certificates.appendChild(coursesDiv)
     certificates.appendChild(totalP)
     renderCourses(courses, coursesDiv)
 
   })
-  .catch(error => console.error(error));
+  .catch(error => console.error(error))
