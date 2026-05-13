@@ -1,5 +1,5 @@
 /* Primary Color: #111827 (Modern Dark Gray) */
-/* Secondary Color: #3B82F6 (Clean Blue) */
+/* Secondary Color: #1D4ED8 (Accessible Blue) */
 /* Background Color: #F9FAFB (Soft White) */
 /* Text Color: #1F2937 (Slate Gray) */
 /* Font Family: 'Inter', sans-serif */
@@ -22,7 +22,7 @@ header {
     padding: 8px;
     margin: auto;
     background-color: #111827;
-    color: white;
+    color: #F9FAFB;
     text-align: center;
 }
 
@@ -37,8 +37,13 @@ header {
     display: block;
 }
 
+.navigation a {
+    color: #F9FAFB;
+}
+
 .navigation a:hover {
     background: rgba(255, 255, 255, 0.15);
+    color: #FFFFFF;
 }
 
 .hamburger {
@@ -79,15 +84,19 @@ header {
     font-size: 1.4rem;
     color: #3B82F6;
     transform: rotate(90deg);
-    border: 2px solid #3b82fa;
+    border: 2px solid #3B82F6;
 }
 
-
-ul, a {
+ul {
     display: block;
     list-style: none;
+    margin: auto 4px;
+    padding: 4px;
+}
+
+a {
+    display: block;
     text-decoration: none;
-    color: #F9FAFB; 
     margin: auto 4px;
     padding: 4px;
 }
@@ -96,13 +105,10 @@ ul, a {
    MAIN
 ========================= */
 
-
 main {
     width: 100%;
-    /* padding: 1rem; */
     text-align: center;
 }
-
 
 /* =========================
         MENU BUTTONS
@@ -111,7 +117,6 @@ main {
 .menu {
     display: none;
 }
-
 
 /* =========================
    CARDS CONTAINER
@@ -130,7 +135,7 @@ main {
 ========================= */
 
 .service-card {
-    background: white;
+    background: #FFFFFF;
     border-radius: 1.2rem;
     overflow: hidden;
     padding: .4rem;
@@ -165,7 +170,7 @@ main {
 .service-card p {
     font-size: 0.95rem;
     line-height: 1.5;
-    color: #4b5563;
+    color: #4B5563;
 }
 
 /* =========================
@@ -175,8 +180,8 @@ main {
 .service-card a {
     margin-top: auto;
     text-decoration: none;
-    background: #2563eb;
-    color: #ffffff;
+    background: #1E40AF;
+    color: #FFFFFF;
     padding: 0.8rem 1rem;
     border-radius: 0.8rem;
     text-align: center;
@@ -185,12 +190,13 @@ main {
 }
 
 .service-card a:hover {
-    background: #2563eb;
+    background: #1E3A8A;
 }
 
 /* =========================
    FOOTER
 ========================= */
+
 footer {
     width: 100%;
     
