@@ -2,10 +2,21 @@ const url = './data/members.json';
 const cards = document.querySelector('#cards');
 const menuBtn = document.querySelector('.hamburger');
 const navBar = document.querySelector('.navigation');
+const listBtn = document.querySelector('#list');
+const gridBtn = document.querySelector('#grid');
+const card = document.querySelector('.service-card')
 
 menuBtn.addEventListener('click', () => {
     menuBtn.classList.toggle('show')
     navBar.classList.toggle('show')
+})
+
+listBtn.addEventListener('click', () => {
+    cards.classList.add('list')
+})
+
+gridBtn.addEventListener('click', () => {
+    cards.classList.remove('list')
 })
 
 document.getElementById('currentYear').textContent = new Date().getFullYear()

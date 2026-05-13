@@ -4,11 +4,10 @@
 /* Text Color: #1F2937 (Slate Gray) */
 /* Font Family: 'Inter', sans-serif */
 
-
 body {
     color: #1F2937;
-    max-width: 320px;
-    width: 320px;
+    width: 100%;
+    max-width: 1200px;
     margin: auto;
     font-family: 'Inter', sans-serif;
     background: #f9fafb;
@@ -29,8 +28,8 @@ header {
 }
 
 .navigation {
-    width: 320px;
-    background-color: #3B82F6;
+    width: 90%;
+    background-color: #111827;
     display: none;
     position: absolute;
 }
@@ -89,7 +88,7 @@ ul, a {
     display: block;
     list-style: none;
     text-decoration: none;
-    color: #F9FAFB;
+    color: #F9FAFB; 
     margin: auto 4px;
     padding: 4px;
 }
@@ -124,7 +123,6 @@ main {
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 1.5rem;
     padding: 1.5rem;
-    /* width: min(1200px, 100%); */
     margin: 0 auto;
 }
 
@@ -178,8 +176,8 @@ main {
 .service-card a {
     margin-top: auto;
     text-decoration: none;
-    background: #3b82f6;
-    color: white;
+    background: #2563eb;
+    color: #ffffff;
     padding: 0.8rem 1rem;
     border-radius: 0.8rem;
     text-align: center;
