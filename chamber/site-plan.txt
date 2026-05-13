@@ -1,0 +1,88 @@
+Site Name:
+
+ServiceHub Chamber
+
+Site Purpose:
+
+This website is intended to help local service providers gain better exposure in 
+Bogotá by offering a platform that connects clients with trusted professionals. 
+It will provide a wide range of essential services such as plumbing, welding, 
+carpentry, painting, and many other everyday home and maintenance services. Each 
+contractor or service provider will be reviewed and will have a catalog showcasing 
+their work, making their profiles more attractive to potential clients and helping 
+them reach a wider audience.
+
+Target Market
+
+Services providers and citicenz in the city of Bogota.
+
+Site Goals:
+
+• Provide high-quality and qualified services to clients
+• Create a bridge between customer needs and professional solutions
+• Improve the visibility of skilled professionals and contractors
+• Promote a culture of quality work, trust, and professionalism
+
+Users:
+
+• Emergency Locksmith Client:
+Sofia is a 29-year-old professional who accidentally lost her apartment keys late 
+at night. She needs a reliable locksmith service that can respond quickly, provide 
+secure solutions, and offer verified reviews to ensure safety and trust.
+
+• Homeowner Looking for Painting Services:
+Carlos is a 42-year-old homeowner preparing to renovate his house. He is searching 
+for experienced painters with portfolios of previous work, fair pricing, and positive 
+customer feedback to help him choose the right professional.
+
+• Family Needing Moving Services:
+Andrea and her family are relocating to a new apartment across the city. They are 
+looking for trustworthy moving services that can safely transport furniture and 
+personal belongings while offering affordable prices and flexible schedules.
+
+• Student Searching for an English Teacher:
+Mateo is a 21-year-old university student who wants to improve his English skills 
+for better job opportunities. He is looking for qualified English teachers with good
+reviews, flexible schedules, and online or in-person class options.
+
+Scenarios:
+
+• A plumber wants to expand his customer base and gain more visibility in Bogotá. He 
+visits the website to create a professional profile, upload photos of completed 
+plumbing projects, and receive customer reviews that help attract new clients.
+
+• A carpenter is looking for more job opportunities and wants to showcase custom 
+furniture and woodworking projects. She uses the website to publish her services, 
+display a portfolio of her work, and connect with homeowners interested in 
+renovations and custom designs.
+
+• An electrician wants to promote his repair and installation services to people in 
+the community. He joins the platform to share his experience, provide contact 
+information, and allow customers to leave ratings and feedback about his work.
+
+• A private math tutor wants to reach more students who need academic support. She 
+creates a profile on the website to display her qualifications, teaching experience, 
+available schedules, and testimonials from previous students.
+
+SEO Plan:
+
+• Use relevant keywords such as “plumber in Bogotá,” “carpenter services,” 
+“electrician near me,” and “home services in Bogotá” throughout the website content 
+and headings.
+
+• Optimize page titles, meta descriptions, and image alt text to improve visibility 
+in search engine results.
+
+• Create service-specific pages with clear descriptions, customer reviews, and 
+location-based content to increase local SEO performance.
+
+• Improve website performance with mobile-friendly design, fast loading speeds, and 
+clean navigation to enhance user experience and search rankings.
+
+Design Brief
+
+Primary Color: #111827 (Modern Dark Gray)
+Secondary Color: #3B82F6 (Clean Blue)
+Background Color: #F9FAFB (Soft White)
+Text Color: #1F2937 (Slate Gray)
+Font Family: 'Inter', sans-serif
