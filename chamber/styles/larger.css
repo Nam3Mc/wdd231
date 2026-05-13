@@ -24,8 +24,8 @@
         width: 160px;
         height: 44px;
         font-size: 1.4rem;
-        background-color: #2563eb;
-        color: #ffffff;
+        background-color: #3B82F6 ;
+        color: #F9FAFB;
         border-radius: 0.8rem;
         border: none;
     }
@@ -87,6 +87,7 @@
         margin: auto;
         padding: 8px;
         font-weight: 500;
+        color: F9FAFB ;
     }
 
     footer {
