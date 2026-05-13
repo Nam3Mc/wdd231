@@ -2,64 +2,64 @@
   "members": [
     {
       "name": "Elite Carpentry",
-      "address": "123 Wood St",
-      "phone": "555-111-2222",
+      "address": "Cra. 15 #93-47, Bogotá, Cundinamarca, 110221",
+      "phone": "+57 601 555 1111",
       "website": "https://elitecarpentry.com",
-      "image": "carpenter.webp",
+      "image": "./images/carpenter.webp",
       "membership": 3,
       "service": "Custom furniture and wood repairs"
     },
     {
       "name": "Iron Forge Welding",
-      "address": "45 Steel Ave",
-      "phone": "555-333-4444",
+      "address": "Calle 72 #18-64, Bogotá, Cundinamarca, 110231",
+      "phone": "+57 601 555 2222",
       "website": "https://ironforge.com",
-      "image": "welder.webp",
+      "image": "./images/blacksmith.webp",
       "membership": 2,
       "service": "Industrial and residential welding"
     },
     {
       "name": "Perfect Paint",
-      "address": "98 Color Rd",
-      "phone": "555-555-6666",
+      "address": "Cra. 11 #140-22, Bogotá, Cundinamarca, 110121",
+      "phone": "+57 601 555 3333",
       "website": "https://perfectpaint.com",
-      "image": "painter.webp",
+      "image": "./images/painting.webp",
       "membership": 1,
       "service": "Interior and exterior painting"
     },
     {
       "name": "Spark Clean",
-      "address": "12 Fresh Ln",
-      "phone": "555-777-8888",
+      "address": "Calle 45 #27-18, Bogotá, Cundinamarca, 111311",
+      "phone": "+57 601 555 4444",
       "website": "https://sparkclean.com",
-      "image": "cleaning.webp",
+      "image": "./images/cleaning.webp",
       "membership": 2,
       "service": "Residential cleaning services"
     },
     {
       "name": "Volt Electric",
-      "address": "77 Power Blvd",
-      "phone": "555-999-1010",
+      "address": "Cra. 30 #63-55, Bogotá, Cundinamarca, 111221",
+      "phone": "+57 601 555 5555",
       "website": "https://voltelectric.com",
-      "image": "electrician.webp",
+      "image": "./images/electrician.webp",
       "membership": 3,
       "service": "Electrical installations and repairs"
     },
     {
       "name": "Flow Plumbing",
-      "address": "66 Water St",
-      "phone": "555-121-3434",
+      "address": "Calle 134 #52-11, Bogotá, Cundinamarca, 110111",
+      "phone": "+57 601 555 6666",
       "website": "https://flowplumbing.com",
-      "image": "plumber.webp",
+      "image": "./images/plumbing.webp",
       "membership": 1,
       "service": "Pipe repair and maintenance"
     },
     {
       "name": "Skyline Roofing",
-      "address": "88 Roof Ave",
-      "phone": "555-565-7878",
+      "address": "Cra. 7 #116-40, Bogotá, Cundinamarca, 110221",
+      "phone": "+57 601 555 7777",
       "website": "https://skylineroofing.com",
-      "image": "roofing.webp",
+      "image": "./images/roofing.webp",
       "membership": 2,
       "service": "Roof installation and repair"
     }

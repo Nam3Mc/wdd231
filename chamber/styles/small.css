@@ -1,0 +1,219 @@
+/* Primary Color: #111827 (Modern Dark Gray) */
+/* Secondary Color: #3B82F6 (Clean Blue) */
+/* Background Color: #F9FAFB (Soft White) */
+/* Text Color: #1F2937 (Slate Gray) */
+/* Font Family: 'Inter', sans-serif */
+
+
+body {
+    color: #1F2937;
+    max-width: 320px;
+    width: 320px;
+    margin: auto;
+    font-family: 'Inter', sans-serif;
+    background: #f9fafb;
+    color: #111827;
+}
+
+header {
+    width: 95%;
+    display: flex;
+    font-size: .2rem;
+    justify-content: space-between;
+    align-items: center;
+    height: 44px;
+    padding: 8px auto;
+    margin: auto;
+    background-color: #111827;
+    color: white;
+}
+
+.navigation {
+    width: 320px;
+    background-color: #3B82F6;
+    display: flex;
+    display: none;
+    position: absolute;
+}
+
+.navigation.show {
+    display: block;
+}
+
+.navigation a:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.hamburger {
+    background: none;
+    border: none;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 42px;
+    height: 42px;
+}
+
+/* =========================
+   HAMBURGER ICON
+========================= */
+
+.hamburger::after {
+    content: "\2630";
+
+    font-size: 1.4rem;
+    font-weight: bold;
+    line-height: 1;
+    color: #3B82F6;
+    border-radius: 0.7rem;
+    padding: 0.3rem 0.55rem;
+    transition: all 0.3s ease;
+}
+
+/* =========================
+   ACTIVE STATE
+========================= */
+
+.hamburger.show::after {
+    content: "\00d7";
+    font-size: 1.4rem;
+    color: #3B82F6;
+    transform: rotate(90deg);
+    border: 2px solid #3b82fa;
+}
+
+
+ul, a {
+    display: block;
+    list-style: none;
+    text-decoration: none;
+    color: #F9FAFB;
+    margin: auto 4px;
+    padding: 4px;
+}
+
+
+header {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+/* =========================
+   MAIN
+========================= */
+
+
+main {
+    width: 100%;
+    /* padding: 1rem; */
+    text-align: center;
+}
+
+
+/* =========================
+        MENU BUTTONS
+========================= */
+
+.menu {
+    display: none;
+}
+
+
+/* =========================
+   CARDS CONTAINER
+========================= */
+
+#cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    padding: 1.5rem;
+    /* width: min(1200px, 100%); */
+    margin: 0 auto;
+}
+
+/* =========================
+   SERVICE CARD
+========================= */
+
+.service-card {
+    background: white;
+    border-radius: 1.2rem;
+    overflow: hidden;
+    padding: .4rem;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.12);
+}
+
+/* =========================
+   IMAGE
+========================= */
+
+.service-card img {
+    width: 90%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 0.9rem;
+    margin: auto;
+}
+
+/* =========================
+   TEXT
+========================= */
+
+.service-card p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #4b5563;
+}
+
+/* =========================
+   BUTTON / LINK
+========================= */
+
+.service-card a {
+    margin-top: auto;
+    text-decoration: none;
+    background: #3b82f6;
+    color: white;
+    padding: 0.8rem 1rem;
+    border-radius: 0.8rem;
+    text-align: center;
+    font-weight: 600;
+    transition: background 0.3s ease;
+}
+
+.service-card a:hover {
+    background: #2563eb;
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+    width: 95%;
+    
+    background: #111827;
+    color: #F9FAFB;
+
+    padding: 1.5rem 1rem;
+
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+
+    border-top: 2px solid #3B82F6;
+}
