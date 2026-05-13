@@ -1,4 +1,4 @@
-const url = 'data/members.json';
+const url = './data/members.json';
 const cards = document.querySelector('#cards');
 const menuBtn = document.querySelector('.hamburger');
 const navBar = document.querySelector('.navigation');

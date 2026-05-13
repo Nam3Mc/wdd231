@@ -12,13 +12,12 @@ body {
     margin: auto;
     font-family: 'Inter', sans-serif;
     background: #f9fafb;
-    color: #111827;
 }
 
 header {
     width: 95%;
     display: flex;
-    font-size: .2rem;
+    font-size: 1.5rem;
     justify-content: space-between;
     align-items: center;
     height: 44px;
@@ -26,12 +25,12 @@ header {
     margin: auto;
     background-color: #111827;
     color: white;
+    text-align: center;
 }
 
 .navigation {
     width: 320px;
     background-color: #3B82F6;
-    display: flex;
     display: none;
     position: absolute;
 }
@@ -93,12 +92,6 @@ ul, a {
     color: #F9FAFB;
     margin: auto 4px;
     padding: 4px;
-}
-
-
-header {
-    text-align: center;
-    font-size: 1.5rem;
 }
 
 /* =========================
