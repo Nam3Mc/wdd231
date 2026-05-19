@@ -103,12 +103,12 @@ header img {
 }
 
 .navigation a:hover {
-    background: rgba(255, 255, 255, 0.12);
+    background: #1E3A8A;
     color: #FFFFFF;
 }
 
 .navigation a.active {
-    background: #1D4ED8;
+    background: #1E3A8A;
     color: #FFFFFF;
 }
 
@@ -141,7 +141,7 @@ header img {
     font-weight: bold;
     line-height: 1;
 
-    color: #3B82F6;
+    color: #1D4ED8;
 
     padding: 0.3rem 0.55rem;
 

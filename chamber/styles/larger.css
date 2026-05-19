@@ -98,11 +98,13 @@
     }
 
     .navigation a:hover {
-        background: #1D4ED8;
+        background: #1E3A8A;
+        color: #FFFFFF;
     }
-
+    
     .navigation a.active {
-        background: #1D4ED8;
+        background: #1E3A8A;
+        color: #FFFFFF;
     }
 
     .navigation a:active {
