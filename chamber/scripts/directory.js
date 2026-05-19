@@ -4,7 +4,6 @@ const menuBtn = document.querySelector('.hamburger');
 const navBar = document.querySelector('.navigation');
 const listBtn = document.querySelector('#list');
 const gridBtn = document.querySelector('#grid');
-const card = document.querySelector('.service-card')
 
 menuBtn.addEventListener('click', () => {
     menuBtn.classList.toggle('show')
@@ -13,10 +12,16 @@ menuBtn.addEventListener('click', () => {
 
 listBtn.addEventListener('click', () => {
     cards.classList.add('list')
+
+    listBtn.classList.add('active')
+    gridBtn.classList.remove('active')
 })
 
 gridBtn.addEventListener('click', () => {
     cards.classList.remove('list')
+
+    gridBtn.classList.add('active')
+    listBtn.classList.remove('active')
 })
 
 document.getElementById('currentYear').textContent = new Date().getFullYear()

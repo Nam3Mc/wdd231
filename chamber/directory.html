@@ -32,20 +32,26 @@
             aria-label="Open navigation menu">
         </button>
     </header>
-    <nav class="navigation">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="directory.html">Directory</a></li>
-            <li><a href="join.html">Join</a></li>
-            <li><a href="discover.html">Discover</a></li>
-        </ul>
-    </nav>
+        <nav class="navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+            
+                <li>
+                    <a href="directory.html" class="active">
+                        Directory
+                    </a>
+                </li>
+            
+                <li><a href="join.html">Join</a></li>
+                <li><a href="discover.html">Discover</a></li>
+            </ul>
+        </nav>
     <main>
         <h1>Directory</h1>
         <h2>Business Members</h2>
         <div class="menu">
-            <button id="grid">⬛ Grid</button>
-            <button id="list">📄 List</button>
+            <button id="grid" aria-label="Grid view">⬛ Grid</button>
+            <button id="list" aria-label="List view">📄 List</button>
         </div>
         <div id="cards"></div>
     </main>

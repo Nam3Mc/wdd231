@@ -1,98 +1,212 @@
 @media only screen and (min-width: 20.1rem) {
 
+    /* =========================================
+       HEADER
+    ========================================= */
+
     header {
         width: 100%;
-        padding: 0;
+
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
-        font-size: 2rem;
+
+        padding: 0.8rem 1rem;
+
+        background: #111827;
+
+        font-size: clamp(1rem, 3vw, 1.6rem);
     }
+
+    header span {
+        display: flex;
+        align-items: center;
+
+        gap: 0.6rem;
+
+        flex-wrap: wrap;
+    }
+
+    /* =========================================
+       HAMBURGER
+    ========================================= */
 
     .hamburger {
         display: none;
     }
-    
+
+    /* =========================================
+       NAVIGATION
+    ========================================= */
+
+    .navigation {
+        width: 100%;
+
+        display: block;
+
+        background-color: #111827;
+
+        border-top: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .navigation ul {
+        display: flex;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+        align-items: center;
+
+        gap: 0.5rem;
+
+        width: 100%;
+
+        margin: 0;
+        padding: 0.7rem;
+
+        list-style: none;
+    }
+
+    .navigation li {
+        flex: 1 1 120px;
+
+        min-width: 120px;
+
+        max-width: 220px;
+    }
+
+    .navigation a {
+        display: block;
+
+        width: 100%;
+
+        padding: 0.9rem 1rem;
+
+        text-align: center;
+
+        text-decoration: none;
+
+        font-size: clamp(0.9rem, 2vw, 1.05rem);
+        font-weight: 600;
+
+        color: #F9FAFB;
+
+        border-radius: 0.6rem;
+
+        transition: background 0.3s ease,
+                    transform 0.2s ease;
+    }
+
+    .navigation a:hover {
+        background: #1D4ED8;
+    }
+
+    .navigation a.active {
+        background: #1D4ED8;
+    }
+
+    .navigation a:active {
+        transform: scale(0.97);
+    }
+
+    /* =========================================
+       MENU BUTTONS
+    ========================================= */
+
     .menu {
         display: flex;
+
         justify-content: center;
-        padding: 5px;
-        gap: 44px;
+        align-items: center;
+
+        flex-wrap: wrap;
+
+        gap: 1rem;
+
+        padding: 1rem;
     }
 
     .menu button {
-        width: 160px;
-        height: 44px;
-        font-size: 1.4rem;
-        background-color: #1E40AF ;
-        color: #F9FAFB;
-        border-radius: 0.8rem;
+        width: min(160px, 100%);
+
+        padding: 0.9rem 1rem;
+
         border: none;
+
+        border-radius: 0.8rem;
+
+        background: #1E40AF;
+        color: #F9FAFB;
+
+        font-size: 1rem;
+        font-weight: 600;
+
+        cursor: pointer;
+
+        transition: background 0.3s ease,
+                    transform 0.2s ease;
     }
 
     .menu button:hover {
         background: #1E3A8A;
     }
 
-    .navigation {
-        width: 100%;
-        display: flex;
-        justify-self: center;
-        position: relative;
+    .menu button.active {
+        background: #111827;
     }
 
-    ul {
-        display:  flex;
-        font-size: 1.5rem;
-        width: 100%;
-        padding: 0;
-        margin: 0;
+    .menu button:active {
+        transform: scale(0.96);
     }
 
-    ul li {
-        flex: 1;
-        text-align: center;
-        padding: 4px;
-    }
+    /* =========================================
+       LIST VIEW
+    ========================================= */
 
     #cards.list {
         display: flex;
         flex-direction: column;
-        gap: 10px;
-        align-items: center;
+
+        gap: 1rem;
+
+        padding: 1rem;
     }
 
     .service-card.list {
-        height: 220px;
-        width: 260px;
-        /* padding: 5px; */
-        margin: 14px;
+        width: 100%;
+
+        max-width: 850px;
+
+        margin: 0 auto;
+
+        display: grid;
+
+        grid-template-columns: minmax(140px, 220px) 1fr;
+
+        align-items: center;
+
+        gap: 1rem;
+
+        text-align: left;
     }
 
     .service-card.list img {
-        width: 70%;
-        height: 80px;
+        width: 100%;
+
+        height: 180px;
+
         object-fit: cover;
-        border-radius: 0.9rem;
-        margin: auto;
     }
 
-    .service-card.list p {
-        font-size: 0.9rem;
-        line-height: 14px;
-        color: #4b5563;
-    }
-    
     .service-card.list a {
-        margin: auto;
-        padding: 8px;
-        font-weight: 500;
-        color: #F9FAFB ;
+        width: fit-content;
     }
+
+    /* =========================================
+       FOOTER
+    ========================================= */
 
     footer {
-        padding: 0;
-        margin: 0;
+        padding: 2rem 1rem;
     }
-
 }
