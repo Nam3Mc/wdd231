@@ -19,11 +19,9 @@ Text:      #1F2937
 body {
     width: 100%;
     max-width: 1200px;
-
+    overflow-x: hidden;
     margin: 0 auto;
-
     font-family: 'Inter', sans-serif;
-
     background: #F9FAFB;
     color: #1F2937;
 }
@@ -91,22 +89,14 @@ header img {
 
 .navigation a {
     display: block;
-
     padding: 1rem;
-
     text-decoration: none;
-
     color: #F9FAFB;
-
     transition: background 0.3s ease,
                 color 0.3s ease;
 }
 
-.navigation a:hover {
-    background: #1E3A8A;
-    color: #FFFFFF;
-}
-
+.navigation a:hover,
 .navigation a.active {
     background: #1E3A8A;
     color: #FFFFFF;
@@ -126,8 +116,8 @@ header img {
     align-items: center;
     justify-content: center;
 
-    width: 42px;
-    height: 42px;
+    width: 44px;
+    height: 44px;
 }
 
 /* =========================================
@@ -156,12 +146,18 @@ header img {
 
 .hamburger.show::after {
     content: "\00d7";
-
     color: #3B82F6;
-
     border: 2px solid #3B82F6;
+    transform: none;
+}
 
-    transform: rotate(90deg);
+.navigation a:focus,
+.menu button:focus,
+.hamburger:focus,
+.service-card a:focus {
+    outline: 3px solid #60A5FA;
+
+    outline-offset: 2px;
 }
 
 /* =========================================
@@ -229,6 +225,7 @@ main h2 {
 
 .menu button.active {
     background: #111827;
+    color: #FFFFFF;
 }
 
 /* =========================================
@@ -281,8 +278,7 @@ main h2 {
 }
 
 .service-card:hover {
-    transform: translateY(-6px);
-
+    transform: translateY(-3px);
     box-shadow: 0 8px 28px rgba(0, 0, 0, 0.12);
 }
 
@@ -291,12 +287,10 @@ main h2 {
 ========================================= */
 
 .service-card img {
+    display: block;
     width: 100%;
-
     height: 180px;
-
     object-fit: cover;
-
     border-radius: 0.9rem;
 }
 
@@ -469,102 +463,5 @@ footer p {
 
     .service-card.list a {
         width: 100%;
-    }
-}
-
-/* =========================================
-   DESKTOP / LARGE MOBILE
-========================================= */
-
-@media only screen and (min-width: 20.1rem) {
-
-    /* =========================
-       HEADER
-    ========================= */
-
-    header {
-        padding: 0.8rem 1rem;
-
-        font-size: clamp(1rem, 3vw, 1.6rem);
-    }
-
-    /* =========================
-       HAMBURGER
-    ========================= */
-
-    .hamburger {
-        display: none;
-    }
-
-    /* =========================
-       NAVIGATION
-    ========================= */
-
-    .navigation {
-        width: 100%;
-
-        display: block;
-
-        background-color: #111827;
-
-        border-top: 1px solid rgba(255,255,255,0.08);
-    }
-
-    .navigation ul {
-        display: flex;
-
-        flex-wrap: wrap;
-
-        justify-content: center;
-        align-items: center;
-
-        gap: 0.5rem;
-
-        width: 100%;
-
-        margin: 0;
-        padding: 0.7rem;
-    }
-
-    .navigation li {
-        flex: 1 1 140px;
-
-        max-width: 220px;
-
-        border: none;
-    }
-
-    .navigation a {
-        width: 100%;
-
-        padding: 0.9rem 1rem;
-
-        text-align: center;
-
-        border-radius: 0.6rem;
-
-        font-size: clamp(0.95rem, 2vw, 1.1rem);
-
-        font-weight: 600;
-    }
-
-    .navigation a:hover {
-        background: #1D4ED8;
-    }
-
-    /* =========================
-       LIST VIEW
-    ========================= */
-
-    .service-card.list {
-        grid-template-columns: 220px 1fr;
-
-        max-width: 850px;
-
-        margin: 0 auto;
-    }
-
-    .service-card.list img {
-        height: 180px;
     }
 }

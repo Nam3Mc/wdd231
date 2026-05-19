@@ -6,25 +6,39 @@
     <title>ServiceHub Chamber Directory | Dreiser Morales</title>
     <meta name="description" content="ServiceHub Chamber connects local professionals including carpenters, welders, painters, cleaners, electricians, and plumbers with customers in the community.">
     <meta name="author" content="Dreiser Morales">
+    <meta name="theme-color" content="#111827">
     <link rel="icon" href="images/favicon.ico">
+
     <meta property="og:title" content="ServiceHub Chamber Business Directory">
     <meta property="og:description" content="Find trusted local service professionals including carpenters, painters, welders, electricians, plumbers, and cleaning specialists.">
     <meta property="og:image" content="https://nam3mc.github.io/wdd231/chamber/images/servicehub-preview.webp">    
     <meta property="og:url" content="https://nam3mc.github.io/wdd231/chamber/directory.html">
     <meta property="og:type" content="website">
+
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/larger.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>  
+    <link
+    href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap"
+    rel="stylesheet">
+    <noscript>
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap">
+    </noscript>
+    
     <script src="scripts/directory.js" defer></script>
 
 </head>
 <body>
     <header>
         <span>
-        <img src="images/chamber-logo.webp" alt="Site Logo" width="44" height="44"> 
+        <img src="images/chamber-logo.webp" alt="ServiceHub Chamber logo" width="44" height="44" loading="lazy" decoding="async"> 
             ServiceHub</span>
         <button 
             id="ham-btn" 
@@ -32,12 +46,12 @@
             aria-label="Open navigation menu">
         </button>
     </header>
-        <nav class="navigation">
+        <nav class="navigation" aria-label="Primary navigation">
             <ul>
                 <li><a href="index.html">Home</a></li>
             
                 <li>
-                    <a href="directory.html" class="active">
+                    <a href="directory.html" class="active" aria-current="page">
                         Directory
                     </a>
                 </li>
@@ -46,9 +60,9 @@
                 <li><a href="discover.html">Discover</a></li>
             </ul>
         </nav>
-    <main>
-        <h1>Directory</h1>
-        <h2>Business Members</h2>
+    <main id="main-content">
+        <h1>ServiceHub Business Directory</h1>
+        <h2>Local Business Members</h2>
         <div class="menu">
             <button id="grid" aria-label="Grid view">⬛ Grid</button>
             <button id="list" aria-label="List view">📄 List</button>
