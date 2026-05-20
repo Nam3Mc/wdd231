@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ServiceHub Chamber Home | Dreiser Morales</title>
+    <meta name="description" content="ServiceHub Chamber connects Bogotá residents with trusted local professionals and helps service providers grow their visibility through a strong local business network.">
+    <meta name="author" content="Dreiser Morales">
+    <meta name="theme-color" content="#111827">
+    <link rel="icon" href="images/favicon.ico">
+
+    <meta property="og:title" content="ServiceHub Chamber of Commerce">
+    <meta property="og:description" content="Explore trusted service providers, community events, local weather, and business spotlights in Bogotá.">
+    <meta property="og:image" content="https://nam3mc.github.io/wdd231/chamber/images/servicehub-preview.webp">
+    <meta property="og:url" content="https://nam3mc.github.io/wdd231/chamber/index.html">
+    <meta property="og:type" content="website">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Keep your JS file names however you want, these are just examples -->
+    <!-- <script src="scripts/navigation.js" defer></script> -->
+    <!-- <script src="scripts/home.js" defer></script> -->
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header>
+        <span class="site-brand">
+            <img src="images/chamber-logo.webp" alt="ServiceHub Chamber logo" width="44" height="44" loading="lazy">
+            ServiceHub Chamber
+        </span>
+
+        <button
+            id="ham-btn"
+            class="hamburger"
+            aria-label="Open navigation menu">
+        </button>
+    </header>
+
+    <nav class="navigation" aria-label="Primary navigation">
+        <ul>
+            <li><a href="index.html" class="active" aria-current="page">Home</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li><a href="join.html">Join</a></li>
+            <li><a href="discover.html">Discover</a></li>
+        </ul>
+    </nav>
+
+    <main id="main-content">
+        <h1>ServiceHub Chamber of Commerce</h1>
+
+        <section class="hero">
+            <img
+                src="images/hero-bogota-services.webp"
+                alt="Local professionals providing trusted home and maintenance services in Bogotá"
+                width="1200"
+                height="700">
+
+            <div class="hero-content">
+                <p class="hero-tag">Helping Bogotá connect with trusted professionals</p>
+                <h2>Find reliable services and grow local businesses</h2>
+                <p>
+                    ServiceHub Chamber supports service providers and residents in Bogotá by
+                    promoting trusted professionals, stronger visibility, and better community connections.
+                </p>
+                <a class="cta-button" href="join.html">Join the Chamber</a>
+            </div>
+        </section>
+
+        <section class="info-grid">
+            <section class="card events">
+                <h2>Current Events</h2>
+                <ul>
+                    <li>Small business workshops for local service providers.</li>
+                    <li>Community networking opportunities for contractors and clients.</li>
+                    <li>Training sessions focused on customer trust and service quality.</li>
+                </ul>
+            </section>
+
+            <section class="card weather">
+                <h2>Weather</h2>
+                <div id="weather-card">
+                    <p><strong>Current Temperature:</strong> Loading...</p>
+                    <p><strong>Conditions:</strong> Loading...</p>
+                    <div class="forecast">
+                        <h3>3-Day Forecast</h3>
+                        <ul>
+                            <li>Day 1: Loading...</li>
+                            <li>Day 2: Loading...</li>
+                            <li>Day 3: Loading...</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <section class="spotlights">
+            <h2>Member Spotlights</h2>
+            <div id="spotlight-container" class="spotlight-container">
+                <article class="spotlight-card">
+                    <img src="images/member-placeholder.webp" alt="Business logo placeholder" width="120" height="120" loading="lazy">
+                    <h3>Featured Member</h3>
+                    <p>Company name</p>
+                    <p>Phone number</p>
+                    <p>Address</p>
+                    <p><a href="#">Website</a></p>
+                    <p><strong>Membership:</strong> Gold</p>
+                </article>
+
+                <article class="spotlight-card">
+                    <img src="images/member-placeholder.webp" alt="Business logo placeholder" width="120" height="120" loading="lazy">
+                    <h3>Featured Member</h3>
+                    <p>Company name</p>
+                    <p>Phone number</p>
+                    <p>Address</p>
+                    <p><a href="#">Website</a></p>
+                    <p><strong>Membership:</strong> Silver</p>
+                </article>
+
+                <article class="spotlight-card">
+                    <img src="images/member-placeholder.webp" alt="Business logo placeholder" width="120" height="120" loading="lazy">
+                    <h3>Featured Member</h3>
+                    <p>Company name</p>
+                    <p>Phone number</p>
+                    <p>Address</p>
+                    <p><a href="#">Website</a></p>
+                    <p><strong>Membership:</strong> Gold</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>
+            <strong>ServiceHub Chamber</strong><br>
+            Bogotá, Colombia<br>
+            info@servicehubchamber.com<br>
+            +57 601 000 0000
+        </p>
+
+        <p>
+            &copy; <span id="currentYear"></span> ServiceHub Chamber | Dreiser Morales
+        </p>
+
+        <p>
+            Last Modified:
+            <span id="lastModified"></span>
+        </p>
+    </footer>
+</body>
+</html>
