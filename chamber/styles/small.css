@@ -682,6 +682,59 @@ footer p {
 }
 
 /* =========================================
+   FORECAST TABLE - MOBILE
+========================================= */
+
+#forecast-table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    margin-top: 0.8rem;
+
+    overflow: hidden;
+
+    border-radius: 0.8rem;
+
+    background: #FFFFFF;
+}
+
+#forecast-table thead {
+    background: #1E40AF;
+
+    color: #FFFFFF;
+}
+
+#forecast-table th,
+#forecast-table td {
+    padding: 0.7rem 0.5rem;
+
+    text-align: center;
+
+    font-size: 0.78rem;
+
+    border-bottom: 1px solid #E5E7EB;
+}
+
+#forecast-table tbody tr:nth-child(even) {
+    background: #F3F4F6;
+}
+
+#forecast-table tbody tr:hover {
+    background: #DBEAFE;
+
+    transition: background 0.3s ease;
+}
+
+#forecast-table td {
+    color: #374151;
+}
+
+.forecast {
+    overflow-x: auto;
+}
+
+/* =========================================
    320px FIXES
 ========================================= */
 

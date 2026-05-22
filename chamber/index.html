@@ -23,9 +23,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 
-    <!-- Keep your JS file names however you want, these are just examples -->
-    <!-- <script src="scripts/navigation.js" defer></script> -->
-    <!-- <script src="scripts/home.js" defer></script> -->
+    <script type="module" src="scripts/index.mjs"></script>
+
 </head>
 <body>
     <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -86,15 +85,39 @@
             <section class="card weather">
                 <h2>Weather</h2>
                 <div id="weather-card">
-                    <p><strong>Current Temperature:</strong> Loading...</p>
-                    <p><strong>Conditions:</strong> Loading...</p>
+                    <p id="current-temp"><strong>Current Temperature:</strong> Loading...</p>
+                    <p id="conditions"><strong>Conditions:</strong> Loading...</p>
                     <div class="forecast">
-                        <h3>3-Day Forecast</h3>
-                        <ul>
-                            <li>Day 1: Loading...</li>
-                            <li>Day 2: Loading...</li>
-                            <li>Day 3: Loading...</li>
-                        </ul>
+                        <table id="forecast-table">
+                            <thead>
+                                <tr>
+                                    <th>Day</th>
+                                    <th>Temp</th>
+                                    <th>Wind</th>
+                                    <th>Conditions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="forecast-body">
+                                <tr>
+                                    <td>Loading...</td>
+                                    <td>Loading...</td>
+                                    <td>Loading...</td>
+                                    <td>Loading...</td>
+                                </tr>
+                                <tr>
+                                    <td>Loading...</td>
+                                    <td>Loading...</td>
+                                    <td>Loading...</td>
+                                    <td>Loading...</td>
+                                </tr>
+                                <tr>
+                                    <td>Loading...</td>
+                                    <td>Loading...</td>
+                                    <td>Loading...</td>
+                                    <td>Loading...</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </section>
@@ -103,35 +126,7 @@
         <section class="spotlights">
             <h2>Member Spotlights</h2>
             <div id="spotlight-container" class="spotlight-container">
-                <article class="spotlight-card">
-                    <img src="images/member-placeholder.webp" alt="Business logo placeholder" width="120" height="120" loading="lazy">
-                    <h3>Featured Member</h3>
-                    <p>Company name</p>
-                    <p>Phone number</p>
-                    <p>Address</p>
-                    <p><a href="#">Website</a></p>
-                    <p><strong>Membership:</strong> Gold</p>
-                </article>
-
-                <article class="spotlight-card">
-                    <img src="images/member-placeholder.webp" alt="Business logo placeholder" width="120" height="120" loading="lazy">
-                    <h3>Featured Member</h3>
-                    <p>Company name</p>
-                    <p>Phone number</p>
-                    <p>Address</p>
-                    <p><a href="#">Website</a></p>
-                    <p><strong>Membership:</strong> Silver</p>
-                </article>
-
-                <article class="spotlight-card">
-                    <img src="images/member-placeholder.webp" alt="Business logo placeholder" width="120" height="120" loading="lazy">
-                    <h3>Featured Member</h3>
-                    <p>Company name</p>
-                    <p>Phone number</p>
-                    <p>Address</p>
-                    <p><a href="#">Website</a></p>
-                    <p><strong>Membership:</strong> Gold</p>
-                </article>
+                
             </div>
         </section>
     </main>

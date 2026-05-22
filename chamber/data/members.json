@@ -62,6 +62,123 @@
       "image": "./images/roofing.webp",
       "membership": 2,
       "service": "Roof installation and repair"
+    },
+    {
+      "name": "Bright Glass",
+      "address": "Cra. 24 #85-19, Bogotá, Cundinamarca, 110211",
+      "phone": "+57 601 555 8888",
+      "website": "https://brightglass.com",
+      "image": "./images/bright-glass.webp",
+      "membership": 1,
+      "service": "Glass installation and repair"
+    },
+    {
+      "name": "Urban Movers",
+      "address": "Calle 90 #12-33, Bogotá, Cundinamarca, 110221",
+      "phone": "+57 601 555 9999",
+      "website": "https://urbanmovers.com",
+      "image": "./images/urban-movers.webp",
+      "membership": 2,
+      "service": "Residential and office moving"
+    },
+    {
+      "name": "Green Garden",
+      "address": "Cra. 18 #102-88, Bogotá, Cundinamarca, 110231",
+      "phone": "+57 601 555 1010",
+      "website": "https://greengarden.com",
+      "image": "./images/green-garden.webp",
+      "membership": 3,
+      "service": "Garden maintenance and landscaping"
+    },
+    {
+      "name": "Quick Pest Control",
+      "address": "Calle 53 #19-21, Bogotá, Cundinamarca, 111321",
+      "phone": "+57 601 555 1112",
+      "website": "https://quickpest.com",
+      "image": "./images/quick-pest-control.webp",
+      "membership": 2,
+      "service": "Residential pest extermination"
+    },
+    {
+      "name": "Secure Locks",
+      "address": "Cra. 9 #66-90, Bogotá, Cundinamarca, 110221",
+      "phone": "+57 601 555 1212",
+      "website": "https://securelocks.com",
+      "image": "./images/secure-locks.webp",
+      "membership": 1,
+      "service": "Emergency locksmith services"
+    },
+    {
+      "name": "Aqua Pools",
+      "address": "Calle 140 #10-45, Bogotá, Cundinamarca, 110111",
+      "phone": "+57 601 555 1313",
+      "website": "https://aquapools.com",
+      "image": "./images/aqua-pools.webp",
+      "membership": 3,
+      "service": "Pool cleaning and maintenance"
+    },
+    {
+      "name": "Tech Installers",
+      "address": "Cra. 50 #75-60, Bogotá, Cundinamarca, 111211",
+      "phone": "+57 601 555 1414",
+      "website": "https://techinstallers.com",
+      "image": "./images/tech-installers.webp",
+      "membership": 2,
+      "service": "Smart home and security installations"
+    },
+    {
+      "name": "Stone Masters",
+      "address": "Calle 127 #48-20, Bogotá, Cundinamarca, 110121",
+      "phone": "+57 601 555 1515",
+      "website": "https://stonemasters.com",
+      "image": "./images/stone-masters.webp",
+      "membership": 1,
+      "service": "Granite and marble installations"
+    },
+    {
+      "name": "Fast HVAC",
+      "address": "Cra. 33 #58-11, Bogotá, Cundinamarca, 111221",
+      "phone": "+57 601 555 1616",
+      "website": "https://fasthvac.com",
+      "image": "./images/fast-HVAC.webp",
+      "membership": 3,
+      "service": "Air conditioning and ventilation"
+    },
+    {
+      "name": "Golden Floors",
+      "address": "Calle 80 #16-44, Bogotá, Cundinamarca, 110211",
+      "phone": "+57 601 555 1717",
+      "website": "https://goldenfloors.com",
+      "image": "./images/golden-floors.webp",
+      "membership": 2,
+      "service": "Wood and ceramic flooring"
+    },
+    {
+      "name": "Rapid Repairs",
+      "address": "Cra. 28 #70-25, Bogotá, Cundinamarca, 111311",
+      "phone": "+57 601 555 1818",
+      "website": "https://rapidrepairs.com",
+      "image": "./images/rapid-repairs.webp",
+      "membership": 1,
+      "service": "General home maintenance"
+    },
+    {
+      "name": "Blue Water Tanks",
+      "address": "Calle 98 #32-50, Bogotá, Cundinamarca, 110221",
+      "phone": "+57 601 555 1919",
+      "website": "https://bluewatertanks.com",
+      "image": "./images/blue-water-tanks.webp",
+      "membership": 2,
+      "service": "Water tank cleaning services"
+    },
+    {
+      "name": "Prime Security",
+      "address": "Cra. 13 #77-88, Bogotá, Cundinamarca, 110231",
+      "phone": "+57 601 555 2020",
+      "website": "https://primesecurity.com",
+      "image": "./images/prime-security.webp",
+      "membership": 3,
+      "service": "Residential and business security systems"
     }
   ]
 }

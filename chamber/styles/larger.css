@@ -326,29 +326,27 @@
 
     .spotlight-container {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         gap: 1rem;
     }
-
+    
     .spotlight-card {
-        background: #FFFFFF;
-        border-radius: 1.2rem;
-        padding: 1.25rem;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
-        text-align: center;
+        display: grid;
+        grid-template-columns: 90px 1fr;
+        align-items: center;
+        text-align: left;
+        gap: 1rem;
     }
-
+    
     .spotlight-card img {
-        width: 120px;
-        height: 120px;
-        object-fit: cover;
-        margin: 0 auto 1rem;
-        border-radius: 1rem;
+        width: 90px;
+        height: 90px;
+        margin: 0;
     }
-
-    .spotlight-card h3 {
-        margin-top: 0;
-        margin-bottom: 0.75rem;
+    
+    .spotlight-card h3,
+    .spotlight-card p {
+        margin: 0.25rem 0;
     }
 
     .spotlight-card p {
@@ -364,6 +362,33 @@
 
     .spotlight-card a:hover {
         text-decoration: underline;
+    }
+
+    /* =========================================
+       FORECAST TABLE - LARGE
+    ========================================= */
+    
+    #forecast-table th,
+    #forecast-table td {
+        padding: 1rem;
+    
+        font-size: 0.95rem;
+    }
+    
+    #forecast-table th {
+        font-weight: 700;
+    
+        letter-spacing: 0.03em;
+    }
+    
+    #forecast-table td {
+        font-size: 0.9rem;
+    }
+    
+    #forecast-table tbody tr:hover {
+        transform: scale(1.01);
+    
+        transition: all 0.2s ease;
     }
 
 }

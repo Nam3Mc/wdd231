@@ -6,8 +6,10 @@ let totalCredits = 0
 
 document.getElementById('currentYear').textContent =
   new Date().getFullYear()
+  
 document.getElementById('lastModified').textContent =
   document.lastModified
+
 navButton.addEventListener('click', () => {
     navButton.classList.toggle('show')
     navBar.classList.toggle('show')
