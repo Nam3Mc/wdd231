@@ -68,10 +68,7 @@
     }
 
     .navigation li {
-        flex: 1 1 140px;
-        width: 100%;
-        min-width: 140px;
-        max-width: 220px;
+        flex: 0 1 auto;
     }
 
     .navigation a {
@@ -120,7 +117,7 @@
     }
 
     .menu button {
-        width: clamp(120px, 20vw, 160px);
+        min-width: 120px;
 
         padding: 0.9rem 1rem;
 
@@ -163,27 +160,35 @@
         padding: 1rem;
     }
 
-    .service-card.list {
+    #cards.list .service-card {
         width: 100%;
-        grid-template-columns: 1fr;
+
         max-width: 850px;
-        text-align: center;
+
         margin: 0 auto;
-        display: grid;
-        grid-template-columns: minmax(140px, 220px) 1fr;
-        align-items: center;
-        gap: 1rem;
+
+        display: flex;
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 0.6rem;
+
         text-align: left;
     }
 
-    .service-card.list img {
-        width: 100%;
-        height: 160px;
-        object-fit: cover;
+    #cards.list .service-card img {
+        display: none;
     }
 
-    .service-card.list a {
-        width: 100%
+    #cards.list .service-card a {
+        width: auto;
+
+        padding: 0;
+
+        background: none;
+
+        color: #1E40AF;
     }
 
     .navigation a:focus,
@@ -201,6 +206,9 @@
         padding: 1.5rem 1rem;
     }
 
+    /* =========================================
+       HERO
+    ========================================= */
 
     .hero {
         display: grid;
@@ -266,6 +274,10 @@
         background: #1E3A8A;
     }
 
+    /* =========================================
+       INFO GRID
+    ========================================= */
+
     .info-grid {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -299,6 +311,10 @@
     .forecast {
         margin-top: 1rem;
     }
+
+    /* =========================================
+       SPOTLIGHTS
+    ========================================= */
 
     .spotlights {
         margin-bottom: 2rem;
