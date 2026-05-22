@@ -2,6 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta
+        http-equiv="Content-Security-Policy"
+        content="
+        default-src 'self';
+        img-src 'self' data:;
+        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+        font-src 'self' https://fonts.gstatic.com;
+        script-src 'self';
+    ">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ServiceHub Chamber Directory | Dreiser Morales</title>
     <meta name="description" content="ServiceHub Chamber connects local professionals including carpenters, welders, painters, cleaners, electricians, and plumbers with customers in the community.">
@@ -25,13 +34,7 @@
           crossorigin>  
     <link
     href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap"
-    rel="stylesheet">
-    <noscript>
-        <link
-            rel="stylesheet"
-            href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap">
-    </noscript>
-    
+    rel="stylesheet">    
     <script src="scripts/directory.js" defer></script>
 
 </head>
