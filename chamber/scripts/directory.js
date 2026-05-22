@@ -1,4 +1,6 @@
 import cardCreator from "./cards-creator.mjs";
+import updateFooter from "./update-footer.mjs"
+import hamburguerMenu from "./hamburguer-menu.mjs"
 
 const url = './data/members.json';
 const cards = document.querySelector('#cards');
@@ -7,27 +9,22 @@ const gridBtn = document.querySelector('#grid');
 
 listBtn.addEventListener('click', () => {
     cards.classList.add('list')
-
+    
     listBtn.classList.add('active')
     gridBtn.classList.remove('active')
 })
 
 gridBtn.addEventListener('click', () => {
     cards.classList.remove('list')
-
+    
     gridBtn.classList.add('active')
     listBtn.classList.remove('active')
 })
 
-document.getElementById('currentYear').textContent = new Date().getFullYear()
-document.getElementById('lastModified').textContent = document.lastModified
-
 const displayServises = (services) => {
     services.forEach(service => {
-
         const card = cardCreator(service)
         cards.appendChild(card)
-
     });
 }
 
@@ -42,4 +39,6 @@ const getServices = async (APIUrl) => {
     }
 }
 
+hamburguerMenu()
+updateFooter()
 getServices(url)
