@@ -1,7 +1,7 @@
 export default function forecastHandler(list) {
     
     const days = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'];
-    const dayIndex = new Date().getDay();
+    const dayIndex = new Date().getDay()+1
 
     const tableBody = document.querySelector('#forecast-body');
     tableBody.textContent = '';
