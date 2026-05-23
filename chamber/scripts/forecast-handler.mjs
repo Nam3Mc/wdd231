@@ -18,7 +18,7 @@ export default function forecastHandler(list) {
         tr.append(temp);
 
         const wind = document.createElement('td');
-        wind.innerHTML = `${list[i].wind.speed} k/h`;
+        wind.innerHTML = `${list[i].wind.speed} km/h`;
         tr.append(wind);
 
         const condition = document.createElement('td');

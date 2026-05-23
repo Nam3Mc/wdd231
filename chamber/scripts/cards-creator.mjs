@@ -1,7 +1,5 @@
 export default function cardCreator(service) {
 
-    console.log(service)
-
     const card = document.createElement('section')
     const companyLogo = document.createElement('img')
     const address = document.createElement('p')

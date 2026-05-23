@@ -7,7 +7,6 @@ export default function fetchServices(url) {
         .then(data => {
 
             const selectedServices = serviceSelector(data.members)
-            console.log(selectedServices)
             renderSpotLight(selectedServices)
         })
 }
