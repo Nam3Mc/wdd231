@@ -1,69 +1,42 @@
 @media only screen and (min-width: 20.1rem) {
 
-    /* =========================================
-       HEADER
-    ========================================= */
-
     header {
         width: 100%;
-
         display: flex;
         justify-content: space-between;
         align-items: center;
-
         padding: 0.8rem 1rem;
-
-        background: #111827;
-
+        background: var(--primary);
         font-size: clamp(1rem, 3vw, 1.6rem);
     }
 
     header span {
         display: flex;
         align-items: center;
-
-        gap: 0.6rem;
-
         flex-wrap: wrap;
+        gap: 0.6rem;
     }
-
-    /* =========================================
-       HAMBURGER
-    ========================================= */
 
     .hamburger {
         display: none;
     }
 
-    /* =========================================
-       NAVIGATION
-    ========================================= */
-
     .navigation {
         width: 100%;
-
         display: block;
-
-        background-color: #111827;
-
-        border-top: 1px solid rgba(255,255,255,0.08);
+        background: var(--primary);
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
     }
 
     .navigation ul {
+        width: 100%;
         display: flex;
-
-        flex-wrap: wrap;
-
         justify-content: center;
         align-items: center;
-
+        flex-wrap: wrap;
         gap: 0.5rem;
-
-        width: 100%;
-
         margin: 0;
         padding: 0.7rem;
-
         list-style: none;
     }
 
@@ -73,85 +46,56 @@
 
     .navigation a {
         display: block;
-
         width: 100%;
-
         padding: 0.9rem 1rem;
-
+        border-radius: 0.6rem;
+        color: var(--text-light);
         text-align: center;
-
         text-decoration: none;
-
         font-size: clamp(0.9rem, 2vw, 1.05rem);
         font-weight: 600;
-
-        color: #F9FAFB;
-
-        border-radius: 0.6rem;
-
-        transition: background 0.3s ease,
-                    transform 0.2s ease;
+        transition: background var(--transition), transform 0.2s ease;
     }
 
     .navigation a:hover,
     .navigation a.active {
-        background: #1E3A8A;
-        color: #FFFFFF;
+        background: var(--blue-dark);
+        color: var(--surface);
     }
-
-    /* =========================================
-       MENU BUTTONS
-    ========================================= */
 
     .menu {
         display: flex;
-
         justify-content: center;
         align-items: center;
-
         flex-wrap: wrap;
-
         gap: 1rem;
-
         padding: 1rem;
     }
 
     .menu button {
         min-width: 120px;
-
         padding: 0.9rem 1rem;
-
         border: none;
-
-        border-radius: 0.8rem;
-
-        background: #1E40AF;
-        color: #F9FAFB;
-
+        border-radius: var(--radius-md);
+        background: var(--blue);
+        color: var(--text-light);
         font-size: 1rem;
         font-weight: 600;
-
         cursor: pointer;
-
-        transition: background 0.3s ease,
-                    transform 0.2s ease;
+        transition: background var(--transition), transform 0.2s ease;
     }
 
     .menu button:hover {
-        background: #1E3A8A;
+        background: var(--blue-dark);
     }
 
     .menu button.active {
-        background: #111827;
+        background: var(--primary);
     }
 
     .menu button:active {
         transform: scale(0.96);
     }
-
-    /* =========================================
-       LIST VIEW
-    ========================================= */
 
     #cards.list {
         display: flex;
@@ -162,18 +106,12 @@
 
     #cards.list .service-card {
         width: 100%;
-
         max-width: 850px;
-
         margin: 0 auto;
-
         display: flex;
         flex-direction: column;
-
         align-items: flex-start;
-
         gap: 0.6rem;
-
         text-align: left;
     }
 
@@ -183,152 +121,105 @@
 
     #cards.list .service-card a {
         width: auto;
-
         padding: 0;
-
         background: none;
-
-        color: #1E40AF;
+        color: var(--blue);
     }
 
-    .navigation a:focus,
-    .menu button:focus {
-        outline: 3px solid #60A5FA;
-
-        outline-offset: 2px;
+    #cards.list .service-card a:hover {
+        color: var(--blue-dark);
     }
-
-    /* =========================================
-       FOOTER
-    ========================================= */
 
     footer {
         padding: 1.5rem 1rem;
     }
 
-    /* =========================================
-       HERO
-    ========================================= */
     .hero {
         min-height: 620px;
-    
         display: flex;
         align-items: center;
-    
-        margin: 1rem 0 2rem;
-    
-        border-radius: 1.2rem;
-    
-        overflow: hidden;
-    
         position: relative;
-    
-        background: #111827;
-    
+        margin: 1rem 0 2rem;
+        overflow: hidden;
+        border-radius: var(--radius-xl);
+        background: var(--primary);
         text-align: left;
     }
-    
+
     .hero img {
         position: absolute;
         inset: 0;
-    
         width: 100%;
         height: 100%;
-    
         object-fit: cover;
         object-position: center;
-    
         z-index: 1;
     }
-    
+
     .hero::after {
         content: "";
-    
         position: absolute;
         inset: 0;
-    
+        z-index: 2;
         background: linear-gradient(
             90deg,
-            rgba(249, 250, 251, 0.96) 0%,
-            rgba(249, 250, 251, 0.82) 35%,
-            rgba(249, 250, 251, 0.35) 55%,
-            rgba(249, 250, 251, 0.02) 100%
+            rgba(249, 250, 251, 0.96) 30%,
+            rgba(249, 250, 251, 0.82) 60%,
+            rgba(249, 250, 251, 0.35) 80%,
+            rgba(249, 250, 251, 0.02) 160%
         );
-    
-        z-index: 2;
     }
-    
+
     .hero-content {
         position: relative;
         z-index: 3;
-    
         max-width: 610px;
-    
         padding: 4rem 3rem;
-    
-        color: #111827;
+        color: var(--primary);
     }
-    
+
     .hero-tag {
         margin: 0 0 0.8rem;
-    
-        color: #1D4ED8;
-    
+        color: var(--blue);
         font-size: 0.9rem;
         font-weight: 800;
-    
         text-transform: uppercase;
         letter-spacing: 0.06em;
     }
-    
+
     .hero h2 {
         margin: 0 0 1rem;
-    
+        color: var(--primary);
         font-size: clamp(3rem, 6vw, 5rem);
         line-height: 0.95;
-    
-        color: #111827;
-    }
-    
-    .hero h2 span {
-        color: #1D4ED8;
-    }
-    
-    .hero-content p {
-        max-width: 36rem;
-    
-        margin-bottom: 1.5rem;
-    
-        font-size: 1.1rem;
-        line-height: 1.6;
-    
-        color: #374151;
-    }
-    
-    .cta-button {
-        display: inline-block;
-    
-        width: fit-content;
-    
-        background: #1E40AF;
-        color: #FFFFFF;
-    
-        text-decoration: none;
-    
-        padding: 0.95rem 1.4rem;
-    
-        border-radius: 0.8rem;
-    
-        font-weight: 700;
-    }
-    
-    .cta-button:hover {
-        background: #1E3A8A;
     }
 
-    /* =========================================
-       INFO GRID
-    ========================================= */
+    .hero h2 span {
+        color: var(--blue);
+    }
+
+    .hero-content p {
+        max-width: 36rem;
+        margin-bottom: 1.5rem;
+        color: var(--text-table);
+        font-size: 1.1rem;
+        line-height: 1.6;
+    }
+
+    .cta-button {
+        display: inline-block;
+        width: fit-content;
+        padding: 0.95rem 1.4rem;
+        border-radius: var(--radius-md);
+        background: var(--blue);
+        color: var(--surface);
+        text-decoration: none;
+        font-weight: 700;
+    }
+
+    .cta-button:hover {
+        background: var(--blue-dark);
+    }
 
     .info-grid {
         display: grid;
@@ -338,10 +229,10 @@
     }
 
     .card {
-        background: #FFFFFF;
-        border-radius: 1.2rem;
         padding: 1.25rem;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+        border-radius: var(--radius-xl);
+        background: var(--surface);
+        box-shadow: var(--shadow-sm);
         text-align: left;
     }
 
@@ -356,17 +247,14 @@
     }
 
     .card li,
-    #weather-card p {
-        color: #4B5563;
+    #weather-card p,
+    .spotlight-card p {
+        color: var(--text-muted);
     }
 
     .forecast {
         margin-top: 1rem;
     }
-
-    /* =========================================
-       SPOTLIGHTS
-    ========================================= */
 
     .spotlights {
         margin-bottom: 2rem;
@@ -381,21 +269,21 @@
         grid-template-columns: repeat(3, 1fr);
         gap: 1rem;
     }
-    
+
     .spotlight-card {
         display: grid;
         grid-template-columns: 90px 1fr;
         align-items: center;
-        text-align: left;
         gap: 1rem;
+        text-align: left;
     }
-    
+
     .spotlight-card img {
         width: 90px;
         height: 90px;
         margin: 0;
     }
-    
+
     .spotlight-card h3,
     .spotlight-card p {
         margin: 0.25rem 0;
@@ -403,44 +291,36 @@
 
     .spotlight-card p {
         margin: 0.45rem 0;
-        color: #4B5563;
     }
 
     .spotlight-card a {
-        color: #1D4ED8;
+        color: var(--blue);
         text-decoration: none;
         font-weight: 600;
     }
 
     .spotlight-card a:hover {
+        color: var(--blue-dark);
         text-decoration: underline;
     }
 
-    /* =========================================
-       FORECAST TABLE - LARGE
-    ========================================= */
-    
     #forecast-table th,
     #forecast-table td {
         padding: 1rem;
-    
-        font-size: 0.95rem;
     }
-    
+
     #forecast-table th {
+        font-size: 0.95rem;
         font-weight: 700;
-    
         letter-spacing: 0.03em;
     }
-    
+
     #forecast-table td {
         font-size: 0.9rem;
     }
-    
+
     #forecast-table tbody tr:hover {
         transform: scale(1.01);
-    
-        transition: all 0.2s ease;
+        transition: transform 0.2s ease, background 0.2s ease;
     }
-
 }

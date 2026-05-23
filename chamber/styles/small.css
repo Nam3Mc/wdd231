@@ -1,12 +1,39 @@
 /* =========================================
-   COLOR SYSTEM
+   VARIABLES
 ========================================= */
-/*
-Primary:   #111827
-Secondary: #1D4ED8
-Background:#F9FAFB
-Text:      #1F2937
-*/
+
+:root {
+    --primary: #111827;
+    --primary-light: #1F2937;
+
+    --blue: #1E40AF;
+    --blue-dark: #1E3A8A;
+    --blue-light: #60A5FA;
+    --blue-soft: #BFDBFE;
+
+    --background: #F9FAFB;
+    --surface: #FFFFFF;
+
+    --text: #1F2937;
+    --text-muted: #4B5563;
+    --text-table: #374151;
+    --text-light: #F9FAFB;
+
+    --border: #E5E7EB;
+    --row-alt: #F3F4F6;
+    --row-hover: #DBEAFE;
+
+    --shadow-sm: 0 4px 20px rgba(0, 0, 0, 0.06);
+    --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.08);
+    --shadow-lg: 0 8px 28px rgba(0, 0, 0, 0.12);
+
+    --radius-sm: 0.5rem;
+    --radius-md: 0.8rem;
+    --radius-lg: 1rem;
+    --radius-xl: 1.2rem;
+
+    --transition: 0.3s ease;
+}
 
 /* =========================================
    GLOBAL
@@ -19,15 +46,44 @@ Text:      #1F2937
 body {
     width: 100%;
     max-width: 1200px;
-
     margin: 0 auto;
-
     overflow-x: hidden;
-
     font-family: 'Inter', sans-serif;
+    background: var(--background);
+    color: var(--text);
+}
 
-    background: #F9FAFB;
-    color: #1F2937;
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* =========================================
+   ACCESSIBILITY
+========================================= */
+
+.skip-link {
+    position: absolute;
+    left: -9999px;
+}
+
+.skip-link:focus {
+    left: 0.5rem;
+    top: 0.5rem;
+    z-index: 1000;
+    padding: 0.6rem 0.8rem;
+    border-radius: var(--radius-sm);
+    background: var(--surface);
+    color: var(--primary);
+}
+
+.navigation a:focus,
+.menu button:focus,
+.hamburger:focus,
+.service-card a:focus,
+.cta-button:focus {
+    outline: 3px solid var(--blue-light);
+    outline-offset: 2px;
 }
 
 /* =========================================
@@ -36,25 +92,19 @@ body {
 
 header {
     width: 100%;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     padding: 0.7rem 1rem;
-
-    background-color: #111827;
-    color: #F9FAFB;
+    background: var(--primary);
+    color: var(--text-light);
 }
 
 header span {
     display: flex;
     align-items: center;
-
     gap: 0.5rem;
-
     font-size: clamp(1rem, 4vw, 1.5rem);
-
     font-weight: 700;
 }
 
@@ -68,10 +118,8 @@ header img {
 
 .navigation {
     width: 100%;
-
     display: none;
-
-    background-color: #111827;
+    background: var(--primary);
 }
 
 .navigation.show {
@@ -80,10 +128,8 @@ header img {
 
 .navigation ul {
     width: 100%;
-
     margin: 0;
     padding: 0;
-
     list-style: none;
 }
 
@@ -93,87 +139,49 @@ header img {
 
 .navigation a {
     display: block;
-
     padding: 1rem;
-
-    color: #F9FAFB;
-
+    color: var(--text-light);
     text-decoration: none;
-
     text-align: center;
-
-    transition: background 0.3s ease,
-                color 0.3s ease;
+    transition: background var(--transition), color var(--transition);
 }
 
 .navigation a:hover,
 .navigation a.active {
-    background: #1E3A8A;
-    color: #FFFFFF;
+    background: var(--blue-dark);
+    color: var(--surface);
 }
 
 /* =========================================
-   HAMBURGER BUTTON
+   HAMBURGER
 ========================================= */
 
 .hamburger {
     width: 44px;
     height: 44px;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     background: none;
     border: none;
-
     cursor: pointer;
 }
 
-/* =========================================
-   HAMBURGER ICON
-========================================= */
-
 .hamburger::after {
     content: "\2630";
-
+    padding: 0.3rem 0.55rem;
+    border-radius: 0.7rem;
+    color: var(--blue-light);
     font-size: 1.5rem;
     font-weight: bold;
-
     line-height: 1;
-
-    color: #1D4ED8;
-
-    padding: 0.3rem 0.55rem;
-
-    border-radius: 0.7rem;
-
-    transition: all 0.3s ease;
+    transition: all var(--transition);
 }
-
-/* =========================================
-   ACTIVE HAMBURGER
-========================================= */
 
 .hamburger.show::after {
     content: "\00d7";
-
-    color: #3B82F6;
-
-    border: 2px solid #3B82F6;
-}
-
-/* =========================================
-   FOCUS STATES
-========================================= */
-
-.navigation a:focus,
-.menu button:focus,
-.hamburger:focus,
-.service-card a:focus {
-    outline: 3px solid #60A5FA;
-
-    outline-offset: 2px;
+    color: var(--blue-light);
+    border: 2px solid var(--blue-light);
 }
 
 /* =========================================
@@ -182,59 +190,66 @@ header img {
 
 main {
     width: 100%;
-
     padding: 1rem;
-
     text-align: center;
 }
 
 main h1,
 main h2 {
-    color: #111827;
+    color: var(--primary);
 }
 
 /* =========================================
-   MENU BUTTONS
+   BUTTONS
 ========================================= */
 
 .menu {
     width: 100%;
-
     display: flex;
-
     justify-content: center;
     align-items: center;
-
     flex-wrap: wrap;
-
     gap: 1rem;
-
     padding: 1rem 0;
+}
+
+.menu button,
+.cta-button,
+.service-card a {
+    border-radius: var(--radius-md);
+    background: var(--blue);
+    color: var(--surface);
+    text-align: center;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background var(--transition), transform 0.2s ease;
 }
 
 .menu button {
     min-width: 120px;
-
     padding: 0.8rem 1.2rem;
-
     border: none;
-
-    border-radius: 0.8rem;
-
-    background: #1E40AF;
-    color: #FFFFFF;
-
     font-size: 1rem;
-    font-weight: 600;
-
     cursor: pointer;
-
-    transition: background 0.3s ease,
-                transform 0.2s ease;
 }
 
-.menu button:hover {
-    background: #1E3A8A;
+.cta-button {
+    display: inline-block;
+    width: auto;
+    padding: 0.85rem 1.2rem;
+    font-size: 0.95rem;
+    font-weight: 700;
+}
+
+.service-card a {
+    margin-top: auto;
+    padding: 0.8rem 1rem;
+}
+
+.menu button:hover,
+.cta-button:hover,
+.service-card a:hover {
+    background: var(--blue-dark);
 }
 
 .menu button:active {
@@ -242,7 +257,7 @@ main h2 {
 }
 
 .menu button.active {
-    background: #111827;
+    background: var(--primary);
 }
 
 /* =========================================
@@ -251,107 +266,59 @@ main h2 {
 
 #cards {
     width: 100%;
-
     display: grid;
-
-    grid-template-columns: repeat(
-        auto-fit,
-        minmax(220px, 1fr)
-    );
-
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 1rem;
-
     padding: 0.8rem;
-
     margin: 0 auto;
 }
 
 /* =========================================
-   SERVICE CARD
+   SHARED CARD STYLE
 ========================================= */
+
+.service-card,
+.card,
+.spotlight-card {
+    background: var(--surface);
+    box-shadow: var(--shadow-sm);
+}
 
 .service-card {
     width: 100%;
-
-    background: #FFFFFF;
-
-    border-radius: 1.2rem;
-
-    overflow: hidden;
-
-    padding: 1rem;
-
     display: flex;
     flex-direction: column;
-
     gap: 0.8rem;
-
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
-
-    transition: transform 0.3s ease,
-                box-shadow 0.3s ease;
+    padding: 1rem;
+    overflow: hidden;
+    border-radius: var(--radius-xl);
+    transition: transform var(--transition), box-shadow var(--transition);
 }
 
 .service-card:hover {
     transform: translateY(-3px);
-
-    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.12);
+    box-shadow: var(--shadow-lg);
 }
-
-/* =========================================
-   IMAGE
-========================================= */
 
 .service-card img {
     width: 100%;
     height: 180px;
-
     display: block;
-
     object-fit: cover;
-
     border-radius: 0.9rem;
 }
 
-/* =========================================
-   TEXT
-========================================= */
+.service-card p,
+.card li,
+#weather-card p,
+.spotlight-card p {
+    color: var(--text-muted);
+}
 
 .service-card p {
     margin: 0;
-
     font-size: 0.95rem;
-
     line-height: 1.5;
-
-    color: #4B5563;
-}
-
-/* =========================================
-   BUTTON / LINK
-========================================= */
-
-.service-card a {
-    margin-top: auto;
-
-    padding: 0.8rem 1rem;
-
-    border-radius: 0.8rem;
-
-    background: #1E40AF;
-    color: #FFFFFF;
-
-    text-align: center;
-
-    text-decoration: none;
-
-    font-weight: 600;
-
-    transition: background 0.3s ease;
-}
-
-.service-card a:hover {
-    background: #1E3A8A;
 }
 
 /* =========================================
@@ -361,19 +328,12 @@ main h2 {
 #cards.list {
     display: flex;
     flex-direction: column;
-
     gap: 0.8rem;
 }
 
 #cards.list .service-card {
-    display: flex;
-    flex-direction: column;
-
     align-items: flex-start;
-
     text-align: left;
-
-    padding: 1rem;
 }
 
 #cards.list .service-card img {
@@ -383,38 +343,13 @@ main h2 {
 #cards.list .service-card a {
     margin: 0;
     padding: 0;
-
     background: none;
-
-    color: #1E40AF;
-
+    color: var(--blue);
     text-align: left;
 }
 
-/* =========================================
-   FOOTER
-========================================= */
-
-footer {
-    width: 100%;
-
-    display: flex;
-    flex-direction: column;
-
-    gap: 0.6rem;
-
-    padding: 1.5rem 1rem;
-
-    background: #111827;
-    color: #F9FAFB;
-
-    text-align: center;
-
-    border-top: 2px solid #3B82F6;
-}
-
-footer p {
-    margin: 0;
+#cards.list .service-card a:hover {
+    color: var(--blue-dark);
 }
 
 /* =========================================
@@ -423,120 +358,73 @@ footer p {
 
 .hero {
     position: relative;
-
     min-height: 520px;
-
     display: flex;
     align-items: flex-end;
-
     margin: 1rem 0 1.5rem;
-
     overflow: hidden;
-
-    border-radius: 1rem;
-
-    background: #111827;
-
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-
+    border-radius: var(--radius-lg);
+    background: var(--primary);
+    box-shadow: var(--shadow-md);
     text-align: left;
 }
 
 .hero img {
     position: absolute;
     inset: 0;
-
     width: 100%;
     height: 100%;
-
     object-fit: cover;
     object-position: 62% center;
-
     z-index: 1;
 }
 
 .hero::after {
     content: "";
-
     position: absolute;
     inset: 0;
-
     background: linear-gradient(
         to top,
         rgba(17, 24, 39, 0.92),
         rgba(17, 24, 39, 0.45),
         rgba(17, 24, 39, 0.1)
     );
-
     z-index: 2;
 }
 
 .hero-content {
     position: relative;
     z-index: 3;
-
     padding: 1.4rem;
-
-    color: #FFFFFF;
+    color: var(--surface);
 }
 
 .hero-tag {
     margin: 0 0 0.6rem;
-
-    color: #93C5FD;
-
+    color: var(--blue-soft);
     font-size: 0.75rem;
     font-weight: 700;
-
     text-transform: uppercase;
     letter-spacing: 0.06em;
 }
 
 .hero h2 {
     margin: 0 0 0.8rem;
-
+    color: var(--surface);
     font-size: clamp(2rem, 11vw, 3rem);
     line-height: 1;
-
-    color: #FFFFFF;
 }
 
 .hero h2 span {
-    color: #3B82F6;
+    color: var(--blue-light);
 }
 
 .hero-content p {
     max-width: 32rem;
-
     margin-bottom: 1rem;
-
+    color: #E5E7EB;
     font-size: 0.95rem;
     line-height: 1.5;
-
-    color: #E5E7EB;
-}
-
-.cta-button {
-    display: inline-block;
-
-    width: auto;
-
-    padding: 0.85rem 1.2rem;
-
-    border-radius: 0.8rem;
-
-    background: #1E40AF;
-    color: #FFFFFF;
-
-    text-align: center;
-    text-decoration: none;
-
-    font-size: 0.95rem;
-    font-weight: 700;
-}
-
-.cta-button:hover {
-    background: #1E3A8A;
 }
 
 /* =========================================
@@ -545,48 +433,32 @@ footer p {
 
 .info-grid {
     display: grid;
-
     grid-template-columns: 1fr;
-
     gap: 1rem;
-
     margin-bottom: 1.5rem;
 }
 
 .card {
-    background: #FFFFFF;
-
-    border-radius: 1rem;
-
     padding: 1rem;
-
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
-
+    border-radius: var(--radius-lg);
     text-align: left;
 }
 
 .card h2 {
     margin-top: 0;
-
     margin-bottom: 0.8rem;
-
     font-size: 1.2rem;
 }
 
 .card ul {
     margin: 0;
-
     padding-left: 1rem;
 }
 
 .card li {
     margin-bottom: 0.6rem;
-
     font-size: 0.9rem;
-
     line-height: 1.4;
-
-    color: #4B5563;
 }
 
 /* =========================================
@@ -595,36 +467,64 @@ footer p {
 
 #weather-card p {
     margin: 0 0 0.6rem;
-
     font-size: 0.9rem;
-
-    color: #4B5563;
 }
 
 .forecast {
     margin-top: 0.8rem;
+    overflow-x: auto;
 }
 
 .forecast h3 {
     margin-bottom: 0.5rem;
-
+    color: var(--primary);
     font-size: 1rem;
-
-    color: #111827;
 }
 
 .forecast ul {
     margin: 0;
-
     padding-left: 1rem;
 }
 
+/* =========================================
+   FORECAST TABLE
+========================================= */
+
 #forecast-table {
+    width: 100%;
     min-width: 300px;
+    margin-top: 0.8rem;
+    overflow: hidden;
+    border-collapse: collapse;
+    border-radius: var(--radius-md);
+    background: var(--surface);
+}
+
+#forecast-table thead {
+    background: var(--blue);
+    color: var(--surface);
+}
+
+#forecast-table th,
+#forecast-table td {
+    padding: 0.7rem 0.5rem;
+    border-bottom: 1px solid var(--border);
+    text-align: center;
+    font-size: 0.78rem;
+    word-break: break-word;
 }
 
 #forecast-table td {
-    word-break: break-word;
+    color: var(--text-table);
+}
+
+#forecast-table tbody tr:nth-child(even) {
+    background: var(--row-alt);
+}
+
+#forecast-table tbody tr:hover {
+    background: var(--row-hover);
+    transition: background var(--transition);
 }
 
 /* =========================================
@@ -637,144 +537,70 @@ footer p {
 
 .spotlights h2 {
     margin-bottom: 0.8rem;
-
     font-size: 1.3rem;
 }
 
 .spotlight-container {
     display: grid;
-
     grid-template-columns: 1fr;
-
     gap: 1rem;
 }
 
 .spotlight-card {
-    background: #FFFFFF;
-
-    border-radius: 1rem;
-
     padding: 1rem;
-
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
-
+    border-radius: var(--radius-lg);
     text-align: center;
 }
 
 .spotlight-card img {
     width: 90px;
     height: 90px;
-
     object-fit: cover;
-
     margin: 0 auto 0.8rem;
-
-    border-radius: 0.8rem;
+    border-radius: var(--radius-md);
 }
 
 .spotlight-card h3 {
     margin-top: 0;
-
     margin-bottom: 0.6rem;
-
+    color: var(--primary);
     font-size: 1.1rem;
-
-    color: #111827;
 }
 
 .spotlight-card p {
     margin: 0.35rem 0;
-
     font-size: 0.88rem;
-
     line-height: 1.4;
-
-    color: #4B5563;
 }
 
 .spotlight-card a {
-    color: #1D4ED8;
-
+    color: var(--blue);
     text-decoration: none;
-
     font-weight: 600;
 }
 
-/* =========================================
-   SKIP LINK
-========================================= */
-
-.skip-link {
-    position: absolute;
-
-    left: -9999px;
-}
-
-.skip-link:focus {
-    left: 0.5rem;
-    top: 0.5rem;
-
-    z-index: 1000;
-
-    padding: 0.6rem 0.8rem;
-
-    border-radius: 0.5rem;
-
-    background: #FFFFFF;
-    color: #111827;
+.spotlight-card a:hover {
+    color: var(--blue-dark);
 }
 
 /* =========================================
-   FORECAST TABLE - MOBILE
+   FOOTER
 ========================================= */
 
-#forecast-table {
+footer {
     width: 100%;
-
-    border-collapse: collapse;
-
-    margin-top: 0.8rem;
-
-    overflow: hidden;
-
-    border-radius: 0.8rem;
-
-    background: #FFFFFF;
-}
-
-#forecast-table thead {
-    background: #1E40AF;
-
-    color: #FFFFFF;
-}
-
-#forecast-table th,
-#forecast-table td {
-    padding: 0.7rem 0.5rem;
-
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    padding: 1.5rem 1rem;
+    border-top: 2px solid var(--blue-light);
+    background: var(--primary);
+    color: var(--text-light);
     text-align: center;
-
-    font-size: 0.78rem;
-
-    border-bottom: 1px solid #E5E7EB;
 }
 
-#forecast-table tbody tr:nth-child(even) {
-    background: #F3F4F6;
-}
-
-#forecast-table tbody tr:hover {
-    background: #DBEAFE;
-
-    transition: background 0.3s ease;
-}
-
-#forecast-table td {
-    color: #374151;
-}
-
-.forecast {
-    overflow-x: auto;
+footer p {
+    margin: 0;
 }
 
 /* =========================================
@@ -782,7 +608,6 @@ footer p {
 ========================================= */
 
 @media only screen and (max-width: 320px) {
-
     header {
         padding: 0.7rem;
     }
@@ -801,7 +626,6 @@ footer p {
 
     #cards {
         grid-template-columns: 1fr;
-
         padding: 0.5rem;
     }
 
@@ -816,5 +640,4 @@ footer p {
     #cards.list .service-card {
         text-align: left;
     }
-
 }
