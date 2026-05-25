@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta
+        http-equiv="Content-Security-Policy"
+        content="
+        default-src 'self';
+        img-src 'self' data:;
+        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+        font-src 'self' https://fonts.gstatic.com;
+        script-src 'self';
+    ">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ServiceHub Chamber Join Page | Dreiser Morales</title>
+    <meta name="description" content="Join ServiceHub Chamber and connect your local business with customers in the community.">
+    <meta name="author" content="Dreiser Morales">
+    <meta name="theme-color" content="#111827">
+    <link rel="icon" href="images/favicon.ico">
+
+    <meta property="og:title" content="ServiceHub Chamber Join Page">
+    <meta property="og:description" content="Join ServiceHub Chamber and promote your business in the local directory.">
+    <meta property="og:image" content="https://nam3mc.github.io/wdd231/chamber/images/servicehub-preview.webp">
+    <meta property="og:url" content="https://nam3mc.github.io/wdd231/chamber/join.html">
+    <meta property="og:type" content="website">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap"
+        rel="stylesheet">
+</head>
+<body>
+    <header>
+        <span>
+            <img src="images/chamber-logo.webp" alt="ServiceHub Chamber logo" width="44" height="44" loading="lazy" decoding="async">
+            ServiceHub
+        </span>
+        <button
+            id="ham-btn"
+            class="hamburger"
+            aria-label="Open navigation menu">
+        </button>
+    </header>
+
+    <nav class="navigation" aria-label="Primary navigation">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+
+            <li><a href="directory.html">Directory</a></li>
+
+            <li>
+                <a href="join.html" class="active" aria-current="page">
+                    Join
+                </a>
+            </li>
+
+            <li><a href="discover.html">Discover</a></li>
+        </ul>
+    </nav>
+
+    <main id="main-content">
+        <h1>Join ServiceHub Chamber</h1>
+    </main>
+
+    <footer>
+        <p>
+            &copy; <span id="currentYear"></span>
+            ServiceHub Chamber
+        </p>
+        <p>
+            Last Modified:
+            <span id="lastModified"></span>
+        </p>
+    </footer>
+</body>
+</html>
