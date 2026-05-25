@@ -1,3 +1,5 @@
+import courseCardCreator from "./index/course-card-creator.mjs"
+
 const navButton = document.querySelector('#ham-btn')
 const navBar = document.querySelector('#nav-bar')
 const certificates = document.querySelector('#certificates')
@@ -37,12 +39,8 @@ fetch('./scripts/courses.json')
         container.innerHTML = ''
         totalCredits = 0
         list.forEach(course => {
-            const p = document.createElement('p')
-            p.classList.add(course.subject)
-            p.innerHTML =
-              `<span class="${course.completed}"></span>
-               ${course.subject} - ${course.number}`
-            container.appendChild(p)
+              const courseBtn = courseCardCreator(course)
+              container.appendChild(courseBtn)
             totalCredits += course.credits
         })
         totalP.textContent =

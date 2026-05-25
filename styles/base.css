@@ -331,10 +331,11 @@ COURSES
 ********************************/
 
 #courses {
-    display: block;
+    /* display: block; */
+    text-align: center;
 }
 
-#courses p {
+#courses button {
     text-align: center;
 
     border: 1px solid #1F2937;
@@ -352,9 +353,10 @@ COURSES
     transition: all 0.3s ease;
 
     word-wrap: break-word;
+    margin: 8px;
 }
 
-#courses p:hover {
+#courses button:hover {
     border-color: #00F5FF;
 
     color: #00F5FF;
@@ -547,8 +549,151 @@ a:focus {
 }
 
 /* evita colores negros en elementos dinámicos */
-#courses p,
+#courses button,
 #total-credits,
 #btns button {
     color: #E5E7EB;
+}
+
+/* *************************** */
+/*           MODAL             */
+/* *************************** */
+
+dialog {
+    width: min(92vw, 420px);
+    max-width: 92vw;
+    max-height: 85vh;
+
+    padding: 1.2rem;
+
+    border: 1px solid #1F2937;
+    border-radius: 18px;
+
+    margin: auto;
+
+    background: #111827;
+    color: #E5E7EB;
+
+    box-shadow:
+        0 0 18px rgba(0, 245, 255, 0.12),
+        0 0 30px rgba(124, 58, 237, 0.15);
+
+    overflow-y: auto;
+}
+
+/* backdrop */
+dialog::backdrop {
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(3px);
+}
+
+/* title */
+dialog h2 {
+    margin-bottom: 0.75rem;
+
+    font-size: 1.3rem;
+    line-height: 1.3;
+
+    color: #00F5FF;
+
+    text-shadow: 0 0 6px rgba(0, 245, 255, 0.35);
+}
+
+/* subtitle */
+dialog h3 {
+    margin-bottom: 0.8rem;
+
+    font-size: 1rem;
+
+    color: #CBD5E1;
+}
+
+/* paragraph */
+dialog p {
+    margin-bottom: 1rem;
+
+    font-size: 0.95rem;
+    line-height: 1.6;
+
+    color: #E5E7EB;
+}
+
+/* tags container */
+dialog > div {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 0.5rem;
+
+    margin-bottom: 1rem;
+}
+
+/* tags */
+dialog > div div {
+    padding: 0.45rem 0.8rem;
+
+    border: 1px solid #1F2937;
+    border-radius: 999px;
+
+    background: #0B0F1A;
+
+    color: #38BDF8;
+
+    font-size: 0.85rem;
+
+    box-shadow:
+        0 0 8px rgba(0, 245, 255, 0.08);
+}
+
+/* button */
+dialog button {
+    width: 100%;
+
+    padding: 0.9rem 1rem;
+
+    border: 1px solid #00F5FF;
+    border-radius: 12px;
+
+    background: #0B0F1A;
+
+    color: #00F5FF;
+
+    font-size: 1rem;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+/* hover */
+dialog button:hover {
+    background: #7C3AED;
+
+    border-color: #7C3AED;
+
+    color: #FFFFFF;
+
+    box-shadow:
+        0 0 12px rgba(124, 58, 237, 0.45);
+}
+
+/* active */
+dialog button:active {
+    transform: scale(0.98);
+}
+
+/* focus accessibility */
+dialog button:focus {
+    outline: 2px solid #00F5FF;
+    outline-offset: 3px;
+}
+
+@media (min-width: 768px) {
+    dialog {
+        width: min(70vw, 520px);
+
+        padding: 1.6rem;
+    }
 }

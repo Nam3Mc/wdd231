@@ -386,8 +386,8 @@ main h2 {
     background: linear-gradient(
         to top,
         rgba(17, 24, 39, 0.92),
-        rgba(17, 24, 39, 0.45),
-        rgba(17, 24, 39, 0.1)
+        rgba(17, 24, 39, 0.45) 80%,
+        rgba(17, 24, 39, 0.1) 100%
     );
     z-index: 2;
 }
@@ -422,7 +422,7 @@ main h2 {
 .hero-content p {
     max-width: 32rem;
     margin-bottom: 1rem;
-    color: #E5E7EB;
+    color: white;
     font-size: 0.95rem;
     line-height: 1.5;
 }
@@ -601,43 +601,4 @@ footer {
 
 footer p {
     margin: 0;
-}
-
-/* =========================================
-   320px FIXES
-========================================= */
-
-@media only screen and (max-width: 320px) {
-    header {
-        padding: 0.7rem;
-    }
-
-    header span {
-        font-size: 0.95rem;
-    }
-
-    .menu {
-        gap: 0.5rem;
-    }
-
-    .menu button {
-        width: 100%;
-    }
-
-    #cards {
-        grid-template-columns: 1fr;
-        padding: 0.5rem;
-    }
-
-    .service-card {
-        padding: 0.7rem;
-    }
-
-    .service-card img {
-        height: 160px;
-    }
-
-    #cards.list .service-card {
-        text-align: left;
-    }
 }

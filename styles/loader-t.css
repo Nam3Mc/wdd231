@@ -1,0 +1,19 @@
+.loader-t {
+  /* the only thing that changed was using transition versus animation */
+  transition: spin 1.5s linear infinite;
+}
+        
+.loader-t::after {
+  /* the only thing that changed was using transition versus animation and the size and visibility at start */
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 1.5s ease-in-out;
+  font-size: 2rem;
+ }
+        
+.loader-t:hover {
+  transform: rotate(360deg); /* Rotate on hover */
+}
+        
+.loader-t:hover::after {
+  transform: translate(-50%, -50%) scale(1.5); /* Scale on hover */
+}
