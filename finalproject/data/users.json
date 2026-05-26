@@ -1,0 +1,102 @@
+[
+  {
+    "id": "usr_001",
+    "fname": "Michael",
+    "lname": "Johnson",
+    "phone": 3005551001,
+    "email": "michael.johnson@pestcontrol.com",
+    "role": "admin",
+    "salary": 4500,
+    "password": "AdminSecure123"
+  },
+  {
+    "id": "usr_002",
+    "fname": "Daniel",
+    "lname": "Smith",
+    "phone": 3005551002,
+    "email": "daniel.smith@pestcontrol.com",
+    "role": "technician",
+    "salary": 1800,
+    "password": "TechPass001"
+  },
+  {
+    "id": "usr_003",
+    "fname": "Sophia",
+    "lname": "Brown",
+    "phone": 3005551003,
+    "email": "sophia.brown@pestcontrol.com",
+    "role": "technician",
+    "salary": 1750,
+    "password": "TechPass002"
+  },
+  {
+    "id": "usr_004",
+    "fname": "James",
+    "lname": "Wilson",
+    "phone": 3005551004,
+    "email": "james.wilson@pestcontrol.com",
+    "role": "technician",
+    "salary": 1850,
+    "password": "TechPass003"
+  },
+  {
+    "id": "usr_005",
+    "fname": "Emma",
+    "lname": "Taylor",
+    "phone": 3005551005,
+    "email": "emma.taylor@pestcontrol.com",
+    "role": "technician",
+    "salary": 1900,
+    "password": "TechPass004"
+  },
+  {
+    "id": "usr_006",
+    "fname": "William",
+    "lname": "Anderson",
+    "phone": 3005551006,
+    "email": "william.anderson@pestcontrol.com",
+    "role": "technician",
+    "salary": 1700,
+    "password": "TechPass005"
+  },
+  {
+    "id": "usr_007",
+    "fname": "Olivia",
+    "lname": "Martinez",
+    "phone": 3005551007,
+    "email": "olivia.martinez@pestcontrol.com",
+    "role": "technician",
+    "salary": 1950,
+    "password": "TechPass006"
+  },
+  {
+    "id": "usr_008",
+    "fname": "Benjamin",
+    "lname": "Thomas",
+    "phone": 3005551008,
+    "email": "benjamin.thomas@pestcontrol.com",
+    "role": "technician",
+    "salary": 1820,
+    "password": "TechPass007"
+  },
+  {
+    "id": "usr_009",
+    "fname": "Isabella",
+    "lname": "Harris",
+    "phone": 3005551009,
+    "email": "isabella.harris@pestcontrol.com",
+    "role": "technician",
+    "salary": 1780,
+    "password": "TechPass008"
+  },
+  {
+    "id": "usr_010",
+    "fname": "Ethan",
+    "lname": "Clark",
+    "phone": 3005551010,
+    "email": "ethan.clark@pestcontrol.com",
+    "role": "technician",
+    "salary": 1880,
+    "password": "TechPass009"
+  }
+]
