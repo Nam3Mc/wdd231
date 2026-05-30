@@ -31,6 +31,8 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
 </head>
 <body>
     <header>
@@ -63,6 +65,119 @@
 
     <main id="main-content">
         <h1>Join ServiceHub Chamber</h1>
+        
+        <form action="welcome.htm" method="GET" class="sing-up-form">
+            <div class="checkbox-group">
+
+                <label>
+                    <span>First Name</span>  
+                    <input 
+                    type="text" 
+                    name="fname" 
+                    required autocomplete="given-name" 
+                    title="Your First Name" 
+                    placeholder="Jhon"
+                    value="fname"    
+                    >
+                </label>
+                <label>
+                    <span>Last Name</span>  
+                    <input 
+                    type="text" 
+                    name="lname" 
+                    required autocomplete="family-name" 
+                    title="Your Last Name" 
+                    placeholder="Doe"
+                    value="lname"
+                    >
+                </label>
+            </div>
+            <div class="checkbox-group">
+
+                <label>
+                    <span>Organization Title</span>  
+                    <input 
+                    type="text" 
+                    name="org-title" 
+                    required autocomplete="organization" 
+                    title="Your Organization" 
+                    placeholder="Acme Inc."
+                    value="organization-title"
+                    >
+                </label>
+                <label>
+                    <span>Email</span>  
+                    <input 
+                    type="email" 
+                    name="email" 
+                    required autocomplete="email" 
+                    title="Your Email" 
+                    placeholder="john@example.com"
+                    value="email"
+                    >
+                </label>
+                <label>
+                    <span>Phone</span>  
+                    <input 
+                    type="text" 
+                    name="phone" 
+                    required autocomplete="tel" 
+                    title="Your Phone Number" 
+                    placeholder="(123) 456-7890"
+                    value="phone"
+                    >
+                </label>
+                <label>
+                    <span>Business/Organization's name:</span>  
+                    <input 
+                    type="text" 
+                    name="org" 
+                    required autocomplete="organization" 
+                    title="Your Organization" 
+                    placeholder="Acme Inc."
+                    value="organization"
+                    >
+                </label>
+            </div>
+            <div class="checkbox-group"> 
+                <label>
+                    <span>Membership</span>
+                    <input 
+                    type="radio" 
+                    name="membership" 
+                    value="gold" 
+                    checked
+                    > Gold
+                    <input 
+                    type="radio" 
+                    name="membership" 
+                    value="silver"
+                    > Silver
+                    <input 
+                    type="radio" 
+                    name="membership" 
+                    value="bronze"
+                    > Bronze
+                    <input 
+                    type="radio" 
+                    name="membership" 
+                    value="nonprofit"
+                    > Non-Profit
+                </label>
+            </div>
+            <label>
+                <span>Description</span>
+                <textarea 
+                    name="description" 
+                    placeholder="Describe your business and services."
+                    title="description"
+                ></textarea>
+            </label>
+        </form>
+        
+        <p>
+            Connect your local business with customers in the community by joining ServiceHub Chamber. Our directory helps residents find trusted services nearby, while providing businesses with a platform to showcase their offerings and grow their customer base.
+        </p>
     </main>
 
     <footer>
