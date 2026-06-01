@@ -6,8 +6,7 @@
       content="default-src 'self'; img-src 'self' data: https:; 
       style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; 
       font-src 'self' https://fonts.gstatic.com; 
-      script-src 'self';"
-      >
+      script-src 'self';">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ServiceHub Chamber Join Page | Dreiser Morales</title>
@@ -23,181 +22,210 @@
     <meta property="og:type" content="website">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap"
         rel="stylesheet">
 
-    <link rel="stylesheet" href="styles/join-small.css">
-    <link rel="stylesheet" href="styles/join-larger.css">
-
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <script type="module" src="scripts/join.mjs"></script>
 </head>
+
 <body>
     <header>
         <span>
             <img src="images/chamber-logo.webp" alt="ServiceHub Chamber logo" width="44" height="44" loading="lazy" decoding="async">
             ServiceHub
         </span>
-        <button
-            id="ham-btn"
-            class="hamburger"
-            aria-label="Open navigation menu">
-        </button>
+
+        <button id="ham-btn" class="hamburger" aria-label="Open navigation menu"></button>
     </header>
 
     <nav class="navigation" aria-label="Primary navigation">
         <ul>
             <li><a href="index.html">Home</a></li>
-
             <li><a href="directory.html">Directory</a></li>
-
-            <li>
-                <a href="join.html" class="active" aria-current="page">
-                    Join
-                </a>
-            </li>
-
+            <li><a href="join.html" class="active" aria-current="page">Join</a></li>
             <li><a href="discover.html">Discover</a></li>
         </ul>
     </nav>
 
     <main id="main-content">
         <h1>Join ServiceHub Chamber</h1>
-        
-        <form action="thankyou.html" method="GET" class="sing-up-form">
-            <div class="checkbox-group">
+
+        <section class="join-layout">
+            <form action="thankyou.html" method="get" class="sing-up-form">
+                <label>
+                    <span>First Name</span>
+                    <input
+                        type="text"
+                        id="fname"
+                        name="fname"
+                        required
+                        autocomplete="given-name"
+                        title="Your First Name"
+                        placeholder="John">
+                </label>
 
                 <label>
-                    <span>First Name</span>  
-                    <input 
-                    type="text" 
-                    name="fname" 
-                    required autocomplete="given-name" 
-                    title="Your First Name" 
-                    placeholder="Jhon"
-                    value="fname"    
-                    >
+                    <span>Last Name</span>
+                    <input
+                        type="text"
+                        id="lname"
+                        name="lname"
+                        required
+                        autocomplete="family-name"
+                        title="Your Last Name"
+                        placeholder="Doe">
                 </label>
-                <label>
-                    <span>Last Name</span>  
-                    <input 
-                    type="text" 
-                    name="lname" 
-                    required autocomplete="family-name" 
-                    title="Your Last Name" 
-                    placeholder="Doe"
-                    value="lname"
-                    >
-                </label>
-            </div>
-            <div class="checkbox-group">
 
                 <label>
-                    <span>Organization Title</span>  
-                    <input 
-                    type="text" 
-                    name="org-title" 
-                    required autocomplete="organization" 
-                    title="Your Organization" 
-                    placeholder="Acme Inc."
-                    value="organization-title"
-                    autocomplete="organization-title"
-                    >
+                    <span>Organization Title</span>
+                    <input
+                        type="text"
+                        id="org-title"
+                        name="org-title"
+                        required
+                        title="Enter your organization title, at least 7 characters using only letters, spaces, and hyphens"
+                        autocomplete="organization-title"
+                        pattern="[A-Za-z\s-]{7,}"
+                        placeholder="Business Owner">
                 </label>
+
                 <label>
-                    <span>Email</span>  
-                    <input 
-                    type="email" 
-                    name="email" 
-                    required autocomplete="email" 
-                    title="Your Email" 
-                    placeholder="john@example.com"
-                    value="email"
-                    >
+                    <span>Email</span>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        required
+                        autocomplete="email"
+                        title="Your Email"
+                        placeholder="john@example.com">
                 </label>
+
                 <label>
-                    <span>Phone</span>  
-                    <input 
-                    type="tel" 
-                    name="phone" 
-                    required autocomplete="tel" 
-                    title="Your Phone Number" 
-                    placeholder="(123) 456-7890"
-                    value="phone"
-                    >
+                    <span>Phone</span>
+                    <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        required
+                        autocomplete="tel"
+                        title="Your Phone Number"
+                        placeholder="(123) 456-7890">
                 </label>
+
                 <label>
-                    <span>Business/Organization's name:</span>  
-                    <input 
-                    type="text" 
-                    name="org" 
-                    required autocomplete="organization" 
-                    title="Your Organization" 
-                    placeholder="Acme Inc."
-                    value="organization"
-                    >
+                    <span>Business/Organization Name</span>
+                    <input
+                        type="text"
+                        id="org"
+                        name="org"
+                        required
+                        autocomplete="organization"
+                        title="Business Name"
+                        placeholder="Acme Inc.">
                 </label>
-            </div>
-            <div class="checkbox-group"> 
-                <span>Membership</span>
+
+                <fieldset class="membership-group">
+                    <legend>Membership</legend>
+
+                    <label>
+                        <input type="radio" name="membership" value="np" required>
+                        NP Membership
+                    </label>
+
+                    <label>
+                        <input type="radio" name="membership" value="bronze">
+                        Bronze Membership
+                    </label>
+
+                    <label>
+                        <input type="radio" name="membership" value="silver">
+                        Silver Membership
+                    </label>
+
+                    <label>
+                        <input type="radio" name="membership" value="gold">
+                        Gold Membership
+                    </label>
+                </fieldset>
+
                 <label>
-                    <input 
-                    type="radio" 
-                    name="membership" 
-                    value="gold" 
-                    checked
-                    > Gold
+                    <span>Description</span>
+                    <textarea
+                        id="description"
+                        name="description"
+                        title="Business description"
+                        placeholder="Describe your business and services."></textarea>
                 </label>
-                <label>
-                    <input 
-                    type="radio" 
-                    name="membership" 
-                    value="silver"
-                    > Silver
-                </label>
-                <label>
-                    <input 
-                    type="radio" 
-                    name="membership" 
-                    value="bronze"
-                    > Bronze
-                </label>
-                <label>
-                    <input 
-                    type="radio" 
-                    name="membership" 
-                    value="nonprofit"
-                    > Non-Profit
-                </label>
-            </div>
-            <label>
-                <span>Description</span>
-                <textarea 
-                    name="description" 
-                    placeholder="Describe your business and services."
-                    title="description"
-                ></textarea>
-            </label>
-            <input type="hidden" id="timestamp" name="timestamp" value="">
-            <button type="submit">Submit</button>
-        </form>
-        
+
+                <input type="hidden" id="timestamp" name="timestamp">
+
+                <input type="submit" value="Submit Application">
+            </form>
+
+            <section class="membership-cards" aria-label="Membership levels">
+                <article class="membership-card">
+                    <h2>NP Membership</h2>
+                    <p>For nonprofit organizations. No fee required.</p>
+                    <button type="button" data-modal="np-modal">Learn More</button>
+                </article>
+
+                <article class="membership-card">
+                    <h2>Bronze Membership</h2>
+                    <p>Basic visibility in the ServiceHub directory.</p>
+                    <button type="button" data-modal="bronze-modal">Learn More</button>
+                </article>
+
+                <article class="membership-card">
+                    <h2>Silver Membership</h2>
+                    <p>Extra exposure, training access, and event discounts.</p>
+                    <button type="button" data-modal="silver-modal">Learn More</button>
+                </article>
+
+                <article class="membership-card">
+                    <h2>Gold Membership</h2>
+                    <p>Premium advertising and spotlight positions.</p>
+                    <button type="button" data-modal="gold-modal">Learn More</button>
+                </article>
+            </section>
+        </section>
+
         <p>
-            Connect your local business with customers in the community by joining ServiceHub Chamber. Our directory helps residents find trusted services nearby, while providing businesses with a platform to showcase their offerings and grow their customer base.
+            Connect your local business with customers in the community by joining ServiceHub Chamber.
         </p>
     </main>
 
+    <dialog id="np-modal"> 
+        <h2>NP Membership Benefits</h2>
+        <p>No membership fee, directory listing, and access to community networking events.</p>
+        <button type="button" class="close-modal">Close</button>
+    </dialog>
+
+    <dialog id="bronze-modal">
+        <h2>Bronze Membership Benefits</h2>
+        <p>Directory listing, member profile, and access to basic chamber events.</p>
+        <button type="button" class="close-modal">Close</button>
+    </dialog>
+
+    <dialog id="silver-modal">
+        <h2>Silver Membership Benefits</h2>
+        <p>Directory listing, training opportunities, event discounts, and enhanced visibility.</p>
+        <button type="button" class="close-modal">Close</button>
+    </dialog>
+
+    <dialog id="gold-modal">
+        <h2>Gold Membership Benefits</h2>
+        <p>Premium directory placement, homepage spotlight opportunities, advertising, and special events.</p>
+        <button type="button" class="close-modal"Close</button>
+    </dialog>
+
     <footer>
-        <p>
-            &copy; <span id="currentYear"></span>
-            ServiceHub Chamber
-        </p>
-        <p>
-            Last Modified:
-            <span id="lastModified"></span>
-        </p>
+        <p>&copy; <span id="currentYear"></span> ServiceHub Chamber</p>
+        <p>Last Modified: <span id="lastModified"></span></p>
     </footer>
 </body>
 </html>

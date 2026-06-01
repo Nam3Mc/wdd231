@@ -1,7 +1,12 @@
-@media only screen and (min-width: 20.1rem) {
+@media screen and (min-width: 20.1rem) {
+
+    /* HEADER */
+
     header {
-        padding: 0.8rem 1rem;
+        padding: 1rem 2rem;
     }
+
+    /* NAVIGATION */
 
     .hamburger {
         display: none;
@@ -9,75 +14,106 @@
 
     .navigation {
         display: block;
-        border-top: 1px solid rgba(255, 255, 255, 0.08);
     }
 
     .navigation ul {
         display: flex;
         justify-content: center;
         align-items: center;
-        flex-wrap: wrap;
-        gap: 0.5rem;
-        padding: 0.7rem;
     }
 
     .navigation li {
+        flex: 1;
         border-top: none;
     }
 
     .navigation a {
-        padding: 0.9rem 1rem;
-        border-radius: 0.6rem;
-        font-size: clamp(0.9rem, 2vw, 1.05rem);
+        border-bottom: none;
     }
+
+    /* MAIN */
 
     main {
-        padding: 1.5rem;
-    }
-
-    .sing-up-form {
-        padding: 1.5rem;
-    }
-
-    .checkbox-group {
-        grid-template-columns: 1fr 1fr;
-        gap: 1rem;
-    }
-
-    .checkbox-group:nth-of-type(2) {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .checkbox-group:nth-of-type(3) {
-        display: block;
-    }
-
-    .checkbox-group:nth-of-type(3) label {
-        padding: 1rem;
-        border: 1px solid var(--border);
-        border-radius: var(--radius-md);
-        background: var(--background);
-        line-height: 2;
-    }
-
-    main > p {
-        padding: 1.25rem;
-    }
-}
-
-@media only screen and (min-width: 48rem) {
-    .sing-up-form {
+        max-width: 1000px;
+        margin: 0 auto;
         padding: 2rem;
     }
 
-    .checkbox-group:nth-of-type(2) {
-        grid-template-columns: repeat(2, 1fr);
+    main h1 {
+        text-align: center;
+        margin-bottom: 2rem;
     }
 
-    footer {
-        flex-direction: row;
-        justify-content: space-between;
+    /* FORM */
+
+    .sing-up-form {
+        max-width: 900px;
+        margin: 0 auto 2rem;
+        padding: 2rem;
+    }
+
+    /* FIRST NAME / LAST NAME */
+
+    .checkbox-group:first-of-type {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    /* ORGANIZATION SECTION */
+
+    .checkbox-group:nth-of-type(2) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    /* MEMBERSHIP */
+
+    .checkbox-group:nth-of-type(3) {
+        display: flex;
+        flex-wrap: wrap;
         align-items: center;
-        text-align: left;
+        gap: 1.5rem;
+        margin: 1.5rem 0;
+    }
+
+    .checkbox-group:nth-of-type(3) > span {
+        width: 100%;
+        margin-bottom: .5rem;
+    }
+
+    .checkbox-group:nth-of-type(3) label {
+        margin-bottom: 0;
+    }
+
+    /* TEXTAREA */
+
+    textarea {
+        min-height: 180px;
+    }
+
+    /* BUTTON */
+
+    button[type="submit"] {
+        max-width: 250px;
+        display: block;
+        margin: 1.5rem auto 0;
+    }
+
+    /* INFO PARAGRAPH */
+
+    main > p {
+        max-width: 900px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    /* FOOTER */
+
+    footer {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
     }
 }

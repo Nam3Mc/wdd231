@@ -81,7 +81,9 @@ img {
 .menu button:focus,
 .hamburger:focus,
 .service-card a:focus,
-.cta-button:focus {
+.cta-button:focus,
+.membership-card button:focus,
+input[type="submit"]:focus {
     outline: 3px solid var(--blue-light);
     outline-offset: 2px;
 }
@@ -162,26 +164,27 @@ header img {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: none;
-    border: none;
+    background: transparent;
+    border: 2px solid var(--blue-light);
+    border-radius: 0.7rem;
+    color: var(--blue-light);
     cursor: pointer;
 }
 
-.hamburger::after {
-    content: "\2630";
-    padding: 0.3rem 0.55rem;
-    border-radius: 0.7rem;
-    color: var(--blue-light);
-    font-size: 1.5rem;
-    font-weight: bold;
+.hamburger::before {
+    content: "☰";
+    font-size: 1.7rem;
+    font-weight: 700;
     line-height: 1;
-    transition: all var(--transition);
 }
 
-.hamburger.show::after {
-    content: "\00d7";
-    color: var(--blue-light);
-    border: 2px solid var(--blue-light);
+.hamburger.show::before {
+    content: "×";
+    font-size: 2rem;
+}
+
+.hamburger:hover {
+    background: var(--primary-light);
 }
 
 /* =========================================
@@ -581,6 +584,322 @@ main h2 {
 
 .spotlight-card a:hover {
     color: var(--blue-dark);
+}
+
+/* =========================================
+   JOIN FORM - MOBILE
+========================================= */
+
+.sing-up-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.3rem;
+    padding: 1.2rem;
+    margin: 1rem 0;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    text-align: left;
+}
+
+.sing-up-form label {
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+    width: 100%;
+}
+
+.sing-up-form label span {
+    display: block;
+    margin-bottom: 0.2rem;
+    color: var(--primary);
+    font-size: 0.95rem;
+    font-weight: 700;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    width: 100%;
+    padding: 0.9rem 1rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    background: var(--surface);
+    color: var(--text);
+    font: inherit;
+    font-size: 1rem;
+}
+
+textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+input[type="tel"]::placeholder,
+textarea::placeholder {
+    color: var(--text-muted);
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+textarea:focus {
+    outline: 3px solid var(--blue-soft);
+    border-color: var(--blue);
+}
+
+/* =========================================
+   MEMBERSHIP GROUP
+========================================= */
+
+.membership-group {
+    margin: 1.5rem 0;
+    padding: 1rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    background: var(--surface);
+}
+
+.membership-group legend {
+    padding: 0 0.5rem;
+    color: var(--primary);
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.membership-group label {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.75rem;
+    margin-top: 0.75rem;
+    padding: 0.9rem 1rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    background: var(--background);
+    cursor: pointer;
+    transition: all var(--transition);
+}
+
+.membership-group label:hover {
+    background: var(--row-hover);
+    border-color: var(--blue-light);
+}
+
+.membership-group input[type="radio"] {
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    accent-color: var(--blue);
+    cursor: pointer;
+}
+
+.membership-group label:has(input:checked) {
+    background: var(--blue-soft);
+    border-color: var(--blue);
+    color: var(--primary);
+    font-weight: 700;
+}
+
+.membership-group label:has(input:focus) {
+    outline: 3px solid var(--blue-light);
+    outline-offset: 2px;
+}
+
+/* =========================================
+   SUBMIT BUTTON
+========================================= */
+
+input[type="submit"] {
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    border-radius: var(--radius-md);
+    background: var(--blue);
+    color: var(--surface);
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    cursor: pointer;
+    transition:
+        background var(--transition),
+        transform 0.2s ease,
+        box-shadow var(--transition);
+}
+
+input[type="submit"]:hover {
+    background: var(--blue-dark);
+    box-shadow: var(--shadow-md);
+}
+
+input[type="submit"]:active {
+    transform: scale(0.98);
+}
+
+/* =========================================
+   MEMBERSHIP CARDS
+========================================= */
+
+.membership-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.membership-card {
+    padding: 1.25rem;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    opacity: 0;
+    transform: translateY(20px);
+    animation: cardFadeIn 0.6s ease forwards;
+}
+
+.membership-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.membership-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.membership-card:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.membership-card:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.membership-card h2 {
+    margin-top: 0;
+    color: var(--primary);
+    font-size: 1.2rem;
+}
+
+.membership-card p {
+    color: var(--text-muted);
+    line-height: 1.5;
+}
+
+.membership-card button {
+    width: 100%;
+    margin-top: 1rem;
+    padding: 0.85rem 1rem;
+    border: none;
+    border-radius: var(--radius-md);
+    background: var(--blue);
+    color: var(--surface);
+    font-weight: 700;
+    cursor: pointer;
+    transition:
+        background var(--transition),
+        transform 0.2s ease,
+        box-shadow var(--transition);
+}
+
+.membership-card button:hover {
+    background: var(--blue-dark);
+    box-shadow: var(--shadow-md);
+}
+
+.membership-card button:active {
+    transform: scale(0.98);
+}
+
+@keyframes cardFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =========================================
+   MODALS
+========================================= */
+
+dialog {
+    width: min(90%, 500px);
+    max-width: 500px;
+    padding: 1.5rem;
+
+    border: none;
+    border-radius: var(--radius-lg);
+
+    background: var(--surface);
+    color: var(--text);
+
+    box-shadow: var(--shadow-lg);
+}
+
+
+/* Style only when the modal is open */
+dialog[open] {
+    display: block;
+    position: fixed;
+    inset: 0;
+    margin: auto;
+}
+
+/* Dark background behind modal */
+dialog::backdrop {
+    background: rgba(17, 24, 39, 0.75);
+}
+
+/* Modal title */
+dialog h2 {
+    margin: 0 0 1rem;
+    color: var(--primary);
+    font-size: 1.4rem;
+}
+
+/* Modal text */
+dialog p {
+    margin: 0 0 1.5rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+/* Close button */
+dialog button {
+    width: 100%;
+    padding: 0.85rem 1rem;
+
+    border: none;
+    border-radius: var(--radius-md);
+
+    background: var(--blue);
+    color: var(--surface);
+
+    font-weight: 700;
+    cursor: pointer;
+
+    transition: background var(--transition), transform 0.2s ease;
+}
+
+dialog button:hover {
+    background: var(--blue-dark);
+}
+
+dialog button:active {
+    transform: scale(0.98);
+}
+
+dialog button:focus {
+    outline: 3px solid var(--blue-light);
+    outline-offset: 2px;
 }
 
 /* =========================================

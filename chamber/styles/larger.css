@@ -1,57 +1,49 @@
 @media only screen and (min-width: 20.1rem) {
 
+    /* =========================================
+       HEADER
+    ========================================= */
+
     header {
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
         padding: 0.8rem 1rem;
-        background: var(--primary);
         font-size: clamp(1rem, 3vw, 1.6rem);
     }
 
     header span {
-        display: flex;
-        align-items: center;
         flex-wrap: wrap;
         gap: 0.6rem;
     }
+
+    /* =========================================
+       NAVIGATION
+    ========================================= */
 
     .hamburger {
         display: none;
     }
 
     .navigation {
-        width: 100%;
         display: block;
-        background: var(--primary);
         border-top: 1px solid rgba(255, 255, 255, 0.08);
     }
 
     .navigation ul {
-        width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
         gap: 0.5rem;
-        margin: 0;
         padding: 0.7rem;
-        list-style: none;
     }
 
     .navigation li {
         flex: 0 1 auto;
+        border-top: none;
     }
 
     .navigation a {
-        display: block;
-        width: 100%;
         padding: 0.9rem 1rem;
         border-radius: 0.6rem;
-        color: var(--text-light);
-        text-align: center;
-        text-decoration: none;
         font-size: clamp(0.9rem, 2vw, 1.05rem);
         font-weight: 600;
         transition: background var(--transition), transform 0.2s ease;
@@ -63,104 +55,54 @@
         color: var(--surface);
     }
 
+    /* =========================================
+       MENU BUTTONS
+    ========================================= */
+
     .menu {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-        gap: 1rem;
         padding: 1rem;
     }
 
     .menu button {
         min-width: 120px;
         padding: 0.9rem 1rem;
-        border: none;
-        border-radius: var(--radius-md);
-        background: var(--blue);
-        color: var(--text-light);
-        font-size: 1rem;
-        font-weight: 600;
-        cursor: pointer;
-        transition: background var(--transition), transform 0.2s ease;
     }
 
-    .menu button:hover {
-        background: var(--blue-dark);
-    }
-
-    .menu button.active {
-        background: var(--primary);
-    }
-
-    .menu button:active {
-        transform: scale(0.96);
-    }
+    /* =========================================
+       LIST VIEW
+    ========================================= */
 
     #cards.list {
-        display: flex;
-        flex-direction: column;
         gap: 1rem;
         padding: 1rem;
     }
 
     #cards.list .service-card {
-        width: 100%;
         max-width: 850px;
         margin: 0 auto;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
         gap: 0.6rem;
-        text-align: left;
-    }
-
-    #cards.list .service-card img {
-        display: none;
     }
 
     #cards.list .service-card a {
         width: auto;
-        padding: 0;
-        background: none;
-        color: var(--blue);
     }
 
-    #cards.list .service-card a:hover {
-        color: var(--blue-dark);
-    }
-
-    footer {
-        padding: 1.5rem 1rem;
-    }
+    /* =========================================
+       HERO
+    ========================================= */
 
     .hero {
         min-height: 620px;
-        display: flex;
         align-items: center;
-        position: relative;
         margin: 1rem 0 2rem;
-        overflow: hidden;
         border-radius: var(--radius-xl);
-        background: var(--primary);
-        text-align: left;
     }
 
     .hero img {
-        position: absolute;
-        inset: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
         object-position: center;
-        z-index: 1;
     }
 
     .hero::after {
-        content: "";
-        position: absolute;
-        inset: 0;
-        z-index: 2;
         background: linear-gradient(
             90deg,
             rgba(17, 24, 39, 0.92) 12%,
@@ -171,25 +113,18 @@
     }
 
     .hero-content {
-        position: relative;
-        z-index: 3;
         max-width: 610px;
         padding: 4rem 3rem;
-        color: #FFFFFF;
     }
 
     .hero-tag {
-        margin: 0 0 0.8rem;
-        color: #BFDBFE;
+        margin-bottom: 0.8rem;
         font-size: 0.9rem;
         font-weight: 800;
-        text-transform: uppercase;
-        letter-spacing: 0.06em;
     }
 
     .hero h2 {
-        margin: 0 0 1rem;
-        color: #FFFFFF;
+        margin-bottom: 1rem;
         font-size: clamp(3rem, 6vw, 5rem);
         line-height: 0.95;
     }
@@ -207,22 +142,15 @@
     }
 
     .cta-button {
-        display: inline-block;
         width: fit-content;
         padding: 0.95rem 1.4rem;
-        border-radius: var(--radius-md);
-        background: var(--blue);
-        color: var(--surface);
-        text-decoration: none;
-        font-weight: 700;
     }
 
-    .cta-button:hover {
-        background: var(--blue-dark);
-    }
+    /* =========================================
+       INFO GRID
+    ========================================= */
 
     .info-grid {
-        display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 1rem;
         margin-bottom: 2rem;
@@ -231,30 +159,47 @@
     .card {
         padding: 1.25rem;
         border-radius: var(--radius-xl);
-        background: var(--surface);
-        box-shadow: var(--shadow-sm);
-        text-align: left;
     }
 
     .card h2 {
-        margin-top: 0;
         margin-bottom: 1rem;
     }
 
     .card ul {
-        margin: 0;
         padding-left: 1.2rem;
     }
 
-    .card li,
-    #weather-card p,
-    .spotlight-card p {
-        color: var(--text-muted);
-    }
+    /* =========================================
+       WEATHER
+    ========================================= */
 
     .forecast {
         margin-top: 1rem;
     }
+
+    #forecast-table th,
+    #forecast-table td {
+        padding: 1rem;
+    }
+
+    #forecast-table th {
+        font-size: 0.95rem;
+        font-weight: 700;
+        letter-spacing: 0.03em;
+    }
+
+    #forecast-table td {
+        font-size: 0.9rem;
+    }
+
+    #forecast-table tbody tr:hover {
+        transform: scale(1.01);
+        transition: transform 0.2s ease, background 0.2s ease;
+    }
+
+    /* =========================================
+       SPOTLIGHTS
+    ========================================= */
 
     .spotlights {
         margin-bottom: 2rem;
@@ -265,7 +210,6 @@
     }
 
     .spotlight-container {
-        display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 1rem;
     }
@@ -289,38 +233,64 @@
         margin: 0.25rem 0;
     }
 
-    .spotlight-card p {
-        margin: 0.45rem 0;
-    }
-
-    .spotlight-card a {
-        color: var(--blue);
-        text-decoration: none;
-        font-weight: 600;
-    }
-
     .spotlight-card a:hover {
-        color: var(--blue-dark);
         text-decoration: underline;
     }
 
-    #forecast-table th,
-    #forecast-table td {
-        padding: 1rem;
+    /* =========================================
+       JOIN PAGE - LARGER
+    ========================================= */
+
+    .join-layout {
+        display: grid;
+        grid-template-columns: minmax(0, 2fr) minmax(260px, 1fr);
+        gap: 2rem;
+        align-items: start;
     }
 
-    #forecast-table th {
-        font-size: 0.95rem;
-        font-weight: 700;
-        letter-spacing: 0.03em;
+    .sing-up-form {
+        max-width: 800px;
+        margin: 0;
+        padding: 2rem;
     }
 
-    #forecast-table td {
-        font-size: 0.9rem;
+    .sing-up-form label {
+        margin-bottom: 1rem;
     }
 
-    #forecast-table tbody tr:hover {
-        transform: scale(1.01);
-        transition: transform 0.2s ease, background 0.2s ease;
+    textarea {
+        min-height: 180px;
+    }
+
+    .membership-group {
+        padding: 1.25rem;
+    }
+
+    .membership-group legend {
+        font-size: 1.1rem;
+    }
+
+    .membership-group label {
+        margin-bottom: 0.8rem;
+    }
+
+    input[type="submit"] {
+        width: 250px;
+        display: block;
+        margin: 1rem auto 0;
+    }
+
+    .membership-cards {
+        margin-top: 0;
+        position: sticky;
+        top: 1rem;
+    }
+
+    /* =========================================
+       FOOTER
+    ========================================= */
+
+    footer {
+        padding: 1.5rem 1rem;
     }
 }
