@@ -1,0 +1,215 @@
+/* =========================================
+   COLOR VARIABLES
+========================================= */
+:root {
+  --primary: #111827;
+  --primary-light: #1F2937;
+
+  --blue: #1E40AF;
+  --blue-dark: #1E3A8A;
+  --blue-light: #60A5FA;
+  --blue-soft: #BFDBFE;
+
+  --background: #F9FAFB;
+  --surface: #FFFFFF;
+
+  --text: #1F2937;
+  --text-muted: #4B5563;
+  --text-table: #374151;
+  --text-light: #F9FAFB;
+
+  --border: #E5E7EB;
+
+  --row-alt: #F3F4F6;
+  --row-hover: #DBEAFE;
+}
+
+/* =========================================
+   RESET
+========================================= */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0.5rem;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--background);
+  color: var(--text);
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+/* =========================================
+   TYPOGRAPHY
+========================================= */
+h1,
+h2,
+h3 {
+  color: var(--primary);
+  margin-top: 0;
+}
+
+h1 {
+  font-size: 1.6rem;
+}
+
+p {
+  color: var(--text-muted);
+}
+
+/* =========================================
+   FORM
+========================================= */
+form {
+  width: 100%;
+  padding: 1rem;
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+/* =========================================
+   FIELDSET
+========================================= */
+fieldset {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+legend {
+  padding: 0 0.5rem;
+  font-weight: 700;
+  color: var(--blue-dark);
+}
+
+/* =========================================
+   LABELS
+========================================= */
+label {
+  display: block;
+  margin-top: 1rem;
+  margin-bottom: 0.35rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+/* =========================================
+   INPUTS
+========================================= */
+input,
+select,
+textarea {
+  width: 100%;
+  display: block;
+  padding: 0.75rem;
+  font-size: 16px;
+  color: var(--text);
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+input:hover,
+select:hover,
+textarea:hover {
+  border-color: var(--blue);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--blue);
+  box-shadow: 0 0 0 3px var(--blue-soft);
+}
+
+textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* =========================================
+   RADIO & CHECKBOX
+========================================= */
+input[type="radio"],
+input[type="checkbox"] {
+  width: auto;
+  display: inline-block;
+  margin-right: 0.5rem;
+}
+
+.radio-group,
+.checkbox-group {
+  margin-top: 0.5rem;
+}
+
+.radio-group label,
+.checkbox-group label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  font-weight: 500;
+}
+
+/* =========================================
+   RANGE
+========================================= */
+input[type="range"] {
+  padding: 0;
+}
+
+/* =========================================
+   BUTTONS
+========================================= */
+button,
+input[type="submit"] {
+  width: 100%;
+  margin-top: 1.5rem;
+  padding: 0.9rem;
+  border: none;
+  border-radius: 6px;
+  background-color: var(--blue);
+  color: var(--text-light);
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+button:hover,
+input[type="submit"]:hover {
+  background-color: var(--blue-dark);
+}
+
+/* =========================================
+   LINKS
+========================================= */
+a {
+  color: var(--blue);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* =========================================
+   IMAGES
+========================================= */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
