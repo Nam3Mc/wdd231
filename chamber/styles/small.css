@@ -921,3 +921,53 @@ footer {
 footer p {
     margin: 0;
 }
+
+/* =========================================
+   THANK YOU PAGE
+========================================= */
+
+.thank-you-main {
+    min-height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 1rem;
+}
+
+.thank-you-card {
+    width: 100%;
+    padding: 2rem 1.25rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    background: var(--surface);
+    box-shadow: var(--shadow-sm);
+    text-align: center;
+}
+
+.thank-you-tag {
+    display: inline-block;
+    margin-bottom: 1rem;
+    padding: 0.35rem 0.75rem;
+    border-radius: 999px;
+    background: var(--blue-soft);
+    color: var(--blue-dark);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.thank-you-card h1 {
+    margin-bottom: 1rem;
+    color: var(--primary);
+}
+
+.thank-you-card p {
+    max-width: 38rem;
+    margin: 0 auto 1rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+.thank-you-card .cta-button {
+    margin-top: 1rem;
+}

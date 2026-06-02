@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy"
+      content="default-src 'self'; img-src 'self' data: https:; 
+      style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; 
+      font-src 'self' https://fonts.gstatic.com; 
+      script-src 'self';">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You | ServiceHub Chamber | Dreiser Morales</title>
+    <meta name="description" content="Thank you for joining ServiceHub Chamber. Your membership application has been received.">
+    <meta name="author" content="Dreiser Morales">
+    <meta name="theme-color" content="#111827">
+    <link rel="icon" href="images/favicon.ico">
+
+    <meta property="og:title" content="Thank You | ServiceHub Chamber">
+    <meta property="og:description" content="Your ServiceHub Chamber membership application has been received.">
+    <meta property="og:image" content="https://nam3mc.github.io/wdd231/chamber/images/servicehub-preview.webp">
+    <meta property="og:url" content="https://nam3mc.github.io/wdd231/chamber/thankyou.html">
+    <meta property="og:type" content="website">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <script type="module" src="scripts/thankyou.mjs"></script>
+</head>
+
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header>
+        <span>
+            <img src="images/chamber-logo.webp" alt="ServiceHub Chamber logo" width="44" height="44" loading="lazy" decoding="async">
+            ServiceHub
+        </span>
+
+        <button id="ham-btn" class="hamburger" aria-label="Open navigation menu"></button>
+    </header>
+
+    <nav class="navigation" aria-label="Primary navigation">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li><a href="join.html">Join</a></li>
+            <li><a href="discover.html">Discover</a></li>
+        </ul>
+    </nav>
+
+    <main id="main-content" class="thank-you-main">
+        <section class="thank-you-card">
+            <p class="thank-you-tag">Application Received</p>
+
+            <h1>Thank You for Joining Us!</h1>
+            <p>
+                We appreciate your interest in becoming a member of ServiceHub Chamber.
+                Your application has been submitted successfully.
+            </p>
+            <section class="thank-you-card" id="card"></section>
+            <p>
+                Our team will review your information and contact you if additional details are needed.
+            </p>
+
+            <a class="cta-button" href="index.html">Return Home</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentYear"></span> ServiceHub Chamber</p>
+        <p>Last Modified: <span id="lastModified"></span></p>
+    </footer>
+</body>
+</html>
