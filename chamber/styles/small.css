@@ -971,3 +971,21 @@ footer p {
 .thank-you-card .cta-button {
     margin-top: 1rem;
 }
+
+.thank-you-info {
+    margin: 1.5rem 0;
+    padding: 1rem;
+    background: #F9FAFB;
+    border: 1px solid #E5E7EB;
+    border-radius: 0.75rem;
+}
+
+.thank-you-info h2 {
+    margin: 0 0 1rem;
+    color: #111827;
+}
+
+.thank-you-info p {
+    margin: 0.5rem 0;
+    color: #1F2937;
+}

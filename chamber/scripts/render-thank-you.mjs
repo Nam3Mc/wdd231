@@ -9,7 +9,8 @@ export default function getThankYouInfo() {
     const email = params.get("email");
     const phone = params.get("phone");
     const org = params.get("org");
-    const membership = params.get("membership");
+    const timestamp = params.get("timestamp");
+
 
     const infoBox = document.createElement("div");
     infoBox.classList.add("thank-you-info");
@@ -20,7 +21,7 @@ export default function getThankYouInfo() {
         <p><strong>Email:</strong> ${email}</p>
         <p><strong>Phone:</strong> ${phone}</p>
         <p><strong>Organization:</strong> ${org}</p>
-        <p><strong>Membership:</strong> ${membership}</p>
+        <p><strong>Submitted:</strong> ${timestamp}</p>
     `;
 
     container.appendChild(infoBox);
