@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>PestControl Admin Panel Site Plan | Dreiser Morales</title>
+  <meta name="description" content="Site plan for a simple pest control admin panel project for WDD 231.">
+  <meta name="author" content="Dreiser Morales">
+
+  <meta property="og:title" content="PestControl Admin Panel Site Plan">
+  <meta property="og:description" content="Planning document for a pest control business admin panel website.">
+  <meta property="og:type" content="website">
+    <link rel="stylesheet" href="styles/siteplan.css">
+
+</head>
+
+<body>
+  <header>
+    <h1>PestControl Admin Panel Site Plan</h1>
+    <p>WDD 231 Individual Website Project</p>
+  </header>
+
+  <nav>
+    <a href="#site-name">Site Name</a>
+    <a href="#purpose">Purpose</a>
+    <a href="#scenarios">Scenarios</a>
+    <a href="#colors">Colors</a>
+    <a href="#typography">Typography</a>
+    <a href="#wireframes">Wireframes</a>
+  </nav>
+
+  <main>
+    <section>
+      <h2>Project Overview</h2>
+      <p>
+        The project is a simple web application prototype for a pest control business.
+        The goal is to help a business owner organize clients, services, technicians,
+        and service records in a cleaner way than using Excel spreadsheets.
+      </p>
+
+      <p>
+        The final website will contain three main pages:
+      </p>
+
+      <ul>
+        <li><span class="highlight">index.html:</span> Login page for owner/admin and technician access.</li>
+        <li><span class="highlight">dashboard.html:</span> Admin page with dynamic forms for clients, services, and technicians.</li>
+        <li><span class="highlight">records.html:</span> Organized lists of clients, services, employees, and technician service updates.</li>
+      </ul>
+    </section>
+
+    <section id="site-name">
+      <h2>Site Name</h2>
+
+      <h3>PestControl Admin Panel</h3>
+
+      <p>
+        This name was selected because it clearly describes the purpose of the website.
+        It is an administration panel designed specifically for a pest control business.
+        The name is simple, professional, and easy for a business owner or employee to understand.
+      </p>
+
+      <p>
+        Optional domain idea: <strong>pestcontroladmin.com</strong>
+      </p>
+    </section>
+
+    <section id="purpose">
+      <h2>Site Purpose</h2>
+
+      <p>
+        The purpose of the site is to provide a simple digital management system for a pest control company.
+        The owner or admin will be able to create and manage clients, services, and technicians.
+        The system will also allow technicians to view assigned services, add service notes,
+        and mark services as completed.
+      </p>
+
+      <p>
+        The website will demonstrate dynamic JavaScript functionality by displaying forms,
+        generating lists from data, using local storage, opening modal dialogs, and updating content
+        based on user interaction.
+      </p>
+    </section>
+
+    <section id="scenarios">
+      <h2>Scenarios</h2>
+
+      <p>
+        These are possible questions from the target users of the website:
+      </p>
+
+      <ul>
+        <li>How can I quickly create a new client and assign a pest control service to that client?</li>
+        <li>How can a technician see which services are assigned to them and mark them as completed?</li>
+        <li>How can the owner review all clients, employees, and services in one organized place?</li>
+        <li>How can the business keep better service records instead of using Excel?</li>
+      </ul>
+    </section>
+
+    <section id="colors">
+      <h2>Color Scheme</h2>
+
+      <p>
+        The selected color scheme uses green as the main color because it connects with pest control,
+        safety, nature, and cleanliness. Orange is used as an accent color to highlight important actions.
+      </p>
+
+      <div class="color-grid">
+        <div class="color-card">
+          <div class="color-sample green"></div>
+          <div class="color-info">
+            <h3>Primary Green</h3>
+            <p><strong>Hex:</strong> #14532d</p>
+            <p>Used for headings, header background, navigation text, buttons, and important sections.</p>
+          </div>
+        </div>
+
+        <div class="color-card">
+          <div class="color-sample orange"></div>
+          <div class="color-info">
+            <h3>Accent Orange</h3>
+            <p><strong>Hex:</strong> #f97316</p>
+            <p>Used for call-to-action buttons, highlights, borders, and active states.</p>
+          </div>
+        </div>
+
+        <div class="color-card">
+          <div class="color-sample light"></div>
+          <div class="color-info">
+            <h3>Light Background</h3>
+            <p><strong>Hex:</strong> #f8fafc</p>
+            <p>Used for the page background to keep the interface clean and readable.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="typography">
+      <h2>Typography</h2>
+
+      <p>
+        The main font selected for this project is <strong>Inter</strong>, with Arial and Helvetica as fallback fonts.
+        Inter was selected because it is clean, modern, readable, and commonly used in professional dashboard interfaces.
+      </p>
+
+      <div class="typography-example">
+        <h3>Heading Example</h3>
+        <p>
+          Headings will use a strong font weight to clearly separate sections and improve readability.
+        </p>
+      </div>
+
+      <div class="typography-example">
+        <p>
+          Body text will use a regular font weight with enough line spacing to make forms,
+          instructions, service details, and records easy to read.
+        </p>
+      </div>
+    </section>
+
+    <section id="wireframes">
+      <h2>Wireframes</h2>
+
+      <p>
+        These wireframes represent the planned layout for the home/login page of the project.
+      </p>
+
+      <div class="wireframes">
+        <div class="wireframe">
+          <div class="wireframe-title">Mobile View</div>
+
+          <div class="box">Header / Logo</div>
+          <div class="box">Hamburger Navigation</div>
+          <div class="box">Login Card</div>
+          <div class="box">Role Selector</div>
+          <div class="box">Email Input</div>
+          <div class="box">Password Input</div>
+          <div class="box">Login Button</div>
+          <div class="box">Short Project Description</div>
+          <div class="box">Footer Links</div>
+        </div>
+
+        <div class="wireframe">
+          <div class="wireframe-title">Desktop / Tablet View</div>
+
+          <div class="wireframe-desktop">
+            <div class="box top">Header with Logo and Navigation</div>
+            <div class="box">Left Branding Section</div>
+            <div class="box">Login Form Card</div>
+            <div class="box">Business Benefits / Summary</div>
+            <div class="box bottom">Footer with Attributions and Video Link</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 PestControl Admin Panel</p>
+    <p>Site Plan by Dreiser Morales</p>
+  </footer>
+</body>
+</html>
