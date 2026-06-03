@@ -1043,10 +1043,8 @@ footer p {
     margin-bottom: 0;
 }
 
-.mdl-button {
-    /* height: 35px;} */
+.mdl-button, .place-card button {
     width: 80%;
-    /* justify-self: center; */
     align-self: last baseline;
     margin-top: 2rem;
     padding: 0.60rem 1rem;
