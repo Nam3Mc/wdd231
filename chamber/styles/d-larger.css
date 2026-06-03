@@ -6,7 +6,7 @@
         gap: 8px;
     }
 
-    main h1 {
+    main h1, #visit-message {
         grid-column: 1/3;
     }
 

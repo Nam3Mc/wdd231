@@ -3,6 +3,7 @@ import fetchWeather from "./fetch-weather.mjs";
 import updateFooter from "./update-footer.mjs";
 import fetchServices from "./fetch-services.mjs";
 import hamburguerMenu from "./hamburguer-menu.mjs"
+import displayVisitMessage from "./visit-counter.mjs";
 
 const API_KEY = "85e2ca2476b925d881c344d811e795ce";
 const city = "Bogota,CO";
@@ -13,5 +14,6 @@ const servicesUrl = './data/members.json';
 fetchWeather(currentUrl)
 fetchForecast(forecastUrl)
 fetchServices(servicesUrl)
+displayVisitMessage()
 hamburguerMenu()
 updateFooter()
