@@ -1,0 +1,130 @@
+[
+  {
+    "id": 1,
+    "name": "Cerro de Monserrate",
+    "address": "Carrera 2 Este #21-48, Bogotá, Colombia",
+    "historical_review": "Monserrate is one of Bogotá's most iconic hills and religious landmarks. It has been a pilgrimage destination for centuries and offers one of the best panoramic views of the city.",
+    "photo_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Santuario_de_Monserrate%2C_Bogot%C3%A1.jpg",
+    "curious_data": "The sanctuary is located more than 3,000 meters above sea level."
+  },
+  {
+    "id": 2,
+    "name": "Museo del Oro",
+    "address": "Carrera 6 #15-88, Bogotá, Colombia",
+    "historical_review": "The Gold Museum preserves one of the most important collections of pre-Hispanic goldwork in the world, representing indigenous cultures such as the Muisca.",
+    "photo_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Museo_Del_Oro%2C_Bogota_%2824976759882%29.jpg",
+    "curious_data": "One of its most famous pieces is the Muisca Raft, connected to the legend of El Dorado."
+  },
+  {
+    "id": 3,
+    "name": "Plaza de Bolívar",
+    "address": "Carrera 7 #11-10, Bogotá, Colombia",
+    "historical_review": "Plaza de Bolívar is the main square of Bogotá and has been central to political, religious, and social life since the colonial period.",
+    "photo_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Plaza_de_Bol%C3%ADvar_%28Bogot%C3%A1%2C_Colombia%29_1.jpg",
+    "curious_data": "It was once known as Plaza Mayor and later Plaza de la Constitución."
+  },
+  {
+    "id": 4,
+    "name": "La Candelaria",
+    "address": "La Candelaria, Bogotá, Colombia",
+    "historical_review": "La Candelaria is Bogotá's historic center, known for colonial houses, museums, churches, universities, and cultural spaces.",
+    "photo_url": "https://commons.wikimedia.org/wiki/Special:FilePath/La_Candelaria%2C_Bogota%2C_Colombia_%285785130118%29.jpg",
+    "curious_data": "Many streets still keep the colonial layout and colorful architecture."
+  },
+  {
+    "id": 5,
+    "name": "Museo Botero",
+    "address": "Calle 11 #4-41, Bogotá, Colombia",
+    "historical_review": "Museo Botero displays works donated by Colombian artist Fernando Botero, along with pieces by international artists.",
+    "photo_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Patio_Museo_Botero_Bogota.JPG",
+    "curious_data": "The collection was donated by Botero in 2000 and is part of Banco de la República's cultural network."
+  },
+  {
+    "id": 6,
+    "name": "Casa Museo Quinta de Bolívar",
+    "address": "Calle 21 #4A-30 Este, Bogotá, Colombia",
+    "historical_review": "This historic house museum preserves the memory of Simón Bolívar and shows how elite homes looked during the early republican period.",
+    "photo_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Quinta_de_Bol%C3%ADvar_en_Bogot%C3%A1.jpg",
+    "curious_data": "It is located near the base of Monserrate."
+  },
+  {
+    "id": 7,
+    "name": "Chorro de Quevedo",
+    "address": "Calle 12B #2-98, Bogotá, Colombia",
+    "historical_review": "Chorro de Quevedo is a small historic square associated with the early origins of Bogotá and the old Santa Fe settlement.",
+    "photo_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Chorro_de_Quevedo%2C_en_Bogot%C3%A1%2C_Colombia.jpg",
+    "curious_data": "Today it is popular for street art, storytelling, chicha, and student life."
+  },
+  {
+    "id": 8,
+    "name": "Museo Nacional de Colombia",
+    "address": "Carrera 7 #28-66, Bogotá, Colombia",
+    "historical_review": "The National Museum is one of Colombia's most important museums, with collections about art, history, archaeology, and ethnography.",
+    "photo_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bogot%C3%A1_TM_Museo_Nacional.jpg",
+    "curious_data": "The building was originally used as a prison before becoming a museum."
+  },
+  {
+    "id": 9,
+    "name": "Jardín Botánico José Celestino Mutis",
+    "address": "Calle 63 #68-95, Bogotá, Colombia",
+    "historical_review": "Bogotá's Botanical Garden is dedicated to the conservation, research, and education of Andean and Colombian plant species.",
+    "photo_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Jardin_Botanico_Bogota.jpg",
+    "curious_data": "It has collections focused on high-Andean ecosystems and páramo vegetation."
+  },
+  {
+    "id": 11,
+    "name": "Planetario de Bogotá",
+    "address": "Calle 26B #5-93, Bogotá, Colombia",
+    "historical_review": "The Bogotá Planetarium opened in 1969 and became one of the city's main science and astronomy centers.",
+    "photo_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Planetario_de_Bogot%C3%A1.JPG",
+    "curious_data": "Its dome hosts immersive astronomy and science shows."
+  },
+  {
+    "id": 12,
+    "name": "Maloka",
+    "address": "Carrera 68D #24A-51, Bogotá, Colombia",
+    "historical_review": "Maloka is an interactive science and technology museum designed to make learning experimental, playful, and accessible.",
+    "photo_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Maloka_in_Bogot%C3%A1_Colombia.jpg",
+    "curious_data": "It is known for its large dome theater and interactive science rooms."
+  },
+  {
+    "id": 13,
+    "name": "Biblioteca Virgilio Barco",
+    "address": "Avenida Carrera 60 #57-60, Bogotá, Colombia",
+    "historical_review": "Designed by architect Rogelio Salmona, this library is considered one of Bogotá's architectural landmarks.",
+    "photo_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Biblioteca_Virgilio_Barco_Bogot%C3%A1_Colombia.jpg",
+    "curious_data": "Its circular forms, brickwork, and reflecting pools are part of its identity."
+  },
+  {
+    "id": 14,
+    "name": "Parque Metropolitano Simón Bolívar",
+    "address": "Between Calle 63 and Calle 53, Carrera 66 and Avenida 68, Bogotá, Colombia",
+    "historical_review": "Simón Bolívar Park is one of the largest and most important urban parks in Bogotá, used for recreation, sports, and concerts.",
+    "photo_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bogot%C3%A1_Parque_Sim%C3%B3n_Bol%C3%ADvar.JPG",
+    "curious_data": "It is often called one of the green lungs of Bogotá."
+  },
+  {
+    "id": 15,
+    "name": "Torre Colpatria",
+    "address": "Carrera 7 #24-89, Bogotá, Colombia",
+    "historical_review": "Torre Colpatria is one of Bogotá's most recognizable skyscrapers and a symbol of the modern city skyline.",
+    "photo_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Torre_Colpatria_de_Bogot%C3%A1%2C_Cundinamarca.jpeg",
+    "curious_data": "At night, its facade is often illuminated with colorful lights."
+  },
+  {
+    "id": 19,
+    "name": "Plaza de Mercado de Paloquemao",
+    "address": "Avenida Calle 19 #25-04, Bogotá, Colombia",
+    "historical_review": "Paloquemao is one of Bogotá's most famous traditional markets, known for flowers, fruits, vegetables, meats, local products, and food stalls.",
+    "photo_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bogot%C3%A1_plaza_de_Paloquemao.JPG",
+    "curious_data": "The flower section is one of the most colorful areas to visit early in the morning."
+  },
+  {
+    "id": 20,
+    "name": "Museo de Bogotá - Casa de los Siete Balcones",
+    "address": "Calle 10 #3-61, Bogotá, Colombia",
+    "historical_review": "The Bogotá Museum tells the story of the city through photographs, maps, objects, and urban memory collections.",
+    "photo_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Museo_de_Bogot%C3%A1.jpg",
+    "curious_data": "Its collection includes thousands of objects related to the transformation of Bogotá."
+  }
+]
