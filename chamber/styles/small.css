@@ -789,7 +789,7 @@ input[type="submit"]:active {
     line-height: 1.5;
 }
 
-.membership-card button, .place-card button{
+.membership-card button, .place-card button {
     width: 100%;
     margin-top: 1rem;
     padding: 0.85rem 1rem;
@@ -992,11 +992,6 @@ footer p {
 
 /* Mobile CSS - 320px base */
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
 
 /* Container where cards are appended */
 #places-container,
