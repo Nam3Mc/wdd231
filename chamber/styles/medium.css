@@ -52,7 +52,7 @@
         display: flex;
         justify-content: space-evenly;
     }
-
+    
     .navigation li {
         width: 100%;
     }
@@ -80,6 +80,5 @@
             transform 0.2s ease,
             box-shadow var(--transition);
     }
-
 
 }
