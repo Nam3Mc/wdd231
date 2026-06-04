@@ -1,16 +1,16 @@
 export default function getThankYouInfo() {
-    
     const container = document.querySelector("#card");
+
+    if (!container) return;
 
     const params = new URLSearchParams(window.location.search);
 
-    const fname = params.get("fname");
-    const lname = params.get("lname");
-    const email = params.get("email");
-    const phone = params.get("phone");
-    const org = params.get("org");
-    const timestamp = params.get("timestamp");
-
+    const fname = params.get("fname") || "";
+    const lname = params.get("lname") || "";
+    const email = params.get("email") || "";
+    const phone = params.get("phone") || "";
+    const org = params.get("org") || "";
+    const timestamp = new Date().toISOString();
 
     const infoBox = document.createElement("div");
     infoBox.classList.add("thank-you-info");
@@ -25,5 +25,4 @@ export default function getThankYouInfo() {
     `;
 
     container.appendChild(infoBox);
-
 }
