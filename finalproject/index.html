@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PestControl Login</title>
+  <meta name="description" content="Secure login page for PestControl company administration.">
+  <meta name="author" content="Dreiser Morales">
+  <meta property="og:title" content="PestControl Login">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://example.com/PestControl/index.html">
+  <meta property="og:image" content="https://example.com/PestControl/images/social-preview.webp">
+  <meta property="og:description" content="Secure login page for PestControl company administration.">
+  <link rel="icon" href="images/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/index.css">
+  <!-- <link rel="stylesheet" href="styles/index-m.css"> -->
+  <!-- <link rel="stylesheet" href="styles/index-l.css"> -->
+
+  <script type="module" src="scripts/index.mjs"></script>
+
+</head>
+
+<body class="login-page">
+ 
+  <header>  
+    <div class="logo-container">
+      <h1 class="company-name">PestControl</h1>
+    </div>
+  </header>
+  
+  <main id="main" class="login-main">
+    
+    <section id="log-ing"> 
+      
+      
+      <img src="images/logo.png" alt="PestControl Logo" class="logo">
+      
+      <div>
+        <form id="log-ing-form" >
+          <label for="email">
+            Email:
+            <input type="email" id="email" name="email" placeholder="Jhon@email.com" required>
+          </label>
+          <label for="password">
+            Password:
+            <input type="password" id="password" name="password" placeholder="********" required>
+          </label>
+          <label>
+            <input type="checkbox" id="show-password">
+            Show Password
+          </label>
+          <button type="submit" id="login-button">Login</button>
+        </form>
+      </div>
+
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 PestControl. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
