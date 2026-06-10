@@ -1,0 +1,149 @@
+@media only screen and (min-width: 641px) {
+    body {
+        max-width: 1180px;
+        margin: 0 auto;
+        padding: 1.25rem;
+        display: grid;
+        grid-template-columns: 230px minmax(0, 1fr);
+        grid-template-areas:
+            "header header"
+            "sidebar main"
+            "services services"
+            "footer footer";
+        gap: 1.25rem;
+        align-items: start;
+    }
+
+    .owner-header {
+        grid-area: header;
+        max-width: 100%;
+        min-height: 90px;
+        padding: 1rem 1.25rem;
+    }
+
+    .owner-header img {
+        width: 64px;
+        height: 64px;
+    }
+
+    .owner-header h2 {
+        font-size: 1.45rem;
+    }
+
+    .logout-btn {
+        min-width: 110px;
+        min-height: 44px;
+        font-size: 1rem;
+    }
+
+    .sidebar {
+        grid-area: sidebar;
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        padding: 1rem;
+        position: sticky;
+        top: 1.25rem;
+    }
+
+    .sidebar ul {
+        gap: 0.8rem;
+    }
+
+    .sidebar a {
+        padding: 0.95rem 1rem;
+        font-size: 1.05rem;
+        transition: background-color 0.2s ease, transform 0.2s ease;
+    }
+
+    .sidebar a:hover {
+        transform: translateX(4px);
+    }
+
+    .dashboard-content {
+        grid-area: main;
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+    }
+
+    .dashboard-content h1 {
+        font-size: 2rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .accordion-section {
+        margin-bottom: 1rem;
+    }
+
+    .accordion-btn {
+        min-height: 52px;
+        padding: 0.85rem 1.1rem;
+        font-size: 1.1rem;
+        transition: background-color 0.2s ease, transform 0.2s ease;
+    }
+
+    .accordion-btn:hover {
+        transform: translateY(-1px);
+    }
+
+    .accordion-btn::after {
+        width: 28px;
+        height: 28px;
+    }
+
+    .accordion-section.show .accordion-content,
+    .accordion-content.show {
+        margin-top: 0.6rem;
+    }
+
+    #client-form,
+    #service-form,
+    #technician-form,
+    #stock-form {
+        padding: 1.25rem;
+        border-radius: 18px;
+    }
+
+    input:not([type="checkbox"]),
+    select,
+    textarea {
+        min-height: 46px;
+    }
+
+    form button {
+        max-width: 220px;
+        align-self: flex-end;
+    }
+
+    .services-panel {
+        grid-area: services;
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        padding: 1.25rem;
+    }
+
+    .services-panel h2 {
+        font-size: 1.6rem;
+    }
+
+    #next-services-container {
+        min-height: 140px;
+    }
+
+    .dashboard-footer {
+        grid-area: footer;
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        padding: 1.5rem;
+    }
+
+    .footer-content {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+        gap: 1.5rem;
+        align-items: start;
+    }
+}

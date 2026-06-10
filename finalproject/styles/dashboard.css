@@ -1,0 +1,403 @@
+/* 
+Base CSS: Mobile up to 320px
+Primary Green: #14532d
+Accent Orange: #f97316
+Light Background: #f8fafc
+*/
+
+:root {
+    --primary-green: #14532d;
+    --primary-green-light: #166534;
+    --accent-orange: #f97316;
+    --accent-orange-dark: #ea580c;
+    --light-bg: #f8fafc;
+    --text-dark: #0f172a;
+    --text-muted: #64748b;
+    --white: #ffffff;
+    --border-soft: #d1d5db;
+    --shadow-soft: 0 10px 25px rgba(15, 23, 42, 0.12);
+    --shadow-green: 0 12px 25px rgba(20, 83, 45, 0.2);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background-color: var(--light-bg);
+    color: var(--text-dark);
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0.6rem;
+}
+
+/* HEADER */
+
+.owner-header {
+    background-color: var(--primary-green);
+    color: var(--white);
+    width: 100%;
+    min-height: 76px;
+    padding: 0.5rem;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+    box-shadow: var(--shadow-green);
+    overflow: hidden;
+}
+
+.owner-header img {
+    background-color: rgba(248, 250, 252, 0.85);
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    padding: 0.25rem;
+    flex-shrink: 0;
+}
+
+.owner-header h2 {
+    margin: 0;
+    font-size: 0.9rem;
+    line-height: 1.2;
+    flex: 1;
+    min-width: 0;
+}
+
+.logout-btn {
+    min-width: auto;
+    min-height: 40px;
+    padding: 0 0.65rem;
+    border: none;
+    border-radius: 999px;
+    background-color: var(--accent-orange);
+    color: var(--white);
+    font-size: 0.8rem;
+    font-weight: 700;
+    cursor: pointer;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.logout-btn:hover {
+    background-color: var(--accent-orange-dark);
+}
+
+/* SIDEBAR */
+
+.sidebar {
+    background-color: var(--primary-green);
+    width: 100%;
+    margin-top: 0.75rem;
+    padding: 0.75rem;
+    border-radius: 16px;
+    color: var(--light-bg);
+    box-shadow: var(--shadow-green);
+}
+
+.sidebar nav {
+    width: 100%;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 0.6rem;
+}
+
+.sidebar li {
+    margin: 0;
+}
+
+.sidebar a {
+    display: block;
+    width: 100%;
+    padding: 0.75rem 0.85rem;
+    border-radius: 14px;
+    background-color: rgba(255, 255, 255, 0.12);
+    color: var(--light-bg);
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.sidebar a:hover {
+    background-color: var(--accent-orange);
+}
+
+/* MAIN */
+
+.dashboard-content {
+    width: 100%;
+    margin-top: 0.9rem;
+}
+
+.dashboard-content h1 {
+    margin: 0 0 0.9rem;
+    color: var(--primary-green);
+    font-size: 1.45rem;
+    line-height: 1.2;
+}
+
+/* ACCORDION */
+
+.accordion-section {
+    margin-bottom: 0.85rem;
+}
+
+.accordion-btn {
+    background-color: var(--primary-green-light);
+    width: 100%;
+    min-height: 46px;
+    padding: 0.65rem 0.85rem;
+    border: none;
+    border-radius: 15px;
+    color: var(--light-bg);
+    font-size: 1rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    cursor: pointer;
+    box-shadow: var(--shadow-soft);
+}
+
+.accordion-btn:hover {
+    background-color: var(--primary-green);
+}
+
+.accordion-btn::after {
+    content: '+';
+    order: -1;
+    background-color: var(--accent-orange);
+    color: var(--white);
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    flex-shrink: 0;
+}
+
+/* Form hidden by default */
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(-8px);
+    margin-top: 0;
+    transition:
+        max-height 0.45s ease,
+        opacity 0.25s ease,
+        transform 0.25s ease,
+        margin-top 0.25s ease;
+}
+
+/* Compatible with JS adding .show to section */
+
+.accordion-section.show .accordion-content {
+    max-height: 3000px;
+    opacity: 1;
+    transform: translateY(0);
+    margin-top: 0.45rem;
+}
+
+/* Compatible with JS adding .show directly to accordion-content */
+
+.accordion-content.show {
+    max-height: 3000px;
+    opacity: 1;
+    transform: translateY(0);
+    margin-top: 0.45rem;
+}
+
+.accordion-section.show .accordion-btn::after,
+.accordion-btn[aria-expanded="true"]::after {
+    content: '−';
+}
+
+/* FORMS */
+
+#client-form,
+#service-form,
+#technician-form,
+#stock-form {
+    width: 100%;
+    padding: 0.85rem;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--white);
+    border: 1px solid rgba(20, 83, 45, 0.2);
+    border-radius: 16px;
+    box-shadow: var(--shadow-soft);
+}
+
+label {
+    margin-top: 0.75rem;
+    margin-bottom: 0.3rem;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--text-dark);
+}
+
+.fist-label {
+    margin-top: 0;
+}
+
+input:not([type="checkbox"]),
+select,
+textarea {
+    width: 100%;
+    min-height: 44px;
+    border: 1px solid var(--border-soft);
+    border-radius: 14px;
+    padding: 0.6rem 0.75rem;
+    color: var(--text-dark);
+    background-color: var(--white);
+    font-size: 0.95rem;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 3px solid rgba(249, 115, 22, 0.25);
+    border-color: var(--accent-orange);
+}
+
+fieldset {
+    margin: 0.9rem 0;
+    padding: 1rem 0.85rem 0.85rem;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 15px;
+    background-color: var(--primary-green-light);
+    color: var(--white);
+}
+
+legend {
+    background-color: var(--accent-orange);
+    color: var(--white);
+    padding: 0.35rem 0.7rem;
+    border-radius: 999px;
+    font-size: 0.9rem;
+    font-weight: 800;
+}
+
+fieldset label {
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+    margin: 0.65rem 0;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--accent-orange);
+    flex-shrink: 0;
+}
+
+form button {
+    width: 100%;
+    min-height: 44px;
+    margin-top: 0.9rem;
+    border: none;
+    border-radius: 999px;
+    background-color: var(--accent-orange);
+    color: var(--white);
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: var(--accent-orange-dark);
+}
+
+/* SERVICES PANEL */
+
+.services-panel {
+    width: 100%;
+    margin-top: 0.9rem;
+    padding: 0.9rem;
+    background-color: var(--white);
+    border-radius: 16px;
+    box-shadow: var(--shadow-soft);
+}
+
+.services-panel h2 {
+    margin: 0 0 0.75rem;
+    color: var(--primary-green);
+    font-size: 1.3rem;
+}
+
+#next-services-container {
+    min-height: 110px;
+    border: 1px dashed rgba(20, 83, 45, 0.35);
+    border-radius: 14px;
+    padding: 0.85rem;
+    color: var(--text-muted);
+}
+
+/* FOOTER */
+
+.dashboard-footer {
+    width: 100%;
+    margin-top: 0.9rem;
+    padding: 1rem;
+    background-color: var(--primary-green);
+    color: var(--white);
+    border-radius: 16px;
+}
+
+.footer-content {
+    display: grid;
+    gap: 1rem;
+}
+
+.footer-brand h2,
+.footer-links h3,
+.footer-info h3 {
+    margin: 0 0 0.5rem;
+}
+
+.footer-brand p,
+.footer-info p {
+    margin: 0.35rem 0;
+    color: rgba(255, 255, 255, 0.78);
+    font-size: 0.95rem;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 0.45rem;
+}
+
+.footer-links a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+
+.footer-links a:hover {
+    color: var(--accent-orange);
+}

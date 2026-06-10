@@ -3,9 +3,259 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
+    <title>Owner Dashboard | Pest Control</title>
+    <meta name="description" content="Owner dashboard for managing pest control clients, technicians, services, and stock.">
+    <meta name="author" content="Dreiser Morales">
+    <meta name="theme-color" content="#14532d">
+
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="styles/dashboard.css">
+    <link rel="stylesheet" href="styles/dashboard-m.css">
+    <link rel="stylesheet" href="styles/dashboard-l.css">
+
+    <script type="module" src="scripts/dashboard.mjs"></script>
 </head>
+
 <body>
-    <h1>Dashboard</h1>
+
+    <header class="owner-header">
+        <img src="images/logo.png" alt="Pest Control logo" width="48" height="48">
+        <h2>PestControl Admin</h2>
+        <button id="logout-btn" class="logout-btn" type="button">Logout</button>
+    </header>
+
+    <aside class="sidebar">
+        <nav aria-label="Owner dashboard navigation">
+            <ul>
+                <li>
+                    <a href="#" id="clients-link">Clients</a>
+                </li>
+                <li>
+                    <a href="#" id="technicians-link">Technicians</a>
+                </li>
+                <li>
+                    <a href="#" id="pending-services-link">Pending Services</a>
+                </li>
+                <li>
+                    <a href="#" id="stock-link">Stock</a>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main id="main-content" class="dashboard-content">
+        <h1>Owner Dashboard</h1>
+
+        <!-- ADD CLIENT -->
+        <section class="accordion-section" aria-labelledby="add-client-title">
+            <button class="accordion-btn" type="button" id="add-client-title">
+                Add Client
+            </button>
+
+            <div class="accordion-content">
+                <form method="post" id="client-form">
+                    <label for="companyName" class="fist-label">Company Name</label>
+                    <input type="text" id="companyName" name="companyName" autocomplete="organization" required>
+
+                    <label for="owner">Owner</label>
+                    <input type="text" id="owner" name="owner" autocomplete="name" required>
+
+                    <label for="clientPhone">Phone</label>
+                    <input type="tel" id="clientPhone" name="phone" autocomplete="tel" required>
+
+                    <label for="clientEmail">Email</label>
+                    <input type="email" id="clientEmail" name="email" autocomplete="email" required>
+
+                    <label for="address">Address</label>
+                    <input type="text" id="address" name="address" autocomplete="street-address" required>
+
+                    <label for="city">City</label>
+                    <input type="text" id="city" name="city" autocomplete="address-level2" required>
+
+                    <label for="clientNotes">Client Notes</label>
+                    <textarea id="clientNotes" name="notes" rows="4"></textarea>
+
+                    <button type="submit">Save Client</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- ADD SERVICE -->
+        <section class="accordion-section" aria-labelledby="add-service-title">
+            <button class="accordion-btn" type="button" id="add-service-title">
+                Add Service
+            </button>
+
+            <div class="accordion-content">
+                <form id="service-form">
+                    <label for="serviceClient" class="fist-label">Client</label>
+                    <select id="serviceClient" name="clientId" required>
+                        <option value="">Select a client</option>
+                    </select>
+
+                    <label for="serviceClient" class="fist-label">Technicians</label>
+                    <select id="technicians" name="clientId" required>
+                        <option value="">Select a Technicians</option>
+                    </select>
+
+                    <label for="lastServiceDate">Service Date</label>
+                    <input type="date" id="lastServiceDate" name="lastServiceDate">
+
+                    <fieldset>
+                        <legend>Pest Types</legend>
+
+                        <label>
+                            <input type="checkbox" name="pestTypes" value="Cockroaches">
+                            Cockroaches
+                        </label>
+
+                        <label>
+                            <input type="checkbox" name="pestTypes" value="Rodents">
+                            Rodents
+                        </label>
+
+                        <label>
+                            <input type="checkbox" name="pestTypes" value="Ants">
+                            Ants
+                        </label>
+
+                        <label>
+                            <input type="checkbox" name="pestTypes" value="Termites">
+                            Termites
+                        </label>
+
+                        <label>
+                            <input type="checkbox" name="pestTypes" value="Flies">
+                            Flies
+                        </label>
+                    </fieldset>
+
+                    <label for="serviceNotes">Service Notes</label>
+                    <textarea id="serviceNotes" name="serviceNotes" rows="4"></textarea>
+
+                    <button type="submit">Save Service</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- ADD TECHNICIAN -->
+        <section class="accordion-section" aria-labelledby="add-technician-title">
+            <button class="accordion-btn" type="button" id="add-technician-title">
+                Add Technician
+            </button>
+
+            <div class="accordion-content">
+                <form id="technician-form">
+                    <label for="userId" class="fist-label">User ID</label>
+                    <input type="text" id="userId" name="id" placeholder="usr_002" required>
+
+                    <label for="fname">First Name</label>
+                    <input type="text" id="fname" name="fname" autocomplete="given-name" required>
+
+                    <label for="lname">Last Name</label>
+                    <input type="text" id="lname" name="lname" autocomplete="family-name" required>
+
+                    <label for="technicianPhone">Phone</label>
+                    <input type="tel" id="technicianPhone" name="phone" autocomplete="tel" required>
+
+                    <label for="technicianEmail">Email</label>
+                    <input type="email" id="technicianEmail" name="email" autocomplete="email" required>
+
+                    <label for="role">Role</label>
+                    <select id="role" name="role" required>
+                        <option value="technician">Technician</option>
+                        <option value="owner">Owner</option>
+                        <option value="admin">Admin</option>
+                    </select>
+
+                    <label for="salary">Salary</label>
+                    <input type="number" id="salary" name="salary" min="0" required>
+
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" autocomplete="new-password" required>
+
+                    <button type="submit">Save Technician</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- ADD STOCK -->
+        <section class="accordion-section" aria-labelledby="add-stock-title">
+            <button class="accordion-btn" type="button" id="add-stock-title">
+                Add Stock
+            </button>
+
+            <div class="accordion-content">
+                <form id="stock-form">
+                    <label for="stockId" class="fist-label">Stock ID</label>
+                    <input type="text" id="stockId" name="id" placeholder="stk_001" required>
+
+                    <label for="productName">Product Name</label>
+                    <input type="text" id="productName" name="productName" required>
+
+                    <label for="category">Category</label>
+                    <select id="category" name="category" required>
+                        <option value="">Select category</option>
+                        <option value="Chemical">Chemical</option>
+                        <option value="Equipment">Equipment</option>
+                        <option value="Protection">Protection</option>
+                        <option value="Tool">Tool</option>
+                    </select>
+
+                    <label for="quantity">Quantity</label>
+                    <input type="number" id="quantity" name="quantity" min="0" required>
+
+                    <label for="unit">Unit</label>
+                    <input type="text" id="unit" name="unit" placeholder="liters, units, kg" required>
+
+                    <label for="minimumStock">Minimum Stock</label>
+                    <input type="number" id="minimumStock" name="minimumStock" min="0" required>
+
+                    <label for="supplier">Supplier</label>
+                    <input type="text" id="supplier" name="supplier" required>
+
+                    <label for="price">Price</label>
+                    <input type="number" id="price" name="price" min="0" step="0.01" required>
+
+                    <label for="expirationDate">Expiration Date</label>
+                    <input type="date" id="expirationDate" name="expirationDate">
+
+                    <button type="submit">Save Stock</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <aside class="services-panel" aria-labelledby="next-services-title">
+        <h2 id="next-services-title">Next Services</h2>
+        <div id="next-services-container">
+            <!-- Service cards will be rendered here later -->
+        </div>
+    </aside>
+
+    <footer class="dashboard-footer">
+        <div class="footer-content">
+            <section class="footer-brand">
+                <h2>PestControl Admin</h2>
+                <p>Manage clients, technicians, pending services, and stock from one simple dashboard.</p>
+            </section>
+
+            <section class="footer-links" aria-label="Dashboard quick links">
+                <h3>Dashboard</h3>
+                <ul>
+                    <li><a href="#" id="footer-clients-link">Clients</a></li>
+                    <li><a href="#" id="footer-technicians-link">Technicians</a></li>
+                    <li><a href="#" id="footer-services-link">Pending Services</a></li>
+                    <li><a href="#" id="footer-stock-link">Stock</a></li>
+                </ul>
+            </section>
+
+            <section class="footer-info">
+                <h3>System Info</h3>
+                <p>&copy; <span id="currentYear"></span> PestControl Admin</p>
+                <p>Created by Dreiser Morales</p>
+            </section>
+        </div>
+    </footer>
 </body>
 </html>

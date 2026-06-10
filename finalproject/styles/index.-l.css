@@ -1,0 +1,66 @@
+/* ========================= */
+/* DESKTOP / LARGE SCREEN - 640px and up */
+/* ========================= */
+
+@media only screen and (min-width: 40rem) {
+    body {
+        justify-content: space-between;
+    }
+
+    header {
+        padding-top: 2.4rem;
+        padding-bottom: 1rem;
+    }
+
+    .company-name {
+        font-size: clamp(3rem, 6vw, 4rem);
+        letter-spacing: 2px;
+    }
+
+    .company-name::after {
+        bottom: -14px;
+        width: 80%;
+        height: 6px;
+    }
+
+    .login-main {
+        padding: 2rem;
+        align-items: center;
+    }
+
+    #log-ing {
+        max-width: 420px;
+        border-radius: 32px;
+    }
+
+    .logo {
+        max-width: 260px;
+        padding: 1.7rem 1rem 1.2rem;
+    }
+
+    #log-ing-form {
+        padding: 1.8rem;
+        gap: 1.15rem;
+    }
+
+    label {
+        font-size: 1rem;
+    }
+
+    #email,
+    #password {
+        min-height: 50px;
+        font-size: 1.05rem;
+        padding: 0.8rem 1rem;
+    }
+
+    button {
+        min-height: 52px;
+        font-size: 1.15rem;
+    }
+
+    footer {
+        padding: 1.2rem;
+        font-size: 0.95rem;
+    }
+}

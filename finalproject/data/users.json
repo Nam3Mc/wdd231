@@ -7,7 +7,8 @@
     "email": "michael.johnson@pestcontrol.com",
     "role": "admin",
     "salary": 4500,
-    "password": "AdminSecure123"
+    "password": "AdminSecure123",
+    "services": []
   },
   {
     "id": "usr_002",
@@ -17,7 +18,8 @@
     "email": "daniel.smith@pestcontrol.com",
     "role": "technician",
     "salary": 1800,
-    "password": "TechPass001"
+    "password": "TechPass001",
+    "services": ["srv_001", "srv_010"]
   },
   {
     "id": "usr_003",
@@ -27,7 +29,8 @@
     "email": "sophia.brown@pestcontrol.com",
     "role": "technician",
     "salary": 1750,
-    "password": "TechPass002"
+    "password": "TechPass002",
+    "services": ["srv_002", "srv_009"]
   },
   {
     "id": "usr_004",
@@ -37,7 +40,8 @@
     "email": "james.wilson@pestcontrol.com",
     "role": "technician",
     "salary": 1850,
-    "password": "TechPass003"
+    "password": "TechPass003",
+    "services": ["srv_003"]
   },
   {
     "id": "usr_005",
@@ -47,7 +51,8 @@
     "email": "emma.taylor@pestcontrol.com",
     "role": "technician",
     "salary": 1900,
-    "password": "TechPass004"
+    "password": "TechPass004",
+    "services": ["srv_004"]
   },
   {
     "id": "usr_006",
@@ -57,7 +62,8 @@
     "email": "william.anderson@pestcontrol.com",
     "role": "technician",
     "salary": 1700,
-    "password": "TechPass005"
+    "password": "TechPass005",
+    "services": ["srv_006"]
   },
   {
     "id": "usr_007",
@@ -67,7 +73,8 @@
     "email": "olivia.martinez@pestcontrol.com",
     "role": "technician",
     "salary": 1950,
-    "password": "TechPass006"
+    "password": "TechPass006",
+    "services": ["srv_005"]
   },
   {
     "id": "usr_008",
@@ -77,7 +84,8 @@
     "email": "benjamin.thomas@pestcontrol.com",
     "role": "technician",
     "salary": 1820,
-    "password": "TechPass007"
+    "password": "TechPass007",
+    "services": ["srv_007"]
   },
   {
     "id": "usr_009",
@@ -87,7 +95,8 @@
     "email": "isabella.harris@pestcontrol.com",
     "role": "technician",
     "salary": 1780,
-    "password": "TechPass008"
+    "password": "TechPass008",
+    "services": ["srv_008"]
   },
   {
     "id": "usr_010",
@@ -97,6 +106,7 @@
     "email": "ethan.clark@pestcontrol.com",
     "role": "technician",
     "salary": 1880,
-    "password": "TechPass009"
+    "password": "TechPass009",
+    "services": []
   }
 ]
