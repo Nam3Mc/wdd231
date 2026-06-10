@@ -1,4 +1,5 @@
 import addClient from "./dashboard/add-client.mjs";
+import clientsOptions from "./dashboard/clients-options.mjs";
 import fetchClients from "./dashboard/fetch-clients.mjs";
 import fetchTechnicians from "./dashboard/fetch-technicians.mjs";
 import logOut from "./dashboard/log-out.mjs";
@@ -14,5 +15,6 @@ roleVerificator()
 toggleForms()
 roleVerificator()
 fetchClients(clientsUrl)
+clientsOptions()
 fetchTechnicians(techniciansUrl)
 addClient()

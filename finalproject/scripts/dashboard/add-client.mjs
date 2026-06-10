@@ -1,3 +1,5 @@
+import clientsOptions from "./clients-options.mjs";
+
 export default function addClient() {
     const form = document.querySelector('#client-form');
 
@@ -39,5 +41,7 @@ export default function addClient() {
 
         alert("Client saved successfully");
         form.reset();
+        clientsOptions()
+
     });
 }
