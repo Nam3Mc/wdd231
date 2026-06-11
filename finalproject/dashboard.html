@@ -88,50 +88,50 @@
 
             <div class="accordion-content">
                 <form id="service-form">
-                    <label for="serviceClient" class="fist-label">Client</label>
-                    <select id="serviceClient" name="clientId" required>
+                    <label for="clientId" class="fist-label">Client</label>
+                    <select id="clientId" name="clientId" required>
                         <option value="">Select a client</option>
                     </select>
 
-                    <label for="serviceClient" class="fist-label">Technicians</label>
-                    <select id="technicians" name="clientId" required>
-                        <option value="">Select a Technicians</option>
+                    <label for="technicianId" class="fist-label">Technicians</label>
+                    <select id="technicianId" name="technicianId" required>
+                        <option value="">Select a Technician</option>
                     </select>
 
-                    <label for="lastServiceDate">Service Date</label>
-                    <input type="date" id="lastServiceDate" name="lastServiceDate">
+                    <label for="serviceDate">Service Date</label>
+                    <input type="date" id="serviceDate" name="serviceDate">
 
                     <fieldset>
                         <legend>Pest Types</legend>
 
                         <label>
-                            <input type="checkbox" name="pestTypes" value="Cockroaches">
+                            <input type="checkbox" name="pestTypes" value="cockroaches">
                             Cockroaches
                         </label>
 
                         <label>
-                            <input type="checkbox" name="pestTypes" value="Rodents">
+                            <input type="checkbox" name="pestTypes" value="rodents">
                             Rodents
                         </label>
 
                         <label>
-                            <input type="checkbox" name="pestTypes" value="Ants">
+                            <input type="checkbox" name="pestTypes" value="ants">
                             Ants
                         </label>
 
                         <label>
-                            <input type="checkbox" name="pestTypes" value="Termites">
+                            <input type="checkbox" name="pestTypes" value="termites">
                             Termites
                         </label>
 
                         <label>
-                            <input type="checkbox" name="pestTypes" value="Flies">
+                            <input type="checkbox" name="pestTypes" value="flies">
                             Flies
                         </label>
                     </fieldset>
 
                     <label for="serviceNotes">Service Notes</label>
-                    <textarea id="serviceNotes" name="serviceNotes" rows="4"></textarea>
+                    <textarea id="notes" name="serviceNotes" rows="4"></textarea>
 
                     <button type="submit">Save Service</button>
                 </form>

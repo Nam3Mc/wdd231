@@ -38,7 +38,6 @@ export default function addClient() {
 
         data.push(newClient);
         localStorage.setItem('clients', JSON.stringify(data));
-
         alert("Client saved successfully");
         form.reset();
         clientsOptions()

@@ -1,4 +1,5 @@
 import addClient from "./dashboard/add-client.mjs";
+// import addService from "./dashboard/add-service.mjs";
 import clientsOptions from "./dashboard/clients-options.mjs";
 import fetchClients from "./dashboard/fetch-clients.mjs";
 import fetchTechnicians from "./dashboard/fetch-technicians.mjs";
@@ -18,3 +19,4 @@ fetchClients(clientsUrl)
 clientsOptions()
 fetchTechnicians(techniciansUrl)
 addClient()
+// addService()
