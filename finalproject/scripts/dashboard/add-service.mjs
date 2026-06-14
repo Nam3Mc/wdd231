@@ -1,4 +1,4 @@
-import getAddress from "./get-address.mjs"
+import getClient from "./get-client.mjs"
 
 export default function addService() {
     try {
@@ -10,7 +10,7 @@ export default function addService() {
             const serviceType = document.querySelectorAll('input[type="checkbox"]:checked')
             const services = JSON.parse(localStorage.getItem('services'))
             const servicesValue = []
-            const address = getAddress(formData.clientId.value)
+            const client = getAddress(formData.clientId.value)
             
             serviceType.forEach(service => {
                 servicesValue.push(service.value)
@@ -27,7 +27,7 @@ export default function addService() {
                 "status": "pending",
                 "serviceDate": formData.serviceDate.value,
                 "serviceTime": formData.serviceTime.value,
-                "address": address,
+                "address": client.address,
                 "certificateIssued": false,
                 "productsUsed": []
             }

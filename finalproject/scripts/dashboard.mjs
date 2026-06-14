@@ -8,7 +8,6 @@ import roleVerificator from "./dashboard/role-verificator.mjs";
 import techniciansOptions from "./dashboard/technicians-options.mjs";
 import toggleForms from "./dashboard/toggle-forms.mjs";
 
-comingServices()
 roleVerificator()
 logOut()
 toggleForms()
@@ -17,3 +16,4 @@ techniciansOptions()
 addClient()
 addService()
 addTechnician()
+comingServices()
