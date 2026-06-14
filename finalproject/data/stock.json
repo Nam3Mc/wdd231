@@ -4,9 +4,6 @@
     "productName": "Cypermethrin Insecticide",
     "category": "Chemical",
     "quantity": 25,
-    "unit": "liters",
-    "minimumStock": 5,
-    "supplier": "Agro Pest Supplies",
     "price": 85,
     "expirationDate": "2027-03-15"
   },
@@ -15,9 +12,6 @@
     "productName": "Rodent Glue Traps",
     "category": "Trap",
     "quantity": 120,
-    "unit": "units",
-    "minimumStock": 30,
-    "supplier": "SafeCatch",
     "price": 4,
     "expirationDate": "2028-01-01"
   },
@@ -26,9 +20,6 @@
     "productName": "Rat Poison Blocks",
     "category": "Chemical",
     "quantity": 60,
-    "unit": "boxes",
-    "minimumStock": 10,
-    "supplier": "PestKill Co",
     "price": 22,
     "expirationDate": "2027-09-10"
   },
@@ -37,9 +28,6 @@
     "productName": "Termite Barrier Foam",
     "category": "Chemical",
     "quantity": 18,
-    "unit": "cans",
-    "minimumStock": 5,
-    "supplier": "TermiShield",
     "price": 30,
     "expirationDate": "2027-06-20"
   },
@@ -48,9 +36,6 @@
     "productName": "Mosquito Fogging Liquid",
     "category": "Chemical",
     "quantity": 40,
-    "unit": "liters",
-    "minimumStock": 8,
-    "supplier": "Vector Defense",
     "price": 70,
     "expirationDate": "2027-11-11"
   },
@@ -59,9 +44,6 @@
     "productName": "Protective Gloves",
     "category": "Safety",
     "quantity": 200,
-    "unit": "pairs",
-    "minimumStock": 50,
-    "supplier": "Industrial SafeWear",
     "price": 3,
     "expirationDate": "2029-01-01"
   },
@@ -70,9 +52,6 @@
     "productName": "Respirator Masks",
     "category": "Safety",
     "quantity": 90,
-    "unit": "units",
-    "minimumStock": 20,
-    "supplier": "Industrial SafeWear",
     "price": 12,
     "expirationDate": "2028-05-10"
   },
@@ -81,9 +60,6 @@
     "productName": "Cockroach Gel Bait",
     "category": "Chemical",
     "quantity": 75,
-    "unit": "tubes",
-    "minimumStock": 15,
-    "supplier": "RoachAway",
     "price": 15,
     "expirationDate": "2027-08-01"
   },
@@ -92,9 +68,6 @@
     "productName": "Ant Killer Granules",
     "category": "Chemical",
     "quantity": 55,
-    "unit": "bags",
-    "minimumStock": 10,
-    "supplier": "EcoDefense",
     "price": 18,
     "expirationDate": "2027-04-17"
   },
@@ -103,9 +76,6 @@
     "productName": "Fly Sticky Traps",
     "category": "Trap",
     "quantity": 140,
-    "unit": "units",
-    "minimumStock": 40,
-    "supplier": "FlyStop",
     "price": 2,
     "expirationDate": "2028-03-01"
   },
@@ -114,9 +84,6 @@
     "productName": "ULV Fogger Machine",
     "category": "Equipment",
     "quantity": 6,
-    "unit": "units",
-    "minimumStock": 2,
-    "supplier": "ProTech Equipment",
     "price": 450,
     "expirationDate": "2030-01-01"
   },
@@ -125,9 +92,6 @@
     "productName": "Backpack Sprayer",
     "category": "Equipment",
     "quantity": 10,
-    "unit": "units",
-    "minimumStock": 3,
-    "supplier": "ProTech Equipment",
     "price": 180,
     "expirationDate": "2030-01-01"
   },
@@ -136,9 +100,6 @@
     "productName": "Bed Bug Spray",
     "category": "Chemical",
     "quantity": 35,
-    "unit": "bottles",
-    "minimumStock": 8,
-    "supplier": "SleepSafe",
     "price": 25,
     "expirationDate": "2027-07-15"
   },
@@ -147,9 +108,6 @@
     "productName": "Disinfectant Solution",
     "category": "Cleaning",
     "quantity": 70,
-    "unit": "liters",
-    "minimumStock": 15,
-    "supplier": "CleanPro",
     "price": 14,
     "expirationDate": "2027-10-05"
   },
@@ -158,9 +116,6 @@
     "productName": "Industrial Broom",
     "category": "Cleaning",
     "quantity": 25,
-    "unit": "units",
-    "minimumStock": 5,
-    "supplier": "CleanPro",
     "price": 9,
     "expirationDate": "2030-01-01"
   },
@@ -169,9 +124,6 @@
     "productName": "Hazmat Suit",
     "category": "Safety",
     "quantity": 35,
-    "unit": "units",
-    "minimumStock": 10,
-    "supplier": "SafeWear",
     "price": 40,
     "expirationDate": "2029-12-01"
   },
@@ -180,9 +132,6 @@
     "productName": "Mouse Snap Traps",
     "category": "Trap",
     "quantity": 85,
-    "unit": "units",
-    "minimumStock": 20,
-    "supplier": "SafeCatch",
     "price": 5,
     "expirationDate": "2029-01-01"
   },
@@ -191,9 +140,6 @@
     "productName": "Thermal Fogger",
     "category": "Equipment",
     "quantity": 4,
-    "unit": "units",
-    "minimumStock": 1,
-    "supplier": "Vector Defense",
     "price": 780,
     "expirationDate": "2031-01-01"
   },
@@ -202,9 +148,6 @@
     "productName": "Drain Cleaner Gel",
     "category": "Cleaning",
     "quantity": 40,
-    "unit": "bottles",
-    "minimumStock": 8,
-    "supplier": "CleanFlow",
     "price": 11,
     "expirationDate": "2027-12-20"
   },
@@ -213,9 +156,6 @@
     "productName": "Portable UV Insect Trap",
     "category": "Equipment",
     "quantity": 12,
-    "unit": "units",
-    "minimumStock": 3,
-    "supplier": "FlyStop",
     "price": 95,
     "expirationDate": "2030-01-01"
   },
@@ -224,9 +164,6 @@
     "productName": "Fumigation Warning Signs",
     "category": "Safety",
     "quantity": 50,
-    "unit": "units",
-    "minimumStock": 10,
-    "supplier": "SafeWear",
     "price": 6,
     "expirationDate": "2030-01-01"
   },
@@ -235,9 +172,6 @@
     "productName": "Pressure Sprayer",
     "category": "Equipment",
     "quantity": 14,
-    "unit": "units",
-    "minimumStock": 4,
-    "supplier": "ProTech Equipment",
     "price": 120,
     "expirationDate": "2030-01-01"
   },
@@ -246,9 +180,6 @@
     "productName": "Sticky Monitoring Boards",
     "category": "Trap",
     "quantity": 160,
-    "unit": "units",
-    "minimumStock": 40,
-    "supplier": "SafeCatch",
     "price": 1,
     "expirationDate": "2028-06-10"
   },
@@ -257,9 +188,6 @@
     "productName": "Cockroach Powder",
     "category": "Chemical",
     "quantity": 28,
-    "unit": "bags",
-    "minimumStock": 6,
-    "supplier": "RoachAway",
     "price": 19,
     "expirationDate": "2027-09-30"
   },
@@ -268,9 +196,6 @@
     "productName": "Outdoor Mosquito Repellent",
     "category": "Chemical",
     "quantity": 45,
-    "unit": "bottles",
-    "minimumStock": 10,
-    "supplier": "Vector Defense",
     "price": 20,
     "expirationDate": "2027-08-12"
   },
@@ -279,9 +204,6 @@
     "productName": "Termite Detection Kit",
     "category": "Equipment",
     "quantity": 7,
-    "unit": "kits",
-    "minimumStock": 2,
-    "supplier": "TermiShield",
     "price": 210,
     "expirationDate": "2030-01-01"
   },
@@ -290,9 +212,6 @@
     "productName": "Cleaning Towels Pack",
     "category": "Cleaning",
     "quantity": 90,
-    "unit": "packs",
-    "minimumStock": 20,
-    "supplier": "CleanPro",
     "price": 8,
     "expirationDate": "2029-01-01"
   },
@@ -301,9 +220,6 @@
     "productName": "Industrial Flashlight",
     "category": "Equipment",
     "quantity": 20,
-    "unit": "units",
-    "minimumStock": 5,
-    "supplier": "ProTech Equipment",
     "price": 25,
     "expirationDate": "2031-01-01"
   },
@@ -312,9 +228,6 @@
     "productName": "Ant Bait Stations",
     "category": "Trap",
     "quantity": 65,
-    "unit": "units",
-    "minimumStock": 15,
-    "supplier": "EcoDefense",
     "price": 7,
     "expirationDate": "2028-04-22"
   },
@@ -323,9 +236,6 @@
     "productName": "Sanitizing Foam",
     "category": "Cleaning",
     "quantity": 50,
-    "unit": "cans",
-    "minimumStock": 10,
-    "supplier": "CleanFlow",
     "price": 13,
     "expirationDate": "2027-05-14"
   }

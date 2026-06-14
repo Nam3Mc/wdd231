@@ -1,22 +1,19 @@
 import addClient from "./dashboard/add-client.mjs";
-// import addService from "./dashboard/add-service.mjs";
+import addService from "./dashboard/add-service.mjs";
+import addTechnician from "./dashboard/add-technician.mjs";
 import clientsOptions from "./dashboard/clients-options.mjs";
-import fetchClients from "./dashboard/fetch-clients.mjs";
-import fetchTechnicians from "./dashboard/fetch-technicians.mjs";
+import comingServices from "./dashboard/comming-services.mjs";
 import logOut from "./dashboard/log-out.mjs";
 import roleVerificator from "./dashboard/role-verificator.mjs";
+import techniciansOptions from "./dashboard/technicians-options.mjs";
 import toggleForms from "./dashboard/toggle-forms.mjs";
 
-const clientsUrl = './data/clients.json'
-const techniciansUrl = './data/users.json'
-
-
+comingServices()
+roleVerificator()
 logOut()
-roleVerificator()
 toggleForms()
-roleVerificator()
-fetchClients(clientsUrl)
 clientsOptions()
-fetchTechnicians(techniciansUrl)
+techniciansOptions()
 addClient()
-// addService()
+addService()
+addTechnician()

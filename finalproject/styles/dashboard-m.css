@@ -4,9 +4,7 @@
     }
 
     .owner-header,
-    .sidebar,
     .dashboard-content,
-    .services-panel,
     .dashboard-footer {
         max-width: 560px;
         margin-left: auto;
@@ -35,6 +33,15 @@
         font-size: 0.85rem;
     }
 
+    .dashboard-content {
+        margin-top: 1rem;
+    }
+
+    .dashboard-content h1 {
+        font-size: 1.8rem;
+        margin: 1.15rem 0;
+    }
+
     .sidebar {
         padding: 0.9rem;
     }
@@ -42,14 +49,6 @@
     .sidebar a {
         padding: 0.85rem 1rem;
         font-size: 1.05rem;
-    }
-
-    .dashboard-content {
-        margin-top: 1rem;
-    }
-
-    .dashboard-content h1 {
-        font-size: 1.65rem;
     }
 
     .accordion-btn {

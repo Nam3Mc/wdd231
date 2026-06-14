@@ -24,27 +24,27 @@
         <button id="logout-btn" class="logout-btn" type="button">Logout</button>
     </header>
 
-    <aside class="sidebar">
-        <nav aria-label="Owner dashboard navigation">
-            <ul>
-                <li>
-                    <a href="#" id="clients-link">Clients</a>
-                </li>
-                <li>
-                    <a href="#" id="technicians-link">Technicians</a>
-                </li>
-                <li>
-                    <a href="#" id="pending-services-link">Pending Services</a>
-                </li>
-                <li>
-                    <a href="#" id="stock-link">Stock</a>
-                </li>
-            </ul>
-        </nav>
-    </aside>
-
     <main id="main-content" class="dashboard-content">
         <h1>Owner Dashboard</h1>
+
+        <aside class="sidebar">
+            <nav aria-label="Owner dashboard navigation">
+                <ul>
+                    <li>
+                        <a href="#" id="clients-link">Clients</a>
+                    </li>
+                    <li>
+                        <a href="#" id="technicians-link">Technicians</a>
+                    </li>
+                    <li>
+                        <a href="#" id="pending-services-link">Pending Services</a>
+                    </li>
+                    <li>
+                        <a href="#" id="stock-link">Stock</a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
 
         <!-- ADD CLIENT -->
         <section class="accordion-section" aria-labelledby="add-client-title">
@@ -100,6 +100,33 @@
 
                     <label for="serviceDate">Service Date</label>
                     <input type="date" id="serviceDate" name="serviceDate">
+                    <select id="serviceTime" name="serviceTime" required>
+                        <option value="">Select a time</option>
+                        <option value="08:00">08:00</option>
+                        <option value="08:30">08:30</option>
+                        <option value="09:00">09:00</option>
+                        <option value="09:30">09:30</option>
+                        <option value="10:00">10:00</option>
+                        <option value="10:30">10:30</option>
+                        <option value="11:00">11:00</option>
+                        <option value="11:30">11:30</option>
+                        <option value="12:00">12:00</option>
+                        <option value="12:30">12:30</option>
+                        <option value="13:00">13:00</option>
+                        <option value="13:30">13:30</option>
+                        <option value="14:00">14:00</option>
+                        <option value="14:30">14:30</option>
+                        <option value="15:00">15:00</option>
+                        <option value="15:30">15:30</option>
+                        <option value="16:00">16:00</option>
+                        <option value="16:30">16:30</option>
+                        <option value="17:00">17:00</option>
+                        <option value="17:30">17:30</option>
+                        <option value="18:00">18:00</option>
+                    </select>
+
+                    <label for="price">Price</label>
+                    <input type="number" id="price" name="price" min="0" step="0.01" required>
 
                     <fieldset>
                         <legend>Pest Types</legend>
@@ -146,8 +173,6 @@
 
             <div class="accordion-content">
                 <form id="technician-form">
-                    <label for="userId" class="fist-label">User ID</label>
-                    <input type="text" id="userId" name="id" placeholder="usr_002" required>
 
                     <label for="fname">First Name</label>
                     <input type="text" id="fname" name="fname" autocomplete="given-name" required>
@@ -164,7 +189,6 @@
                     <label for="role">Role</label>
                     <select id="role" name="role" required>
                         <option value="technician">Technician</option>
-                        <option value="owner">Owner</option>
                         <option value="admin">Admin</option>
                     </select>
 
@@ -173,7 +197,6 @@
 
                     <label for="password">Password</label>
                     <input type="password" id="password" name="password" autocomplete="new-password" required>
-
                     <button type="submit">Save Technician</button>
                 </form>
             </div>
@@ -187,8 +210,6 @@
 
             <div class="accordion-content">
                 <form id="stock-form">
-                    <label for="stockId" class="fist-label">Stock ID</label>
-                    <input type="text" id="stockId" name="id" placeholder="stk_001" required>
 
                     <label for="productName">Product Name</label>
                     <input type="text" id="productName" name="productName" required>
@@ -205,15 +226,6 @@
                     <label for="quantity">Quantity</label>
                     <input type="number" id="quantity" name="quantity" min="0" required>
 
-                    <label for="unit">Unit</label>
-                    <input type="text" id="unit" name="unit" placeholder="liters, units, kg" required>
-
-                    <label for="minimumStock">Minimum Stock</label>
-                    <input type="number" id="minimumStock" name="minimumStock" min="0" required>
-
-                    <label for="supplier">Supplier</label>
-                    <input type="text" id="supplier" name="supplier" required>
-
                     <label for="price">Price</label>
                     <input type="number" id="price" name="price" min="0" step="0.01" required>
 
@@ -224,14 +236,12 @@
                 </form>
             </div>
         </section>
-    </main>
+        
+        <section class="services-panel" aria-labelledby="next-services-title">
+            <h2 id="next-services-title">Next Services</h2>
+        </section>
 
-    <aside class="services-panel" aria-labelledby="next-services-title">
-        <h2 id="next-services-title">Next Services</h2>
-        <div id="next-services-container">
-            <!-- Service cards will be rendered here later -->
-        </div>
-    </aside>
+    </main>
 
     <footer class="dashboard-footer">
         <div class="footer-content">

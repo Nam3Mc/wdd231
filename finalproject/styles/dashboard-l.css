@@ -1,24 +1,17 @@
 @media only screen and (min-width: 641px) {
     body {
         max-width: 1180px;
+        min-height: 100vh;
         margin: 0 auto;
         padding: 1.25rem;
-        display: grid;
-        grid-template-columns: 230px minmax(0, 1fr);
-        grid-template-areas:
-            "header header"
-            "sidebar main"
-            "services services"
-            "footer footer";
-        gap: 1.25rem;
-        align-items: start;
+        display: block;
     }
 
     .owner-header {
-        grid-area: header;
         max-width: 100%;
         min-height: 90px;
         padding: 1rem 1.25rem;
+        margin-bottom: 1.25rem;
     }
 
     .owner-header img {
@@ -36,8 +29,27 @@
         font-size: 1rem;
     }
 
+    .dashboard-content {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        display: grid;
+        grid-template-columns: 230px minmax(0, 1fr);
+        gap: 1.25rem;
+        align-items: start;
+    }
+
+    .dashboard-content h1 {
+        grid-column: 1 / -1;
+        margin: 0 0 0.25rem;
+        text-align: center;
+        font-size: 2.25rem;
+        color: var(--primary-green);
+    }
+
     .sidebar {
-        grid-area: sidebar;
+        grid-column: 1 / 2;
+        grid-row: 2 / span 4;
         width: 100%;
         max-width: 100%;
         margin: 0;
@@ -60,20 +72,9 @@
         transform: translateX(4px);
     }
 
-    .dashboard-content {
-        grid-area: main;
-        width: 100%;
-        max-width: 100%;
-        margin: 0;
-    }
-
-    .dashboard-content h1 {
-        font-size: 2rem;
-        margin-bottom: 1.25rem;
-    }
-
     .accordion-section {
-        margin-bottom: 1rem;
+        grid-column: 2 / 3;
+        margin-bottom: 0;
     }
 
     .accordion-btn {
@@ -117,9 +118,11 @@
     }
 
     .services-panel {
-        grid-area: services;
+        grid-column: 1 / -1;
+        grid-row: auto;
         width: 100%;
         max-width: 100%;
+        height: 100%;
         margin: 0;
         padding: 1.25rem;
     }
@@ -133,10 +136,9 @@
     }
 
     .dashboard-footer {
-        grid-area: footer;
         width: 100%;
         max-width: 100%;
-        margin: 0;
+        margin-top: 1.25rem;
         padding: 1.5rem;
     }
 

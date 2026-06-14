@@ -85,12 +85,28 @@ body {
     background-color: var(--accent-orange-dark);
 }
 
-/* SIDEBAR */
+/* MAIN */
+
+.dashboard-content {
+    width: 100%;
+    margin-top: 0.9rem;
+}
+
+.dashboard-content h1 {
+    margin: 1rem 0;
+    color: var(--primary-green);
+    font-size: 1.55rem;
+    line-height: 1.2;
+    text-align: center;
+}
+
+/* SIDEBAR INSIDE MAIN */
 
 .sidebar {
     background-color: var(--primary-green);
     width: 100%;
     margin-top: 0.75rem;
+    margin-bottom: 0.9rem;
     padding: 0.75rem;
     border-radius: 16px;
     color: var(--light-bg);
@@ -127,20 +143,6 @@ body {
 
 .sidebar a:hover {
     background-color: var(--accent-orange);
-}
-
-/* MAIN */
-
-.dashboard-content {
-    width: 100%;
-    margin-top: 0.9rem;
-}
-
-.dashboard-content h1 {
-    margin: 0 0 0.9rem;
-    color: var(--primary-green);
-    font-size: 1.45rem;
-    line-height: 1.2;
 }
 
 /* ACCORDION */
@@ -185,8 +187,6 @@ body {
     flex-shrink: 0;
 }
 
-/* Form hidden by default */
-
 .accordion-content {
     max-height: 0;
     overflow: hidden;
@@ -200,16 +200,12 @@ body {
         margin-top 0.25s ease;
 }
 
-/* Compatible with JS adding .show to section */
-
 .accordion-section.show .accordion-content {
     max-height: 3000px;
     opacity: 1;
     transform: translateY(0);
     margin-top: 0.45rem;
 }
-
-/* Compatible with JS adding .show directly to accordion-content */
 
 .accordion-content.show {
     max-height: 3000px;
@@ -247,7 +243,8 @@ label {
     color: var(--text-dark);
 }
 
-.fist-label {
+.fist-label,
+.first-label {
     margin-top: 0;
 }
 
@@ -328,7 +325,7 @@ form button:hover {
     background-color: var(--accent-orange-dark);
 }
 
-/* SERVICES PANEL */
+/* SERVICES PANEL INSIDE MAIN */
 
 .services-panel {
     width: 100%;
@@ -400,4 +397,35 @@ form button:hover {
 
 .footer-links a:hover {
     color: var(--accent-orange);
+}
+
+html {
+    min-height: 100%;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background-color: var(--light-bg);
+    color: var(--text-dark);
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0.6rem;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.dashboard-content {
+    width: 100%;
+    margin-top: 0.9rem;
+    flex: 1;
+}
+
+.dashboard-footer {
+    width: 100%;
+    margin-top: auto;
+    padding: 1rem;
+    background-color: var(--primary-green);
+    color: var(--white);
+    border-radius: 16px;
 }

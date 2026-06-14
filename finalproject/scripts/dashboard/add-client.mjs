@@ -26,7 +26,7 @@ export default function addClient() {
         }
 
         const newClient = {
-            id: phone,
+            id: crypto.randomUUID(),
             companyName: companyName,
             owner: owner,
             phone: phone,
