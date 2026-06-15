@@ -1,71 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technicians | Pest Control</title>
+    <meta name="description" content="Technicians page for reviewing and managing pest control technicians.">
+    <meta name="author" content="Dreiser Morales">
+    <meta name="theme-color" content="#14532d">
 
-  <title>PestControl Technicians</title>
-  <meta name="description" content="Manage PestControl technicians.">
-  <meta name="author" content="Dreiser Morales">
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="styles/technicians.css">
+    <link rel="stylesheet" href="styles/technicians-m.css">
+    <link rel="stylesheet" href="styles/technicians-l.css">
 
-  <link rel="icon" href="images/favicon.ico">
-  <link rel="stylesheet" href="styles/technicians.css">
-
-  <script type="module" src="scripts/technicians.mjs"></script>
+    <script type="module" src="scripts/technicians.mjs"></script>
 </head>
 
 <body>
 
-  <header class="owner-header">
-    <img src="images/logo.png" alt="PestControl logo">
-    <h2>PestControl Admin</h2>
-    <button class="logout-btn" type="button">Logout</button>
-  </header>
+    <header class="owner-header">
+        <div class="header-brand">
+            <a href="./dashboard" class="logo-link" aria-label="Go to dashboard">
+                <img src="images/logo.svg" alt="Pest Control logo" width="48" height="48">
+            </a>
 
-  <main class="dashboard-content">
-    <h1>Technicians</h1>
-
-    <section class="cards-container" id="technicians-container" aria-label="Technicians list">
-
-      <article class="technician-card" data-technician-id="usr_002">
-        <header class="card-header">
-          <div>
-            <h2>Daniel Smith</h2>
-            <p class="card-subtitle">Technician ID: usr_002</p>
-          </div>
-
-          <span class="status-badge technician">Technician</span>
-        </header>
-
-        <div class="card-body">
-          <p><strong>Phone:</strong> 3005551002</p>
-          <p><strong>Email:</strong> daniel.smith@pestcontrol.com</p>
-          <p><strong>Role:</strong> technician</p>
-          <p><strong>Salary:</strong> $1800</p>
-
-          <div class="tag-group" aria-label="Assigned services">
-            <span>srv_001</span>
-            <span>srv_010</span>
-          </div>
+            <h2>PestControl Admin</h2>
         </div>
 
-        <footer class="card-actions">
-          <button class="technician-info-btn" type="button">
-            Technician Information
-          </button>
+        <div class="header-actions">
+            <button
+                id="menu-toggle"
+                class="menu-toggle"
+                type="button"
+                aria-label="Open navigation menu"
+                aria-controls="owner-nav"
+                aria-expanded="false">
+                ☰
+            </button>
+        </div>
 
-          <button class="delete-technician-btn danger-btn" type="button">
-            Delete Technician
-          </button>
-        </footer>
-      </article>
+        <nav id="owner-nav" class="owner-nav" aria-label="Owner dashboard navigation">
+            <ul>
+                <li>
+                    <a href="./dashboard" id="dashboard-link">Dashboard</a>
+                </li>
+                <li>
+                    <a href="./clients" id="clients-link">Clients</a>
+                </li>
+                <li>
+                    <a href="./technicians" id="technicians-link" aria-current="page">Technicians</a>
+                </li>
+                <li>
+                    <a href="./services" id="services-link">Services</a>
+                </li>
+                <li>
+                    <a href="./stock" id="stock-link">Stock</a>
+                </li>
+                <li class="logout-item">
+                    <button id="logout-btn" class="logout-btn" type="button">Logout</button>
+                </li>
+            </ul>
+        </nav>
+    </header>
 
-    </section>
-  </main>
+    <main id="main-content" class="technicians-content">
+        <h1>Technicians</h1>
 
-  <footer class="dashboard-footer">
-    <p>&copy; 2024 PestControl. All rights reserved.</p>
-  </footer>
+        <section class="technicians-panel" aria-labelledby="technicians-title">
+            <div class="technicians-panel-header">
+                <h2 id="technicians-title">Technician List</h2>
+                <p>Review technician profiles, roles, phone numbers, and assigned service information.</p>
+            </div>
+
+            <div id="technicians-container" class="technicians-container">
+                <!-- Technician cards will be dynamically inserted here -->
+            </div>
+        </section>
+    </main>
+
+    <footer class="dashboard-footer">
+        <div class="footer-content">
+            <section class="footer-brand">
+                <h2>PestControl Admin</h2>
+                <p>Manage clients, technicians, services, and stock from one simple dashboard.</p>
+            </section>
+
+            <section class="footer-links" aria-label="Dashboard quick links">
+                <h3>Dashboard</h3>
+                <ul>
+                    <li><a href="./dashboard" id="footer-dashboard-link">Dashboard</a></li>
+                    <li><a href="./clients" id="footer-clients-link">Clients</a></li>
+                    <li><a href="./technicians" id="footer-technicians-link">Technicians</a></li>
+                    <li><a href="./services" id="footer-services-link">Services</a></li>
+                    <li><a href="./stock" id="footer-stock-link">Stock</a></li>
+                </ul>
+            </section>
+
+            <section class="footer-info">
+                <h3>System Info</h3>
+                <p>&copy; <span id="currentYear"></span> PestControl Admin</p>
+                <p>Created by Dreiser Morales</p>
+            </section>
+        </div>
+    </footer>
 
 </body>
 </html>

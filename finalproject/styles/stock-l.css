@@ -1,0 +1,360 @@
+/* 
+    Shared admin page CSS
+    Large styles: 641px and up
+*/
+
+@media only screen and (min-width: 641px) {
+    body {
+        padding: 1rem;
+    }
+
+    /* HEADER */
+
+    .owner-header {
+        position: relative;
+        max-width: 1440px;
+        min-height: 90px;
+        margin: 0 auto;
+        padding: 1rem 1.25rem;
+        gap: 1rem;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .header-brand {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 0.75rem;
+        padding-right: 9.5rem;
+    }
+
+    .header-brand img {
+        width: 64px;
+        height: 64px;
+        aspect-ratio: 1 / 1;
+    }
+
+    .header-brand h2 {
+        font-size: 1.45rem;
+        white-space: nowrap;
+    }
+
+    .header-actions,
+    .menu-toggle {
+        display: none;
+    }
+
+    /* NAVBAR BELOW HEADER */
+
+    .owner-nav {
+        display: block;
+        width: 100%;
+        margin-top: 0;
+        padding-top: 0.9rem;
+        border-top: 2px solid var(--white);
+    }
+
+    .owner-nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.75rem;
+        flex-wrap: wrap;
+    }
+
+    .owner-nav li {
+        display: flex;
+        align-items: center;
+        margin: 0;
+    }
+
+    .owner-nav a {
+        display: block;
+        width: auto;
+        min-width: 110px;
+        min-height: 44px;
+        padding: 0.75rem 1rem;
+        border-radius: 999px;
+        background-color: var(--primary-green-dark);
+        color: var(--white);
+        text-decoration: none;
+        font-size: 0.95rem;
+        font-weight: 700;
+        text-align: center;
+        white-space: nowrap;
+        transition:
+            background-color 0.2s ease,
+            transform 0.2s ease;
+    }
+
+    .owner-nav a:hover,
+    .owner-nav a[aria-current="page"] {
+        background-color: var(--accent-orange-dark);
+        color: var(--white);
+        transform: translateY(-2px);
+    }
+
+    .owner-nav a:focus-visible {
+        outline: 3px solid var(--white);
+        outline-offset: 3px;
+    }
+
+    /* LOGOUT TOP RIGHT */
+
+    .owner-nav .logout-item,
+    .owner-nav li:last-child {
+        position: absolute;
+        top: 1.55rem;
+        right: 1.25rem;
+    }
+
+    .owner-nav .logout-btn {
+        width: auto;
+        min-width: 110px;
+        min-height: 44px;
+        padding: 0.75rem 1rem;
+        border: 2px solid var(--white);
+        border-radius: 999px;
+        background-color: var(--accent-orange-dark);
+        color: var(--white);
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1rem;
+        font-weight: 700;
+        text-align: center;
+        white-space: nowrap;
+        cursor: pointer;
+        transition:
+            background-color 0.2s ease,
+            transform 0.2s ease;
+    }
+
+    .owner-nav .logout-btn:hover {
+        background-color: var(--accent-orange);
+        transform: translateY(-2px);
+    }
+
+    .owner-nav .logout-btn:focus-visible {
+        outline: 3px solid var(--white);
+        outline-offset: 3px;
+    }
+
+    .owner-nav .logout-btn::before {
+        content: "";
+    }
+
+    /* MAIN LAYOUT */
+
+    .clients-content,
+    .technicians-content,
+    .stock-content {
+        width: 100%;
+        max-width: 1440px;
+        min-height: 74vh;
+        margin: 1.25rem auto 0;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+        align-items: start;
+    }
+
+    .clients-content h1,
+    .technicians-content h1,
+    .stock-content h1 {
+        min-height: 2.3rem;
+        margin: 0;
+        font-size: 1.9rem;
+        text-align: left;
+    }
+
+    /* PANELS */
+
+    .clients-panel,
+    .technicians-panel,
+    .stock-panel {
+        min-height: 540px;
+        margin-top: 0;
+        padding: 1.25rem;
+        border-radius: 20px;
+    }
+
+    .clients-panel-header,
+    .technicians-panel-header,
+    .stock-panel-header {
+        min-height: 74px;
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+        gap: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .clients-panel-header h2,
+    .technicians-panel-header h2,
+    .stock-panel-header h2 {
+        font-size: 1.55rem;
+    }
+
+    .clients-panel-header p,
+    .technicians-panel-header p,
+    .stock-panel-header p {
+        max-width: 460px;
+        margin: 0;
+        font-size: 0.95rem;
+        text-align: right;
+    }
+
+    /* CONTAINERS */
+
+    .clients-container,
+    .technicians-container,
+    .stock-container {
+        min-height: 350px;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+        align-content: start;
+        gap: 1rem;
+    }
+
+    /* CARDS */
+
+    .client-card,
+    .technician-card,
+    .stock-card,
+    .data-card {
+        min-height: 210px;
+        padding: 1rem;
+        border-radius: 18px;
+        display: flex;
+        flex-direction: column;
+        transition:
+            transform 0.2s ease,
+            box-shadow 0.2s ease;
+    }
+
+    .client-card:hover,
+    .technician-card:hover,
+    .stock-card:hover,
+    .data-card:hover {
+        transform: translateY(-4px);
+        box-shadow: var(--shadow-card-hover);
+    }
+
+    .card-title,
+    .client-company,
+    .technician-name,
+    .stock-product {
+        font-size: 1.15rem;
+    }
+
+    .card-detail,
+    .client-detail,
+    .technician-detail,
+    .stock-detail {
+        font-size: 0.95rem;
+    }
+
+    .status-badge,
+    .role-badge,
+    .category-badge {
+        font-size: 0.82rem;
+    }
+
+    .card-actions {
+        margin-top: auto;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.7rem;
+    }
+
+    .card-actions button,
+    .info-btn,
+    .delete-btn {
+        min-height: 40px;
+        font-size: 0.86rem;
+    }
+
+    /* FOOTER */
+
+    .dashboard-footer {
+        width: 100%;
+        max-width: 1440px;
+        margin: 1.25rem auto 0;
+        padding: 1.25rem;
+    }
+
+    .footer-content {
+        display: grid;
+        grid-template-columns: 1.5fr 1fr 1fr;
+        align-items: start;
+        gap: 1.5rem;
+    }
+
+    .footer-links a {
+        display: inline-block;
+        padding: 0.15rem 0.25rem;
+        border-radius: 6px;
+    }
+
+    .footer-links a:hover {
+        background-color: var(--white);
+        color: var(--primary-green-dark);
+    }
+
+    /* SHARED DATA CARDS - LARGE */
+    
+    .clients-container,
+    .technicians-container,
+    .stock-container {
+        min-height: 350px;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+        align-content: start;
+        gap: 1rem;
+    }
+    
+    .client-card,
+    .technician-card,
+    .stock-card {
+        min-height: 220px;
+        padding: 1.1rem;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 0.6rem;
+        transition:
+            transform 0.2s ease,
+            box-shadow 0.2s ease;
+    }
+    
+    .client-card:hover,
+    .technician-card:hover,
+    .stock-card:hover {
+        transform: translateY(-4px);
+        box-shadow: var(--shadow-card-hover);
+    }
+    
+    .client-company,
+    .technician-name,
+    .stock-product {
+        font-size: 1.18rem;
+    }
+    
+    .client-detail,
+    .technician-detail,
+    .stock-detail {
+        font-size: 0.96rem;
+    }
+    
+    .status-badge,
+    .role-badge,
+    .category-badge {
+        margin-top: auto;
+        font-size: 0.85rem;
+        padding: 0.42rem 0.85rem;
+    }
+    
+}

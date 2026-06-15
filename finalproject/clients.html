@@ -1,80 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clients | Pest Control</title>
+    <meta name="description" content="Clients page for reviewing and managing pest control company clients.">
+    <meta name="author" content="Dreiser Morales">
+    <meta name="theme-color" content="#14532d">
 
-  <title>PestControl Clients</title>
-  <meta name="description" content="Manage PestControl company clients.">
-  <meta name="author" content="Dreiser Morales">
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="styles/clients.css">
+    <link rel="stylesheet" href="styles/clients-m.css">
+    <link rel="stylesheet" href="styles/clients-l.css">
 
-  <link rel="icon" href="images/favicon.ico">
-  <link rel="stylesheet" href="styles/clients.css">
-  <link rel="stylesheet" href="styles/clients-m.css">
-  <link rel="stylesheet" href="styles/clients-l.css">
-
-  <script type="module" src="scripts/clients.mjs"></script>
+    <script type="module" src="scripts/clients.mjs"></script>
 </head>
 
 <body>
 
-  <header class="owner-header">
-    <img src="images/logo.png" alt="PestControl logo">
-    <h2>PestControl Admin</h2>
-    <button class="logout-btn" type="button">Logout</button>
-  </header>
+    <header class="owner-header">
+        <div class="header-brand">
+            <a href="./dashboard" class="logo-link" aria-label="Go to dashboard">
+                <img src="images/logo.svg" alt="Pest Control logo" width="48" height="48">
+            </a>
 
-  <main class="dashboard-content">
-    <h1>Clients</h1>
-
-    <section class="cards-container" id="clients-container" aria-label="Clients list">
-
-      <article class="client-card" data-client-id="cmp_001">
-        <header class="card-header">
-          <div>
-            <h2>EcoShield Pest Control</h2>
-            <p class="card-subtitle">Owner: Michael Johnson</p>
-          </div>
-
-          <span class="status-badge active">Active</span>
-        </header>
-
-        <div class="card-body">
-          <p><strong>Phone:</strong> 3005552001</p>
-          <p><strong>Email:</strong> contact@ecoshieldpc.com</p>
-          <p><strong>Address:</strong> Cra 15 #93-47, Bogotá, Colombia</p>
-          <p><strong>City:</strong> Bogotá</p>
-          <p><strong>Service Plan:</strong> Monthly</p>
-          <p><strong>Last Service:</strong> 2026-05-10</p>
-          <p><strong>Next Service:</strong> 2026-06-10</p>
-
-          <div class="tag-group" aria-label="Pest types">
-            <span>Cockroaches</span>
-            <span>Rodents</span>
-          </div>
-
-          <p class="card-notes">
-            <strong>Notes:</strong> Restaurant kitchen requires monthly inspection.
-          </p>
+            <h2>PestControl Admin</h2>
         </div>
 
-        <footer class="card-actions">
-          <button class="client-info-btn" type="button">
-            Client Information
-          </button>
+        <div class="header-actions">
+            <button
+                id="menu-toggle"
+                class="menu-toggle"
+                type="button"
+                aria-label="Open navigation menu"
+                aria-controls="owner-nav"
+                aria-expanded="false">
+                ☰
+            </button>
+        </div>
 
-          <button class="delete-client-btn danger-btn" type="button">
-            Delete Client
-          </button>
-        </footer>
-      </article>
+        <nav id="owner-nav" class="owner-nav" aria-label="Owner dashboard navigation">
+            <ul>
+                <li>
+                    <a href="./dashboard" id="dashboard-link">Dashboard</a>
+                </li>
+                <li>
+                    <a href="./clients" id="clients-link" aria-current="page">Clients</a>
+                </li>
+                <li>
+                    <a href="./technicians" id="technicians-link">Technicians</a>
+                </li>
+                <li>
+                    <a href="./services" id="services-link">Services</a>
+                </li>
+                <li>
+                    <a href="./stock" id="stock-link">Stock</a>
+                </li>
+                <li class="logout-item">
+                    <button id="logout-btn" class="logout-btn" type="button">Logout</button>
+                </li>
+            </ul>
+        </nav>
+    </header>
 
-    </section>
-  </main>
+    <main id="main-content" class="clients-content">
+        <h1>Clients</h1>
 
-  <footer class="dashboard-footer">
-    <p>&copy; 2024 PestControl. All rights reserved.</p>
-  </footer>
+        <section class="clients-panel" aria-labelledby="clients-title">
+            <div class="clients-panel-header">
+                <h2 id="clients-title">Client List</h2>
+                <p>Review registered companies, owners, contact information, and service details.</p>
+            </div>
+
+            <div id="clients-container" class="clients-container">
+                <!-- Client cards will be dynamically inserted here -->
+            </div>
+        </section>
+    </main>
+
+    <footer class="dashboard-footer">
+        <div class="footer-content">
+            <section class="footer-brand">
+                <h2>PestControl Admin</h2>
+                <p>Manage clients, technicians, services, and stock from one simple dashboard.</p>
+            </section>
+
+            <section class="footer-links" aria-label="Dashboard quick links">
+                <h3>Dashboard</h3>
+                <ul>
+                    <li><a href="./dashboard" id="footer-dashboard-link">Dashboard</a></li>
+                    <li><a href="./clients" id="footer-clients-link">Clients</a></li>
+                    <li><a href="./technicians" id="footer-technicians-link">Technicians</a></li>
+                    <li><a href="./services" id="footer-services-link">Services</a></li>
+                    <li><a href="./stock" id="footer-stock-link">Stock</a></li>
+                </ul>
+            </section>
+
+            <section class="footer-info">
+                <h3>System Info</h3>
+                <p>&copy; <span id="currentYear"></span> PestControl Admin</p>
+                <p>Created by Dreiser Morales</p>
+            </section>
+        </div>
+    </footer>
 
 </body>
 </html>

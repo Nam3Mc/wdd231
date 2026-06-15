@@ -1,66 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock | Pest Control</title>
+    <meta name="description" content="Stock page for reviewing and managing pest control products, equipment, and supplies.">
+    <meta name="author" content="Dreiser Morales">
+    <meta name="theme-color" content="#14532d">
 
-  <title>PestControl Stock</title>
-  <meta name="description" content="Manage PestControl inventory and stock products.">
-  <meta name="author" content="Dreiser Morales">
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="styles/stock.css">
+    <link rel="stylesheet" href="styles/stock-m.css">
+    <link rel="stylesheet" href="styles/stock-l.css">
 
-  <link rel="icon" href="images/favicon.ico">
-  <link rel="stylesheet" href="styles/stock.css">
-
-  <script type="module" src="scripts/stock.mjs"></script>
+    <script type="module" src="scripts/stock.mjs"></script>
 </head>
 
 <body>
 
-  <header class="owner-header">
-    <img src="images/logo.png" alt="PestControl logo">
-    <h2>PestControl Admin</h2>
-    <button class="logout-btn" type="button">Logout</button>
-  </header>
+    <header class="owner-header">
+        <div class="header-brand">
+            <a href="./dashboard" class="logo-link" aria-label="Go to dashboard">
+                <img src="images/logo.svg" alt="Pest Control logo" width="48" height="48">
+            </a>
 
-  <main class="dashboard-content">
-    <h1>Stock</h1>
-
-    <section class="cards-container" id="stock-container" aria-label="Stock list">
-
-      <article class="stock-card" data-stock-id="stk_001">
-        <header class="card-header">
-          <div>
-            <h2>Cypermethrin Insecticide</h2>
-            <p class="card-subtitle">Product ID: stk_001</p>
-          </div>
-
-          <span class="status-badge stock">In Stock</span>
-        </header>
-
-        <div class="card-body">
-          <p><strong>Category:</strong> Chemical</p>
-          <p><strong>Quantity:</strong> 25</p>
-          <p><strong>Price:</strong> $85</p>
-          <p><strong>Expiration Date:</strong> 2027-03-15</p>
+            <h2>PestControl Admin</h2>
         </div>
 
-        <footer class="card-actions">
-          <button class="stock-info-btn" type="button">
-            Product Information
-          </button>
+        <div class="header-actions">
+            <button
+                id="menu-toggle"
+                class="menu-toggle"
+                type="button"
+                aria-label="Open navigation menu"
+                aria-controls="owner-nav"
+                aria-expanded="false">
+                ☰
+            </button>
+        </div>
 
-          <button class="delete-stock-btn danger-btn" type="button">
-            Delete Product
-          </button>
-        </footer>
-      </article>
+        <nav id="owner-nav" class="owner-nav" aria-label="Owner dashboard navigation">
+            <ul>
+                <li>
+                    <a href="./dashboard" id="dashboard-link">Dashboard</a>
+                </li>
+                <li>
+                    <a href="./clients" id="clients-link">Clients</a>
+                </li>
+                <li>
+                    <a href="./technicians" id="technicians-link">Technicians</a>
+                </li>
+                <li>
+                    <a href="./services" id="services-link">Services</a>
+                </li>
+                <li>
+                    <a href="./stock" id="stock-link" aria-current="page">Stock</a>
+                </li>
+                <li class="logout-item">
+                    <button id="logout-btn" class="logout-btn" type="button">Logout</button>
+                </li>
+            </ul>
+        </nav>
+    </header>
 
-    </section>
-  </main>
+    <main id="main-content" class="stock-content">
+        <h1>Stock</h1>
 
-  <footer class="dashboard-footer">
-    <p>&copy; 2024 PestControl. All rights reserved.</p>
-  </footer>
+        <section class="stock-panel" aria-labelledby="stock-title">
+            <div class="stock-panel-header">
+                <h2 id="stock-title">Stock List</h2>
+                <p>Review products, categories, quantities, prices, and expiration dates.</p>
+            </div>
+
+            <div id="stock-container" class="stock-container">
+                <!-- Stock cards will be dynamically inserted here -->
+            </div>
+        </section>
+    </main>
+
+    <footer class="dashboard-footer">
+        <div class="footer-content">
+            <section class="footer-brand">
+                <h2>PestControl Admin</h2>
+                <p>Manage clients, technicians, services, and stock from one simple dashboard.</p>
+            </section>
+
+            <section class="footer-links" aria-label="Dashboard quick links">
+                <h3>Dashboard</h3>
+                <ul>
+                    <li><a href="./dashboard" id="footer-dashboard-link">Dashboard</a></li>
+                    <li><a href="./clients" id="footer-clients-link">Clients</a></li>
+                    <li><a href="./technicians" id="footer-technicians-link">Technicians</a></li>
+                    <li><a href="./services" id="footer-services-link">Services</a></li>
+                    <li><a href="./stock" id="footer-stock-link">Stock</a></li>
+                </ul>
+            </section>
+
+            <section class="footer-info">
+                <h3>System Info</h3>
+                <p>&copy; <span id="currentYear"></span> PestControl Admin</p>
+                <p>Created by Dreiser Morales</p>
+            </section>
+        </div>
+    </footer>
 
 </body>
 </html>

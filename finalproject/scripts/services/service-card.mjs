@@ -1,5 +1,6 @@
 import getClient from "../dashboard/get-client.mjs";
 import getTechnician from "../dashboard/get-technichian.mjs";
+import deleteService from "./delete-service.mjs";
 import serviceModal from "./service-modal.mjs";
 
 export default function serviceCard(service) {
@@ -58,6 +59,14 @@ export default function serviceCard(service) {
     deleteBtn.classList.add("delete-btn");
     deleteBtn.type = "button";
     deleteBtn.textContent = "Delete";
+
+    deleteBtn.addEventListener("click", () => {
+        const wasDeleted = deleteService(service);
+    
+        if (wasDeleted) {
+            container.remove();
+        }
+    });
 
     technicianContainer.classList.add("service-technician");
 
