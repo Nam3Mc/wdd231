@@ -7,6 +7,7 @@ import logOut from "./dashboard/log-out.mjs";
 import roleVerificator from "./dashboard/role-verificator.mjs";
 import techniciansOptions from "./dashboard/technicians-options.mjs";
 import toggleForms from "./dashboard/toggle-forms.mjs";
+import hamburguerMenu from "./hamburguer-menu.mjs";
 
 roleVerificator()
 logOut()
@@ -17,3 +18,4 @@ addClient()
 addService()
 addTechnician()
 comingServices()
+hamburguerMenu()

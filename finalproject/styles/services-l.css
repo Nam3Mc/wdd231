@@ -4,7 +4,6 @@
 */
 
 @media only screen and (min-width: 641px) {
-
     body {
         padding: 1rem;
     }
@@ -12,27 +11,153 @@
     /* HEADER */
 
     .owner-header {
+        position: relative;
         max-width: 1440px;
+        min-height: 90px;
         margin: 0 auto;
-        min-height: 82px;
-        padding: 0.75rem 1.2rem;
-        gap: 0.85rem;
+        padding: 1rem 1.25rem;
+        gap: 1rem;
+        flex-wrap: wrap;
+        align-items: center;
     }
 
-    .owner-header img {
-        width: 54px;
-        height: 54px;
+    .header-brand {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 0.75rem;
+        padding-right: 9.5rem;
+    }
+
+    .logo-link {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        flex-shrink: 0;
+    }
+
+    .logo-link:focus-visible {
+        outline: 3px solid var(--white);
+        outline-offset: 3px;
+    }
+
+    .header-brand img {
+        width: 64px;
+        height: 64px;
         aspect-ratio: 1 / 1;
     }
 
-    .owner-header h2 {
-        font-size: 1.15rem;
+    .header-brand h2 {
+        font-size: 1.45rem;
+        white-space: nowrap;
     }
 
-    .logout-btn {
-        min-height: 42px;
-        padding: 0 1.1rem;
-        font-size: 0.9rem;
+    .header-actions,
+    .menu-toggle {
+        display: none;
+    }
+
+    /* NAVBAR BELOW HEADER */
+
+    .owner-nav {
+        display: block;
+        width: 100%;
+        margin-top: 0;
+        padding-top: 0.9rem;
+        border-top: 2px solid var(--white);
+    }
+
+    .owner-nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.75rem;
+        flex-wrap: wrap;
+    }
+
+    .owner-nav li {
+        display: flex;
+        align-items: center;
+        margin: 0;
+    }
+
+    .owner-nav a {
+        display: block;
+        width: auto;
+        min-width: 110px;
+        min-height: 44px;
+        padding: 0.75rem 1rem;
+        border-radius: 999px;
+        background-color: var(--primary-green-dark);
+        color: var(--white);
+        text-decoration: none;
+        font-size: 0.95rem;
+        font-weight: 700;
+        text-align: center;
+        white-space: nowrap;
+        transition:
+            background-color 0.2s ease,
+            transform 0.2s ease;
+    }
+
+    .owner-nav a:hover,
+    .owner-nav a[aria-current="page"] {
+        background-color: var(--accent-orange-dark);
+        color: var(--white);
+        transform: translateY(-2px);
+    }
+
+    .owner-nav a:focus-visible {
+        outline: 3px solid var(--white);
+        outline-offset: 3px;
+    }
+
+    /* LOGOUT TOP RIGHT */
+
+    .owner-nav .logout-item,
+    .owner-nav li:last-child {
+        position: absolute;
+        top: 1.55rem;
+        right: 1.25rem;
+    }
+
+    .owner-nav .logout-btn {
+        width: auto;
+        min-width: 110px;
+        min-height: 44px;
+        padding: 0.75rem 1rem;
+        border: 2px solid var(--white);
+        border-radius: 999px;
+        background-color: var(--accent-orange-dark);
+        color: var(--white);
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1rem;
+        font-weight: 700;
+        text-align: center;
+        white-space: nowrap;
+        cursor: pointer;
+        transition:
+            background-color 0.2s ease,
+            transform 0.2s ease;
+    }
+
+    .owner-nav .logout-btn:hover {
+        background-color: var(--accent-orange);
+        transform: translateY(-2px);
+    }
+
+    .owner-nav .logout-btn:focus-visible {
+        outline: 3px solid var(--white);
+        outline-offset: 3px;
+    }
+
+    .owner-nav .logout-btn::before {
+        content: "";
     }
 
     /* MAIN LAYOUT */
@@ -43,10 +168,10 @@
         min-height: 74vh;
         margin: 1.25rem auto 0;
         display: grid;
-        grid-template-columns: 230px minmax(0, 1fr);
+        grid-template-columns: 1fr;
         grid-template-areas:
-            "title title"
-            "sidebar services";
+            "title"
+            "services";
         gap: 1.25rem;
         align-items: start;
     }
@@ -57,28 +182,6 @@
         margin: 0;
         font-size: 1.9rem;
         text-align: left;
-    }
-
-    /* SIDEBAR */
-
-    .sidebar {
-        grid-area: sidebar;
-        position: sticky;
-        top: 1rem;
-        min-height: 65vh;
-        margin: 0;
-        padding: 1rem;
-    }
-
-    .sidebar ul {
-        grid-template-columns: 1fr;
-        gap: 0.75rem;
-    }
-
-    .sidebar a {
-        padding: 0.9rem 1rem;
-        text-align: left;
-        font-size: 1rem;
     }
 
     /* SERVICES PANEL */
@@ -165,6 +268,7 @@
         font-size: 1.1rem;
     }
 
+    .service-price,
     .service-status,
     .service-date {
         min-height: 1.25rem;

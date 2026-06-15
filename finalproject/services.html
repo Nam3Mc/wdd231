@@ -19,37 +19,52 @@
 <body>
 
     <header class="owner-header">
-        <a href="./dashboard" class="logo-link">
-            <img src="images/logo.svg" alt="Pest Control logo" width="48" height="48">
-        </a>
-        <h2>PestControl Admin</h2>
-        <button id="logout-btn" class="logout-btn" type="button">Logout</button>
+        <div class="header-brand">
+            <a href="./dashboard" class="logo-link" aria-label="Go to dashboard">
+                <img src="images/logo.svg" alt="Pest Control logo" width="48" height="48">
+            </a>
+
+            <h2>PestControl Admin</h2>
+        </div>
+
+        <div class="header-actions">
+            <button
+                id="menu-toggle"
+                class="menu-toggle"
+                type="button"
+                aria-label="Open navigation menu"
+                aria-controls="owner-nav"
+                aria-expanded="false">
+                ☰
+            </button>
+        </div>
+
+        <nav id="owner-nav" class="owner-nav" aria-label="Owner dashboard navigation">
+            <ul>
+                <li>
+                    <a href="./dashboard" id="dashboard-link">Dashboard</a>
+                </li>
+                <li>
+                    <a href="./clients" id="clients-link">Clients</a>
+                </li>
+                <li>
+                    <a href="./technicians" id="technicians-link">Technicians</a>
+                </li>
+                <li>
+                    <a href="./services" id="services-link" aria-current="page">Services</a>
+                </li>
+                <li>
+                    <a href="./stock" id="stock-link">Stock</a>
+                </li>
+                <li class="logout-item">
+                    <button id="logout-btn" class="logout-btn" type="button">Logout</button>
+                </li>
+            </ul>
+        </nav>
     </header>
 
     <main id="main-content" class="services-content">
         <h1>Services</h1>
-
-        <aside class="sidebar">
-            <nav aria-label="Owner dashboard navigation">
-                <ul>
-                    <li>
-                        <a href="./dashboard" id="dashboard-link">Dashboard</a>
-                    </li>
-                    <li>
-                        <a href="./clients" id="clients-link">Clients</a>
-                    </li>
-                    <li>
-                        <a href="./technicians" id="technicians-link">Technicians</a>
-                    </li>
-                    <li>
-                        <a href="./services" id="services-link" aria-current="page">Services</a>
-                    </li>
-                    <li>
-                        <a href="./stock" id="stock-link">Stock</a>
-                    </li>
-                </ul>
-            </nav>
-        </aside>
 
         <section class="services-panel" aria-labelledby="services-title">
             <div class="services-panel-header">
@@ -61,21 +76,21 @@
                 <button class="filter-btn active-filter" type="button" data-filter="all" aria-pressed="true">
                     All
                 </button>
-            
+
                 <button class="filter-btn" type="button" data-filter="pending" aria-pressed="false">
                     Scheduled
                 </button>
-            
+
                 <button class="filter-btn" type="button" data-filter="completed" aria-pressed="false">
                     Completed
                 </button>
-            
+
                 <button class="filter-btn" type="button" data-filter="soon-to-expire" aria-pressed="false">
                     Soon to Expire
                 </button>
             </div>
 
-            <div id="services-container" class="services-container"> 
+            <div id="services-container" class="services-container">
                 <!-- Service cards will be dynamically inserted here -->
             </div>
         </section>
@@ -91,6 +106,7 @@
             <section class="footer-links" aria-label="Dashboard quick links">
                 <h3>Dashboard</h3>
                 <ul>
+                    <li><a href="./dashboard" id="footer-dashboard-link">Dashboard</a></li>
                     <li><a href="./clients" id="footer-clients-link">Clients</a></li>
                     <li><a href="./technicians" id="footer-technicians-link">Technicians</a></li>
                     <li><a href="./services" id="footer-services-link">Services</a></li>

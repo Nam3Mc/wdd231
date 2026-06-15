@@ -11,27 +11,126 @@
         margin-right: auto;
     }
 
+    /* HEADER */
+
     .owner-header {
+        position: relative;
         min-height: 80px;
-        padding: 0.6rem;
-        gap: 0.5rem;
+        padding: 0.75rem;
+        gap: 0.75rem;
+        flex-wrap: wrap;
     }
-    
-    .owner-header img {
+
+    .header-brand {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 0.55rem;
+        padding-right: 7.5rem;
+    }
+
+    .header-brand img {
         width: 50px;
         height: 50px;
     }
-    
-    .owner-header h2 {
+
+    .header-brand h2 {
         font-size: 1rem;
     }
-    
-    .logout-btn {
-        min-width: auto;
-        min-height: 40px;
-        padding: 0 0.75rem;
-        font-size: 0.85rem;
+
+    .header-actions,
+    .menu-toggle {
+        display: none;
     }
+
+    /* NAVBAR BELOW HEADER */
+
+    .owner-nav {
+        display: block;
+        width: 100%;
+        margin-top: 0.35rem;
+        padding-top: 0.75rem;
+        border-top: 2px solid var(--white);
+    }
+
+    .owner-nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.65rem;
+    }
+
+    .owner-nav li {
+        margin: 0;
+    }
+
+    .owner-nav a {
+        display: block;
+        width: 100%;
+        min-height: 46px;
+        padding: 0.8rem 1rem;
+        border-radius: 999px;
+        background-color: var(--primary-green-dark);
+        color: var(--white);
+        text-decoration: none;
+        font-size: 1rem;
+        font-weight: 700;
+        text-align: center;
+        white-space: nowrap;
+    }
+
+    .owner-nav a:hover {
+        background-color: var(--accent-orange-dark);
+        color: var(--white);
+    }
+
+    .owner-nav a:focus-visible {
+        outline: 3px solid var(--white);
+        outline-offset: 3px;
+    }
+
+    /* LOGOUT TOP RIGHT */
+
+    .owner-nav .logout-item,
+    .owner-nav li:last-child {
+        position: absolute;
+        top: 0.75rem;
+        right: 0.75rem;
+    }
+
+    .owner-nav .logout-btn {
+        width: auto;
+        min-width: 96px;
+        min-height: 42px;
+        padding: 0.65rem 0.9rem;
+        border: 2px solid var(--white);
+        border-radius: 999px;
+        background-color: var(--accent-orange-dark);
+        color: var(--white);
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 0.9rem;
+        font-weight: 700;
+        text-align: center;
+        white-space: nowrap;
+        cursor: pointer;
+    }
+
+    .owner-nav .logout-btn:hover {
+        background-color: var(--accent-orange);
+    }
+
+    .owner-nav .logout-btn:focus-visible {
+        outline: 3px solid var(--white);
+        outline-offset: 3px;
+    }
+
+    .owner-nav .logout-btn::before {
+        content: "";
+    }
+
+    /* MAIN */
 
     .dashboard-content {
         margin-top: 1rem;
@@ -42,14 +141,7 @@
         margin: 1.15rem 0;
     }
 
-    .sidebar {
-        padding: 0.9rem;
-    }
-
-    .sidebar a {
-        padding: 0.85rem 1rem;
-        font-size: 1.05rem;
-    }
+    /* ACCORDION */
 
     .accordion-btn {
         min-height: 48px;
@@ -66,6 +158,8 @@
     .accordion-content.show {
         margin-top: 0.5rem;
     }
+
+    /* FORMS */
 
     #client-form,
     #service-form,
@@ -89,6 +183,17 @@
         padding: 1rem;
     }
 
+    fieldset label {
+        font-size: 1rem;
+    }
+
+    form button {
+        min-height: 46px;
+        font-size: 1.05rem;
+    }
+
+    /* SERVICES PANEL */
+
     .services-panel {
         padding: 1rem;
     }
@@ -97,10 +202,37 @@
         font-size: 1.45rem;
     }
 
+    #next-services-container {
+        padding: 1rem;
+    }
+
+    /* SERVICE CARD */
+
+    .service-card {
+        padding: 1.1rem;
+    }
+
+    .service-card p:first-child {
+        font-size: 1.15rem;
+    }
+
+    .service-card p {
+        font-size: 1rem;
+    }
+
+    /* FOOTER */
+
     .dashboard-footer {
         padding: 1.2rem;
     }
 
+    .footer-content {
+        gap: 1.15rem;
+    }
 
-
+    .footer-brand p,
+    .footer-info p,
+    .footer-links a {
+        font-size: 1rem;
+    }
 }
