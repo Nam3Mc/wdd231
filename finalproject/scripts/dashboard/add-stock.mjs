@@ -1,5 +1,3 @@
-import renderStock from "./render-stock.mjs";
-
 export default function addStock() {
     const formData = document.querySelector("#stock-form");
 
@@ -25,8 +23,6 @@ export default function addStock() {
 
             stock.push(newStock);
             localStorage.setItem("stock", JSON.stringify(stock));
-
-            renderStock();
 
             alert("Stock product added successfully");
             formData.reset();

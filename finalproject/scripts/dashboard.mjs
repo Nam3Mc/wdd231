@@ -11,9 +11,6 @@ import hamburguerMenu from "./hamburguer-menu.mjs";
 import logOut from "./log-out.mjs";
 
 roleVerificator()
-clientsOptions()
-techniciansOptions()
-comingServices()
 hamburguerMenu()
 logOut()
 toggleForms()
@@ -21,3 +18,6 @@ addClient()
 addService()
 addTechnician()
 addStock()
+clientsOptions()
+techniciansOptions()
+comingServices()
