@@ -1,45 +1,63 @@
-import getClient from "./get-client.mjs"
+import getClient from "./get-client.mjs";
 
 export default function addService() {
-    try {
+    const formData = document.querySelector("#service-form");
 
-        const formData = document.querySelector('#service-form')
-        
-        formData.addEventListener('submit', (event) => {
-            event.preventDefault()
-            const serviceType = document.querySelectorAll('input[type="checkbox"]:checked')
-            const services = JSON.parse(localStorage.getItem('services'))
-            const servicesValue = []
-            const client = getAddress(formData.clientId.value)
-            
-            serviceType.forEach(service => {
-                servicesValue.push(service.value)
-            })
-            
-            const newService = {
-                "id": crypto.randomUUID(),
-                "clientId": formData.clientId.value,
-                "technicianId": formData.technicianId.value,
-                "serviceName": servicesValue,
-                "description": formData.notes.value,
-                "price":formData.price.value,
-                "durationHours": null,
-                "status": "pending",
-                "serviceDate": formData.serviceDate.value,
-                "serviceTime": formData.serviceTime.value,
-                "address": client.address,
-                "certificateIssued": false,
-                "productsUsed": []
+    if (!formData) {
+        console.error("Service form not found");
+        return;
+    }
+
+    formData.addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        try {
+            const checkedServices = formData.querySelectorAll('input[type="checkbox"]:checked');
+
+            const services = JSON.parse(localStorage.getItem("services")) || [];
+            const servicesValue = [];
+
+            checkedServices.forEach((service) => {
+                servicesValue.push(service.value);
+            });
+
+            const client = getClient(formData.clientId.value);
+
+            if (!client) {
+                alert("Please select a valid client.");
+                return;
             }
 
-            services.push(newService)
-            localStorage.setItem('services', JSON.stringify(services))
-            alert('Service added successfully')
-            
-            formData.reset()
-        })
-    } catch(error) {
-        console.error('Error adding service:', error)
-        alert('Something went wrong while adding the service')
-    }
+            if (servicesValue.length === 0) {
+                alert("Please select at least one service type.");
+                return;
+            }
+
+            const newService = {
+                id: crypto.randomUUID(),
+                clientId: formData.clientId.value,
+                technicianId: formData.technicianId.value,
+                serviceName: servicesValue,
+                description: formData.serviceNotes.value.trim(),
+                price: Number(formData.price.value),
+                durationHours: null,
+                status: "pending",
+                serviceDate: formData.serviceDate.value,
+                serviceTime: formData.serviceTime.value,
+                address: client.address,
+                certificateIssued: false,
+                productsUsed: []
+            };
+
+            services.push(newService);
+            localStorage.setItem("services", JSON.stringify(services));
+
+            alert("Service added successfully");
+            formData.reset();
+
+        } catch (error) {
+            console.error("Error adding service:", error);
+            alert("Something went wrong while adding the service.");
+        }
+    });
 }
