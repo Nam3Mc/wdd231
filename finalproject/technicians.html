@@ -1,13 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Technicians</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>PestControl Technicians</title>
+  <meta name="description" content="Manage PestControl technicians.">
+  <meta name="author" content="Dreiser Morales">
+
+  <link rel="icon" href="images/favicon.ico">
+  <link rel="stylesheet" href="styles/technicians.css">
+
+  <script type="module" src="scripts/technicians.mjs"></script>
 </head>
+
 <body>
-    <main>  
-        <h1>Technicians</h1>
-    </main> 
+
+  <header class="owner-header">
+    <img src="images/logo.png" alt="PestControl logo">
+    <h2>PestControl Admin</h2>
+    <button class="logout-btn" type="button">Logout</button>
+  </header>
+
+  <main class="dashboard-content">
+    <h1>Technicians</h1>
+
+    <section class="cards-container" id="technicians-container" aria-label="Technicians list">
+
+      <article class="technician-card" data-technician-id="usr_002">
+        <header class="card-header">
+          <div>
+            <h2>Daniel Smith</h2>
+            <p class="card-subtitle">Technician ID: usr_002</p>
+          </div>
+
+          <span class="status-badge technician">Technician</span>
+        </header>
+
+        <div class="card-body">
+          <p><strong>Phone:</strong> 3005551002</p>
+          <p><strong>Email:</strong> daniel.smith@pestcontrol.com</p>
+          <p><strong>Role:</strong> technician</p>
+          <p><strong>Salary:</strong> $1800</p>
+
+          <div class="tag-group" aria-label="Assigned services">
+            <span>srv_001</span>
+            <span>srv_010</span>
+          </div>
+        </div>
+
+        <footer class="card-actions">
+          <button class="technician-info-btn" type="button">
+            Technician Information
+          </button>
+
+          <button class="delete-technician-btn danger-btn" type="button">
+            Delete Technician
+          </button>
+        </footer>
+      </article>
+
+    </section>
+  </main>
+
+  <footer class="dashboard-footer">
+    <p>&copy; 2024 PestControl. All rights reserved.</p>
+  </footer>
+
 </body>
 </html>

@@ -1,0 +1,320 @@
+/* 
+    services-l.css
+    Large styles: 641px and up
+*/
+
+@media only screen and (min-width: 641px) {
+
+    body {
+        padding: 1rem;
+    }
+
+    /* HEADER */
+
+    .owner-header {
+        max-width: 1440px;
+        margin: 0 auto;
+        min-height: 82px;
+        padding: 0.75rem 1.2rem;
+        gap: 0.85rem;
+    }
+
+    .owner-header img {
+        width: 54px;
+        height: 54px;
+        aspect-ratio: 1 / 1;
+    }
+
+    .owner-header h2 {
+        font-size: 1.15rem;
+    }
+
+    .logout-btn {
+        min-height: 42px;
+        padding: 0 1.1rem;
+        font-size: 0.9rem;
+    }
+
+    /* MAIN LAYOUT */
+
+    .services-content {
+        width: 100%;
+        max-width: 1440px;
+        min-height: 74vh;
+        margin: 1.25rem auto 0;
+        display: grid;
+        grid-template-columns: 230px minmax(0, 1fr);
+        grid-template-areas:
+            "title title"
+            "sidebar services";
+        gap: 1.25rem;
+        align-items: start;
+    }
+
+    .services-content h1 {
+        grid-area: title;
+        min-height: 2.3rem;
+        margin: 0;
+        font-size: 1.9rem;
+        text-align: left;
+    }
+
+    /* SIDEBAR */
+
+    .sidebar {
+        grid-area: sidebar;
+        position: sticky;
+        top: 1rem;
+        min-height: 65vh;
+        margin: 0;
+        padding: 1rem;
+    }
+
+    .sidebar ul {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+    }
+
+    .sidebar a {
+        padding: 0.9rem 1rem;
+        text-align: left;
+        font-size: 1rem;
+    }
+
+    /* SERVICES PANEL */
+
+    .services-panel {
+        grid-area: services;
+        min-height: 540px;
+        margin-top: 0;
+        padding: 1.25rem;
+        border-radius: 20px;
+    }
+
+    .services-panel-header {
+        min-height: 74px;
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+        gap: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .services-panel-header h2 {
+        font-size: 1.55rem;
+    }
+
+    .services-panel-header p {
+        max-width: 420px;
+        margin: 0;
+        font-size: 0.95rem;
+        text-align: right;
+    }
+
+    /* FILTER BAR */
+
+    .service-filter-bar {
+        min-height: 42px;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: start;
+        gap: 0.65rem;
+        margin-bottom: 1rem;
+    }
+
+    .filter-btn {
+        flex: 0 1 auto;
+        min-height: 40px;
+        padding: 0.45rem 1rem;
+        font-size: 0.85rem;
+        white-space: nowrap;
+    }
+
+    /* SERVICES CONTAINER */
+
+    .services-container {
+        min-height: 350px;
+        align-content: start;
+        gap: 0.85rem;
+    }
+
+    /* SERVICE CARD - LARGE COMPACT LIST STYLE */
+
+    .service-card {
+        min-height: 145px;
+        padding: 1rem;
+        border-radius: 18px;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(140px, 0.75fr);
+        grid-template-areas:
+            "info technician"
+            "actions actions";
+        align-items: center;
+        gap: 0.85rem;
+    }
+
+    .service-card-info {
+        grid-area: info;
+        min-width: 0;
+        display: grid;
+        gap: 0.4rem;
+    }
+
+    .service-company {
+        min-height: 1.4rem;
+        font-size: 1.1rem;
+    }
+
+    .service-status,
+    .service-date {
+        min-height: 1.25rem;
+        font-size: 0.9rem;
+    }
+
+    .service-status {
+        min-height: 32px;
+        padding: 0.3rem 0.7rem;
+        font-size: 0.8rem;
+    }
+
+    /* TECHNICIAN RIGHT SIDE */
+
+    .service-technician {
+        grid-area: technician;
+        min-height: 74px;
+        padding-left: 0.85rem;
+        border-top: none;
+        border-left: 2px solid var(--border-green);
+        display: grid;
+        grid-template-columns: 1fr;
+        align-content: center;
+        gap: 0.3rem;
+        text-align: right;
+    }
+
+    .technician-name,
+    .technician-phone {
+        margin: 0;
+        font-size: 0.88rem;
+        line-height: 1.35;
+        font-weight: 700;
+    }
+
+    .technician-name span,
+    .technician-phone span {
+        display: block;
+        margin-bottom: 0.1rem;
+        color: var(--text-muted);
+        font-size: 0.72rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 0.03em;
+    }
+
+    .technician-name {
+        color: var(--primary-green-dark);
+    }
+
+    .technician-phone a {
+        color: var(--text-dark);
+        text-decoration: none;
+    }
+
+    .technician-phone a:hover {
+        color: var(--accent-orange-dark);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+    }
+
+    /* BUTTONS BOTTOM ROW */
+
+    .service-actions {
+        grid-area: actions;
+        min-width: 0;
+        min-height: 56px;
+        margin-top: 0;
+        padding-top: 0.75rem;
+        border-top: 2px solid var(--border-green);
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: start;
+        gap: 0.7rem;
+    }
+
+    .service-actions button {
+        width: 100%;
+        min-height: 38px;
+        padding: 0 0.85rem;
+        border-radius: 999px;
+        font-size: 0.82rem;
+        font-weight: 800;
+    }
+
+    /* FOOTER */
+
+    .dashboard-footer {
+        width: 100%;
+        max-width: 1440px;
+        margin: 1.25rem auto 0;
+        padding: 1.25rem;
+    }
+
+    .footer-content {
+        grid-template-columns: 1.5fr 1fr 1fr;
+        align-items: start;
+        gap: 1.5rem;
+    }
+
+    .footer-links a {
+        display: inline-block;
+        padding: 0.15rem 0.25rem;
+        border-radius: 6px;
+    }
+
+    .footer-links a:hover {
+        background-color: var(--white);
+        color: var(--primary-green-dark);
+    }
+
+    /* SERVICE DIALOG - LARGE 641px+ */
+
+    .service-dialog {
+        width: min(90%, 620px);
+        max-width: 620px;
+        max-height: 86vh;
+        border-radius: 22px;
+    }
+
+    .service-dialog-content {
+        padding: 1.4rem;
+        gap: 0.85rem;
+    }
+
+    .service-dialog-content h2 {
+        font-size: 1.65rem;
+        text-align: left;
+    }
+
+    .service-dialog-content p {
+        padding: 0.75rem 0.85rem;
+        font-size: 0.96rem;
+        display: grid;
+        grid-template-columns: 150px 1fr;
+        gap: 0.5rem;
+        align-items: center;
+    }
+
+    .service-dialog-content span {
+        display: inline;
+        margin: 0;
+        font-size: 0.9rem;
+    }
+
+    .close-dialog-btn {
+        width: auto;
+        min-width: 150px;
+        min-height: 44px;
+        padding: 0 1.2rem;
+        justify-self: end;
+    }
+}

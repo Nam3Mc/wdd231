@@ -3,11 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services</title>
+    <title>Services | Pest Control</title>
+    <meta name="description" content="Services page for reviewing, managing, and deleting scheduled pest control services.">
+    <meta name="author" content="Dreiser Morales">
+    <meta name="theme-color" content="#14532d">
+
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="styles/services.css">
+    <link rel="stylesheet" href="styles/services-m.css">
+    <link rel="stylesheet" href="styles/services-l.css">
+
+    <script type="module" src="scripts/services.mjs"></script>
 </head>
+
 <body>
-    <main>
+
+    <header class="owner-header">
+        <a href="./dashboard" class="logo-link">
+            <img src="images/logo.svg" alt="Pest Control logo" width="48" height="48">
+        </a>
+        <h2>PestControl Admin</h2>
+        <button id="logout-btn" class="logout-btn" type="button">Logout</button>
+    </header>
+
+    <main id="main-content" class="services-content">
         <h1>Services</h1>
+
+        <aside class="sidebar">
+            <nav aria-label="Owner dashboard navigation">
+                <ul>
+                    <li>
+                        <a href="./dashboard" id="dashboard-link">Dashboard</a>
+                    </li>
+                    <li>
+                        <a href="./clients" id="clients-link">Clients</a>
+                    </li>
+                    <li>
+                        <a href="./technicians" id="technicians-link">Technicians</a>
+                    </li>
+                    <li>
+                        <a href="./services" id="services-link" aria-current="page">Services</a>
+                    </li>
+                    <li>
+                        <a href="./stock" id="stock-link">Stock</a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <section class="services-panel" aria-labelledby="services-title">
+            <div class="services-panel-header">
+                <h2 id="services-title">Next Services</h2>
+                <p>Review scheduled services and manage each request.</p>
+            </div>
+
+            <div class="service-filter-bar" aria-label="Filter services by status">
+                <button class="filter-btn active-filter" type="button" data-filter="all" aria-pressed="true">
+                    All
+                </button>
+            
+                <button class="filter-btn" type="button" data-filter="pending" aria-pressed="false">
+                    Scheduled
+                </button>
+            
+                <button class="filter-btn" type="button" data-filter="completed" aria-pressed="false">
+                    Completed
+                </button>
+            
+                <button class="filter-btn" type="button" data-filter="soon-to-expire" aria-pressed="false">
+                    Soon to Expire
+                </button>
+            </div>
+
+            <div id="services-container" class="services-container"> 
+                <!-- Service cards will be dynamically inserted here -->
+            </div>
+        </section>
     </main>
+
+    <footer class="dashboard-footer">
+        <div class="footer-content">
+            <section class="footer-brand">
+                <h2>PestControl Admin</h2>
+                <p>Manage clients, technicians, services, and stock from one simple dashboard.</p>
+            </section>
+
+            <section class="footer-links" aria-label="Dashboard quick links">
+                <h3>Dashboard</h3>
+                <ul>
+                    <li><a href="./clients" id="footer-clients-link">Clients</a></li>
+                    <li><a href="./technicians" id="footer-technicians-link">Technicians</a></li>
+                    <li><a href="./services" id="footer-services-link">Services</a></li>
+                    <li><a href="./stock" id="footer-stock-link">Stock</a></li>
+                </ul>
+            </section>
+
+            <section class="footer-info">
+                <h3>System Info</h3>
+                <p>&copy; <span id="currentYear"></span> PestControl Admin</p>
+                <p>Created by Dreiser Morales</p>
+            </section>
+        </div>
+    </footer>
+
 </body>
 </html>

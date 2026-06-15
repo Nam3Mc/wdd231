@@ -1,13 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clients</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>PestControl Clients</title>
+  <meta name="description" content="Manage PestControl company clients.">
+  <meta name="author" content="Dreiser Morales">
+
+  <link rel="icon" href="images/favicon.ico">
+  <link rel="stylesheet" href="styles/clients.css">
+  <link rel="stylesheet" href="styles/clients-m.css">
+  <link rel="stylesheet" href="styles/clients-l.css">
+
+  <script type="module" src="scripts/clients.mjs"></script>
 </head>
+
 <body>
-    <main>
-        <h1>Clients</h1>
-    </main>
+
+  <header class="owner-header">
+    <img src="images/logo.png" alt="PestControl logo">
+    <h2>PestControl Admin</h2>
+    <button class="logout-btn" type="button">Logout</button>
+  </header>
+
+  <main class="dashboard-content">
+    <h1>Clients</h1>
+
+    <section class="cards-container" id="clients-container" aria-label="Clients list">
+
+      <article class="client-card" data-client-id="cmp_001">
+        <header class="card-header">
+          <div>
+            <h2>EcoShield Pest Control</h2>
+            <p class="card-subtitle">Owner: Michael Johnson</p>
+          </div>
+
+          <span class="status-badge active">Active</span>
+        </header>
+
+        <div class="card-body">
+          <p><strong>Phone:</strong> 3005552001</p>
+          <p><strong>Email:</strong> contact@ecoshieldpc.com</p>
+          <p><strong>Address:</strong> Cra 15 #93-47, Bogotá, Colombia</p>
+          <p><strong>City:</strong> Bogotá</p>
+          <p><strong>Service Plan:</strong> Monthly</p>
+          <p><strong>Last Service:</strong> 2026-05-10</p>
+          <p><strong>Next Service:</strong> 2026-06-10</p>
+
+          <div class="tag-group" aria-label="Pest types">
+            <span>Cockroaches</span>
+            <span>Rodents</span>
+          </div>
+
+          <p class="card-notes">
+            <strong>Notes:</strong> Restaurant kitchen requires monthly inspection.
+          </p>
+        </div>
+
+        <footer class="card-actions">
+          <button class="client-info-btn" type="button">
+            Client Information
+          </button>
+
+          <button class="delete-client-btn danger-btn" type="button">
+            Delete Client
+          </button>
+        </footer>
+      </article>
+
+    </section>
+  </main>
+
+  <footer class="dashboard-footer">
+    <p>&copy; 2024 PestControl. All rights reserved.</p>
+  </footer>
+
 </body>
 </html>

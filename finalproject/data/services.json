@@ -7,17 +7,13 @@
     "description": "Inspection and chemical treatment for cockroach infestations.",
     "price": 120,
     "durationHours": 2,
-    "status": "scheduled",
-    "serviceDate": "2026-05-28",
+    "status": "completed",
+    "lastServiceDate": "2026-06-05",
+    "serviceDate": "2026-06-10",
     "serviceTime": "09:00",
     "address": "Cra 15 #93-47, Bogotá, Colombia",
     "certificateIssued": true,
-    "productsUsed": [
-      "stk_001",
-      "stk_008",
-      "stk_006",
-      "stk_007"
-    ]
+    "productsUsed": ["stk_001", "stk_008", "stk_006", "stk_007"]
   },
   {
     "id": "srv_002",
@@ -28,16 +24,12 @@
     "price": 180,
     "durationHours": 3,
     "status": "completed",
-    "serviceDate": "2026-05-20",
+    "lastServiceDate": "2026-06-08",
+    "serviceDate": "2026-06-12",
     "serviceTime": "14:00",
     "address": "Calle 72 #18-64, Bogotá, Colombia",
     "certificateIssued": true,
-    "productsUsed": [
-      "stk_002",
-      "stk_003",
-      "stk_017",
-      "stk_016"
-    ]
+    "productsUsed": ["stk_002", "stk_003", "stk_017", "stk_016"]
   },
   {
     "id": "srv_003",
@@ -46,18 +38,14 @@
     "serviceName": ["Termite Treatment"],
     "description": "Wood protection and anti-termite barrier application.",
     "price": 250,
-    "durationHours": 4,
-    "status": "in_progress",
-    "serviceDate": "2026-05-26",
+    "durationHours": null,
+    "status": "soon to expire",
+    "lastServiceDate": "2026-03-15",
+    "serviceDate": "2026-06-14",
     "serviceTime": "11:00",
     "address": "Av Boyacá #45-12, Bogotá, Colombia",
     "certificateIssued": false,
-    "productsUsed": [
-      "stk_004",
-      "stk_026",
-      "stk_012",
-      "stk_006"
-    ]
+    "productsUsed": ["stk_004", "stk_026", "stk_012", "stk_006"]
   },
   {
     "id": "srv_004",
@@ -66,18 +54,14 @@
     "serviceName": ["Mosquito Fogging"],
     "description": "Outdoor fumigation for mosquito population control.",
     "price": 160,
-    "durationHours": 2,
-    "status": "scheduled",
-    "serviceDate": "2026-05-30",
+    "durationHours": null,
+    "status": "soon to expire",
+    "lastServiceDate": "2026-03-17",
+    "serviceDate": "2026-06-16",
     "serviceTime": "16:00",
     "address": "Cra 7 #112-33, Bogotá, Colombia",
     "certificateIssued": false,
-    "productsUsed": [
-      "stk_005",
-      "stk_011",
-      "stk_018",
-      "stk_007"
-    ]
+    "productsUsed": ["stk_005", "stk_011", "stk_018", "stk_007"]
   },
   {
     "id": "srv_005",
@@ -86,18 +70,14 @@
     "serviceName": ["Ant Control Service"],
     "description": "Interior and exterior ant colony elimination.",
     "price": 110,
-    "durationHours": 1.5,
-    "status": "completed",
-    "serviceDate": "2026-05-18",
+    "durationHours": null,
+    "status": "soon to expire",
+    "lastServiceDate": "2026-03-18",
+    "serviceDate": "2026-06-18",
     "serviceTime": "10:30",
     "address": "Calle 100 #19-40, Bogotá, Colombia",
     "certificateIssued": true,
-    "productsUsed": [
-      "stk_009",
-      "stk_029",
-      "stk_022",
-      "stk_006"
-    ]
+    "productsUsed": ["stk_009", "stk_029", "stk_022", "stk_006"]
   },
   {
     "id": "srv_006",
@@ -106,19 +86,14 @@
     "serviceName": ["Commercial Kitchen Disinfection"],
     "description": "Deep sanitation and pest prevention for kitchens.",
     "price": 320,
-    "durationHours": 5,
-    "status": "scheduled",
-    "serviceDate": "2026-06-01",
+    "durationHours": null,
+    "status": "soon to expire",
+    "lastServiceDate": "2026-03-20",
+    "serviceDate": "2026-06-20",
     "serviceTime": "20:00",
     "address": "Cra 50 #26-11, Medellín, Colombia",
     "certificateIssued": false,
-    "productsUsed": [
-      "stk_014",
-      "stk_019",
-      "stk_030",
-      "stk_015",
-      "stk_027"
-    ]
+    "productsUsed": ["stk_014", "stk_019", "stk_030", "stk_015", "stk_027"]
   },
   {
     "id": "srv_007",
@@ -127,18 +102,14 @@
     "serviceName": ["Warehouse Pest Inspection"],
     "description": "Full pest inspection for industrial warehouses.",
     "price": 210,
-    "durationHours": 3,
-    "status": "pending",
-    "serviceDate": "2026-06-03",
+    "durationHours": null,
+    "status": "soon to expire",
+    "lastServiceDate": "2026-03-21",
+    "serviceDate": "2026-06-21",
     "serviceTime": "08:00",
     "address": "Calle 10 #33-20, Cali, Colombia",
     "certificateIssued": false,
-    "productsUsed": [
-      "stk_023",
-      "stk_028",
-      "stk_020",
-      "stk_021"
-    ]
+    "productsUsed": ["stk_023", "stk_028", "stk_020", "stk_021"]
   },
   {
     "id": "srv_008",
@@ -147,38 +118,30 @@
     "serviceName": ["Bed Bug Elimination"],
     "description": "Specialized treatment for bed bug infestations.",
     "price": 290,
-    "durationHours": 4,
-    "status": "completed",
-    "serviceDate": "2026-05-16",
+    "durationHours": null,
+    "status": "scheduled",
+    "lastServiceDate": "2026-03-22",
+    "serviceDate": "2026-06-22",
     "serviceTime": "13:00",
     "address": "Cra 80 #45-90, Barranquilla, Colombia",
     "certificateIssued": true,
-    "productsUsed": [
-      "stk_013",
-      "stk_016",
-      "stk_007",
-      "stk_012"
-    ]
+    "productsUsed": ["stk_013", "stk_016", "stk_007", "stk_012"]
   },
   {
     "id": "srv_009",
     "clientId": "cmp_009",
-    "technicianId": "usr_03",
+    "technicianId": "usr_003",
     "serviceName": ["Fly Control Treatment"],
     "description": "Fly traps installation and sanitation process.",
     "price": 140,
-    "durationHours": 2,
+    "durationHours": null,
     "status": "scheduled",
-    "serviceDate": "2026-05-29",
+    "lastServiceDate": "2026-03-25",
+    "serviceDate": "2026-06-25",
     "serviceTime": "15:00",
     "address": "Calle 85 #14-55, Bogotá, Colombia",
     "certificateIssued": false,
-    "productsUsed": [
-      "stk_010",
-      "stk_020",
-      "stk_025",
-      "stk_006"
-    ]
+    "productsUsed": ["stk_010", "stk_020", "stk_025", "stk_006"]
   },
   {
     "id": "srv_010",
@@ -187,18 +150,13 @@
     "serviceName": ["General Preventive Fumigation"],
     "description": "Preventive fumigation service for commercial spaces.",
     "price": 190,
-    "durationHours": 3,
+    "durationHours": null,
     "status": "scheduled",
-    "serviceDate": "2026-06-05",
+    "lastServiceDate": "2026-03-28",
+    "serviceDate": "2026-06-28",
     "serviceTime": "09:30",
     "address": "Cra 22 #60-14, Bucaramanga, Colombia",
     "certificateIssued": false,
-    "productsUsed": [
-      "stk_001",
-      "stk_005",
-      "stk_011",
-      "stk_021",
-      "stk_007"
-    ]
+    "productsUsed": ["stk_001", "stk_005", "stk_011", "stk_021", "stk_007"]
   }
 ]

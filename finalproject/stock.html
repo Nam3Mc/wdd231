@@ -1,13 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stock</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>PestControl Stock</title>
+  <meta name="description" content="Manage PestControl inventory and stock products.">
+  <meta name="author" content="Dreiser Morales">
+
+  <link rel="icon" href="images/favicon.ico">
+  <link rel="stylesheet" href="styles/stock.css">
+
+  <script type="module" src="scripts/stock.mjs"></script>
 </head>
+
 <body>
-    <main>
-        <h1>Stock</h1>
-    </main>
+
+  <header class="owner-header">
+    <img src="images/logo.png" alt="PestControl logo">
+    <h2>PestControl Admin</h2>
+    <button class="logout-btn" type="button">Logout</button>
+  </header>
+
+  <main class="dashboard-content">
+    <h1>Stock</h1>
+
+    <section class="cards-container" id="stock-container" aria-label="Stock list">
+
+      <article class="stock-card" data-stock-id="stk_001">
+        <header class="card-header">
+          <div>
+            <h2>Cypermethrin Insecticide</h2>
+            <p class="card-subtitle">Product ID: stk_001</p>
+          </div>
+
+          <span class="status-badge stock">In Stock</span>
+        </header>
+
+        <div class="card-body">
+          <p><strong>Category:</strong> Chemical</p>
+          <p><strong>Quantity:</strong> 25</p>
+          <p><strong>Price:</strong> $85</p>
+          <p><strong>Expiration Date:</strong> 2027-03-15</p>
+        </div>
+
+        <footer class="card-actions">
+          <button class="stock-info-btn" type="button">
+            Product Information
+          </button>
+
+          <button class="delete-stock-btn danger-btn" type="button">
+            Delete Product
+          </button>
+        </footer>
+      </article>
+
+    </section>
+  </main>
+
+  <footer class="dashboard-footer">
+    <p>&copy; 2024 PestControl. All rights reserved.</p>
+  </footer>
+
 </body>
 </html>
