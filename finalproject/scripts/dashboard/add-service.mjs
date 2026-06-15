@@ -35,6 +35,7 @@ export default function addService() {
             services.push(newService)
             localStorage.setItem('services', JSON.stringify(services))
             alert('Service added successfully')
+            
             formData.reset()
         })
     } catch(error) {
