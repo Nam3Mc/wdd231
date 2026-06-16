@@ -2,12 +2,12 @@ import renderServices from "./render-services.mjs"
 import serviceCard from "./service-card.mjs"
 
 export default function statusFilter() {
-    const services = JSON.parse(localStorage.getItem('services'))
     const filterBtn = document.querySelectorAll('.filter-btn')
     const container = document.querySelector('#services-container')
-
+    
     filterBtn.forEach(btn => {
         btn.addEventListener('click', () => {
+            const services = JSON.parse(localStorage.getItem('services'))
 
             container.innerHTML = ''
             filterBtn.forEach(btn => {

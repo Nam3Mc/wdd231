@@ -4,6 +4,7 @@ import getTechnician from "./get-technichian.mjs"
 export default function comingServices() {
     const services = JSON.parse(localStorage.getItem('services')) || []
     const container = document.querySelector('.services-panel')
+    container.textContent = ''
 
     services.forEach(service => {
         const technician = getTechnician(service.technicianId)

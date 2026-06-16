@@ -1,3 +1,4 @@
+import comingServices from "./comming-services.mjs";
 import getClient from "./get-client.mjs";
 
 export default function addService() {
@@ -54,6 +55,7 @@ export default function addService() {
 
             alert("Service added successfully");
             formData.reset();
+            comingServices()
 
         } catch (error) {
             console.error("Error adding service:", error);
