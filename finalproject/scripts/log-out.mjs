@@ -5,6 +5,7 @@ export default function logOut() {
         localStorage.setItem('clients', [])
         localStorage.setItem('technicians', [])
         localStorage.setItem('services', [])
+        localStorage.setItem('stock', [])
         window.location.href = 'index.html'
     })
 }

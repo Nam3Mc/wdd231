@@ -3,7 +3,7 @@ import fetchServices from "./fetch-services.mjs";
 import fetchStock from "./fetch-stock.mjs";
 import fetchTechnicians from "./fetch-technicians.mjs";
 
-export default function roleValidator(user) {
+export default async function roleValidator(user) {
     
     localStorage.setItem("user", JSON.stringify(user));
     const clientsUrl = './data/clients.json'
@@ -12,10 +12,12 @@ export default function roleValidator(user) {
     const stockUrl = './data/stock.json'
 
     if (user.role === "admin") {
-        fetchClients(clientsUrl)
-        fetchTechnicians(techniciansUrl)
-        fetchServices(servicesUrl)
-        fetchStock(stockUrl)
+
+        await fetchClients(clientsUrl)
+        await fetchTechnicians(techniciansUrl)
+        await fetchServices(servicesUrl)
+        await fetchStock(stockUrl)
+
         window.location.href = "dashboard.html";
 
     } else {
