@@ -9,6 +9,7 @@ import addClient from "./dashboard/add-client.mjs";
 import addTechnician from "./dashboard/add-technician.mjs";
 import addService from "./dashboard/add-service.mjs";
 import addStock from "./dashboard/add-stock.mjs";
+import updateFooter from "./update-footer.mjs";
 
 roleVerificator();
 hamburguerMenu();
@@ -21,3 +22,4 @@ addClient();
 addTechnician();
 addService();
 addStock();
+updateFooter()

@@ -421,4 +421,9 @@
         padding: 0 1.2rem;
         justify-self: end;
     }
+
+    .footer-video-link {
+        padding: 0.85rem 1.4rem;
+    }
+
 }

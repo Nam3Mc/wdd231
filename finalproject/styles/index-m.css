@@ -63,4 +63,9 @@
         padding: 1rem;
     }
 
+    .footer-video-link {
+        padding: 0.8rem 1.2rem;
+        font-size: 1rem;
+    }
+
 }

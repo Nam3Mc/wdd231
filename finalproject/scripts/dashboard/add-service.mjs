@@ -42,7 +42,7 @@ export default function addService() {
                 description: formData.serviceNotes.value.trim(),
                 price: Number(formData.price.value),
                 durationHours: null,
-                status: "pending",
+                status: "sheduled",
                 serviceDate: formData.serviceDate.value,
                 serviceTime: formData.serviceTime.value,
                 address: client.address,
