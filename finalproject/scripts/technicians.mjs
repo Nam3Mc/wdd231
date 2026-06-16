@@ -4,4 +4,4 @@ import renderTechnicians from "./technician/render-technicians.mjs";
 
 logOut()
 renderTechnicians()
-hamburguerMenu
+hamburguerMenu()

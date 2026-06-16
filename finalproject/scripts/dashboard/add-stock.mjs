@@ -12,13 +12,24 @@ export default function addStock() {
         try {
             const stock = JSON.parse(localStorage.getItem("stock")) || [];
 
+            const productName = formData.elements["productName"].value.trim();
+            const category = formData.elements["category"].value;
+            const quantity = Number(formData.elements["quantity"].value);
+            const price = Number(formData.elements["price"].value);
+            const expirationDate = formData.elements["expirationDate"].value;
+
+            if (!productName || !category || quantity <= 0 || price <= 0 || !expirationDate) {
+                alert("Please fill out all stock fields correctly.");
+                return;
+            }
+
             const newStock = {
                 id: crypto.randomUUID(),
-                productName: formData.productName.value.trim(),
-                category: formData.category.value,
-                quantity: Number(formData.quantity.value),
-                price: Number(formData.stockPrice.value),
-                expirationDate: formData.expirationDate.value
+                productName,
+                category,
+                quantity,
+                price,
+                expirationDate
             };
 
             stock.push(newStock);
