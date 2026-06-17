@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PestControl Admin Dashboard</title>
+    <meta name="description" content="Administrative dashboard for managing pest control clients, services, inventory, workers, reports and certificates.">
+    <meta name="author" content="Dreiser Morales">
+    <meta name="theme-color" content="#14532d">
+
+    <link rel="stylesheet" href="styles/dashboard.css">
+</head>
+
+<body>
+    <div class="app-shell">
+
+        <header class="app-header">
+            <a href="#" class="brand" aria-label="Go to dashboard">
+                <span class="brand-logo">PC</span>
+                <span class="brand-text">
+                    <strong>PestControl</strong>
+                    <small>Admin System</small>
+                </span>
+            </a>
+
+            <button class="logout-btn" type="button">
+                Logout
+            </button>
+        </header>
+
+        <nav class="main-nav" aria-label="Main navigation">
+            <a href="#" class="nav-link active">Dashboard</a>
+            <a href="#">Clients</a>
+            <a href="#">Services</a>
+            <a href="#">Workers</a>
+            <a href="#">Inventory</a>
+            <a href="#">Reports</a>
+            <a href="#">Certificates</a>
+        </nav>
+
+        <main class="dashboard">
+
+            <section class="dashboard-intro" aria-labelledby="dashboard-title">
+                <div>
+                    <p class="eyebrow">Business overview</p>
+                    <h1 id="dashboard-title">Administrative Dashboard</h1>
+                    <p>
+                        Manage services, clients, workers, stock, reports and certificates from one organized workspace.
+                    </p>
+                </div>
+
+                <div class="intro-status">
+                    <span class="status-dot"></span>
+                    <span>System active</span>
+                </div>
+            </section>
+
+            <section class="dashboard-grid" aria-label="Main dashboard panels">
+
+                <article class="panel quick-panel">
+                    <div class="panel-header">
+                        <div>
+                            <p class="section-label">Quick actions</p>
+                            <h2>Create new records</h2>
+                        </div>
+                    </div>
+
+                    <div class="quick-actions">
+                        <button type="button" class="action-card">
+                            <span class="action-icon">+</span>
+                            <span>
+                                <strong>Add Client</strong>
+                                <small>Register a company or customer</small>
+                            </span>
+                        </button>
+
+                        <button type="button" class="action-card">
+                            <span class="action-icon">+</span>
+                            <span>
+                                <strong>Add Technician</strong>
+                                <small>Create a worker profile</small>
+                            </span>
+                        </button>
+
+                        <button type="button" class="action-card">
+                            <span class="action-icon">+</span>
+                            <span>
+                                <strong>Add Service</strong>
+                                <small>Schedule pest control work</small>
+                            </span>
+                        </button>
+
+                        <button type="button" class="action-card">
+                            <span class="action-icon">+</span>
+                            <span>
+                                <strong>Add Inventory</strong>
+                                <small>Update products or tools</small>
+                            </span>
+                        </button>
+                    </div>
+                </article>
+
+                <article class="panel calendar-panel">
+                    <div class="panel-header">
+                        <div>
+                            <p class="section-label">Current week</p>
+                            <h2>Scheduled services</h2>
+                        </div>
+
+                        <span class="panel-badge">12 services</span>
+                    </div>
+
+                    <div class="week-calendar">
+                        <div class="day-card">
+                            <span class="day-name">Mon</span>
+                            <strong>08</strong>
+                            <small>2 services</small>
+                        </div>
+
+                        <div class="day-card active-day">
+                            <span class="day-name">Tue</span>
+                            <strong>09</strong>
+                            <small>4 services</small>
+                        </div>
+
+                        <div class="day-card">
+                            <span class="day-name">Wed</span>
+                            <strong>10</strong>
+                            <small>1 service</small>
+                        </div>
+
+                        <div class="day-card">
+                            <span class="day-name">Thu</span>
+                            <strong>11</strong>
+                            <small>3 services</small>
+                        </div>
+
+                        <div class="day-card">
+                            <span class="day-name">Fri</span>
+                            <strong>12</strong>
+                            <small>2 services</small>
+                        </div>
+                    </div>
+
+                    <div class="service-list">
+                        <div class="service-item">
+                            <div>
+                                <strong>EcoShield Restaurant</strong>
+                                <span>Cockroach control</span>
+                            </div>
+                            <time>09:00 AM</time>
+                        </div>
+
+                        <div class="service-item">
+                            <div>
+                                <strong>Green Market Bogotá</strong>
+                                <span>Rodent inspection</span>
+                            </div>
+                            <time>11:30 AM</time>
+                        </div>
+
+                        <div class="service-item">
+                            <div>
+                                <strong>North Plaza Offices</strong>
+                                <span>Monthly fumigation</span>
+                            </div>
+                            <time>02:00 PM</time>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="panel alert-panel">
+                    <div class="panel-header">
+                        <div>
+                            <p class="section-label">Expiration alerts</p>
+                            <h2>This month</h2>
+                        </div>
+                    </div>
+
+                    <ul class="alert-list">
+                        <li>
+                            <span class="alert-marker warning"></span>
+                            <div>
+                                <strong>Certificate expires soon</strong>
+                                <small>EcoShield Restaurant — Jun 22</small>
+                            </div>
+                        </li>
+
+                        <li>
+                            <span class="alert-marker success"></span>
+                            <div>
+                                <strong>Service renewal available</strong>
+                                <small>Green Market Bogotá — Jun 25</small>
+                            </div>
+                        </li>
+
+                        <li>
+                            <span class="alert-marker info"></span>
+                            <div>
+                                <strong>Inventory review needed</strong>
+                                <small>Gel bait stock below limit</small>
+                            </div>
+                        </li>
+
+                        <li>
+                            <span class="alert-marker warning"></span>
+                            <div>
+                                <strong>Pending approval</strong>
+                                <small>3 completed services need review</small>
+                            </div>
+                        </li>
+                    </ul>
+                </article>
+
+            </section>
+
+            <section class="stats-section" aria-labelledby="stats-title">
+                <div class="section-heading">
+                    <p class="section-label">Performance summary</p>
+                    <h2 id="stats-title">Key statistics</h2>
+                </div>
+
+                <div class="stats-grid">
+                    <article class="stat-card">
+                        <span class="stat-icon pending">!</span>
+                        <div>
+                            <p>Pending services</p>
+                            <strong>18</strong>
+                            <small>Awaiting completion</small>
+                        </div>
+                    </article>
+
+                    <article class="stat-card">
+                        <span class="stat-icon clients">C</span>
+                        <div>
+                            <p>Registered clients</p>
+                            <strong>126</strong>
+                            <small>Active company records</small>
+                        </div>
+                    </article>
+
+                    <article class="stat-card">
+                        <span class="stat-icon workers">W</span>
+                        <div>
+                            <p>Active workers</p>
+                            <strong>14</strong>
+                            <small>Available technicians</small>
+                        </div>
+                    </article>
+
+                    <article class="stat-card">
+                        <span class="stat-icon inventory">I</span>
+                        <div>
+                            <p>Inventory alerts</p>
+                            <strong>7</strong>
+                            <small>Products need attention</small>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="app-footer">
+            <p>&copy; 2026 PestControl Admin. All rights reserved.</p>
+            <p>Internal business management system</p>
+        </footer>
+
+    </div>
+</body>
+</html>
